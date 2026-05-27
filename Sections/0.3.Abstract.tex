@@ -28,10 +28,36 @@
 
 \normalsize 
   
-Write your abstract here. Through computer vision technologies, ...
+In previous studies, researchers commonly used gradient-based adjoint methods (Adjoint Method) for the design of photonic structures.
+However, this method easily falls into local optima, making it difficult to explore globally optimal solutions.
+Therefore, this study aims to combine machine learning and quantum annealing techniques, and introduce encoding methods to search for globally optimal structures, providing a new approach for photonic structure design.
+This study integrates Factorization Machines (FM) and Quantum Annealing (QA) to construct an FMQA framework and applies it to the inverse design of two-dimensional silicon photonic waveguide structures.
+
+However, due to the limited number of qubits in current quantum annealing hardware, 
+this study proposes multi-encoding methods to enhance the representational capability of
+ design parameters and the resolution of the design space. This approach also mitigates 
+ discretization-induced quantization errors and the staircase effect, 
+ ensuring high consistency between numerical models and real physical behavior. 
+ In terms of spatial and feature encoding, three encoding strategies are employed: 
+ Gaussian Upsampling, two-dimensional Fourier integral, and beta-Variational Autoencoder ($\beta$-VAE).
+
+For numerical simulations, the finite-difference time-domain (FDTD) method is used to analyze the 
+propagation behavior of transverse electric (TE) multimodes in two-dimensional waveguide components. 
+The figure of merit (FoM) is set as the optimization objective to constrain transmission loss 
+and improve transmission efficiency and mode purity.
+
+This study designs and analyzes two key silicon photonic components: 
+a 90-degree Bend Waveguide and a Compact Waveguide Crossing. In the bend waveguide design, 
+the primary objective is to reduce transmission loss and improve transmission efficiency. 
+In the compact waveguide crossing, structural symmetry is exploited to reduce the number of 
+required qubits, effectively suppress mode conversion and crosstalk while maintaining 
+high transmission efficiency. Through the proposed FMQA framework and customized objective function, 
+this study successfully derives high-performance optimized waveguide structures with support 
+for multimode transmission, demonstrating new possibilities and directions for 
+future silicon photonic integrated circuit design.
 
 
 \vspace{1cm}
 
 % 5-7 Keywords (English) 
-\textbf{Keywords: English, keywords, five to seven, computer vision, IoT.} 
+\textbf{Keywords: Factorization Machine, Silicon Photonics, Waveguide, Inverse Design, Quantum Annealing, Machine Learning} 

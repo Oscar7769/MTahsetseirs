@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  26 MAY 2026 17:51
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  27 MAY 2026 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -80,7 +80,35 @@ Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpc_dim=\dimen149
  (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+
+Package fontspec Info: Font family 'TeXGyreTermes(0)' created for font 'TeX
+(fontspec)             Gyre Termes' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"TeX
+(fontspec)             Gyre
+(fontspec)             Termes/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"TeX Gyre
+(fontspec)             Termes/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"TeX Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"TeX Gyre
+(fontspec)             Termes/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+
+ (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2021/12/12 v3.8.8 Typesetting CJK scripts with XeLaTeX
  (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2021/12/12 v2.5.8 Document and package hooks (CTEX)
@@ -207,14 +235,7 @@ Package fontspec Info: Font family 'TW-Kai.ttf(0)' created for font
 (fontspec)             <->"[TW-Kai.ttf]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
-Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-) (/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
+ (/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
 Package: CJKnumb 2015/04/18 4.8.4
 \CJK@q=\count293
 \CJK@r=\count294
@@ -602,11 +623,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count365
 \@lastruleclass=\count366
 \@thisrulewidth=\dimen308
-))
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 82.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (./main.aux)
+)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -735,19 +752,46 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [1
 
-] (./covers/toc_var.tex (./Sections/0.2.Abstract_chinese.tex)
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [1
+]
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 126.
+LaTeX Font Info:    No file TUptm.fd. on input line 126.
 
-] (./Sections/0.3.Abstract.tex)
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 126.
+
+(./covers/toc_var.tex (./Sections/0.2.Abstract_chinese.tex
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 4.
+
+
+Overfull \hbox (19.47752pt too wide) in paragraph at lines 39--41
+[]\TU/TW-Kai.ttf(0)/m/n/12 數 值 模 擬 的 部 分，|  本 研 究 利 用 有 限 差 分 時 域 法 \TU/ptm/m/n/12 (Finite-Difference Time-Domain\TU/TW-Kai.ttf(0)/m/n/12 ，| \TU/ptm/m/n/12 FDTD)
+ []
+
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [2] (./main.toc)
+[1
+
+])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [2] (./Sections/0.3.Abstract.tex
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [3])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [4] (./main.toc)
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
@@ -755,7 +799,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [3
+ [5
 
 ] (./main.lof)
 \tf@lof=\write4
@@ -765,7 +809,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [4
+ [6
 
 ] (./main.lot)
 \tf@lot=\write5
@@ -775,10 +819,14 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [5
+ [7
 
 ]) (./Sections/1.Introduction_Motivation.tex
 Chapter 1.
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 4.
+
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
@@ -814,6 +862,11 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [4]
 Chapter 4.
+
+Overfull \hbox (12.07991pt too wide) in paragraph at lines 10--11
+[]\TU/ptm/b/n/12 overleaf \TU/TW-Kai.ttf(0)/m/n/12 上 有 插 入 圖 片 的 介 紹\TU/ptm/b/n/12 : https://www.overleaf.com/learn/latex/Inserting_Images 
+ []
+
 File: img/1.system_architecture.pdf Graphic file (type pdf)
 <use img/1.system_architecture.pdf>
 File: img/data_preprocessing.png Graphic file (type bmp)
@@ -867,41 +920,34 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [10]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Missing character: There is no → ("2192) in font ptmr8t!
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
 (xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [11
+[11
 
-]
-Missing character: There is no → ("2192) in font ptmr8t!
-)
+])
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [12] (./main.aux) ) 
+ [12] (./main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 16377 strings out of 477728
- 356406 string characters out of 5842238
- 676585 words of memory out of 5000000
- 36635 multiletter control sequences out of 15000+600000
- 505430 words of font info for 98 fonts, out of 8000000 for 9000
+ 16322 strings out of 477728
+ 357456 string characters out of 5842238
+ 681703 words of memory out of 5000000
+ 36568 multiletter control sequences out of 15000+600000
+ 480347 words of font info for 107 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 78i,13n,80p,1436b,836s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,13n,88p,1436b,910s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (20 pages).
+Output written on main.pdf (22 pages).

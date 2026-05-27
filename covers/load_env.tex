@@ -2,16 +2,15 @@
 \documentclass[12pt,a4paper,oneside]{book}
 \usepackage[ top=2.5cm,bottom=2.5cm,left=3cm,right=2cm ]{ geometry }
 
-\usepackage[no-math]{fontspec}   %加這個就可以設定字體 
+% === 字體與語言設定 (整合與修正) ===
+\usepackage[no-math]{fontspec}   % 讓 XeLaTeX 支援系統字體
+\setmainfont{TeX Gyre Termes}    % 設定預設英文字體為 Times New Roman
 
-\usepackage{xeCJK}       %讓中英文字體分開設置 
+\usepackage{xeCJK}               % 讓中英文字體分開設置 
 \usepackage[UTF8,fontset=none,scheme=plain]{ctex}
-\setCJKmainfont[AutoFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
-%\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf} % 設定預設中文字體
 
-\usepackage[T1]{fontenc}
-\usepackage{times}
-\usepackage{CJKnumb}
+\usepackage{CJKnumb}             % 中文數字支援
 
 \usepackage{subcaption}
 \usepackage{caption}
