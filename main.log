@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  29 MAY 2026 17:50
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  29 MAY 2026 18:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,12 +814,12 @@ File: covers/logo2.pdf Graphic file (type pdf)
 [1
 
 
-])
+]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [2]
+ [2])
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -923,10 +923,10 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [14] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 16319 strings out of 477728
- 358421 string characters out of 5842238
+ 16337 strings out of 477728
+ 359619 string characters out of 5842238
  685795 words of memory out of 5000000
- 36571 multiletter control sequences out of 15000+600000
+ 36589 multiletter control sequences out of 15000+600000
  480331 words of font info for 105 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,13n,80p,1436b,625s stack positions out of 5000i,500n,10000p,200000b,80000s

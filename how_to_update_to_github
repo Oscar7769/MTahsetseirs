@@ -1,5 +1,5 @@
 git add .
 
-git commit -m "更新了介紹與動機"
+git commit -m "把intro跟Motivation打完"
 
 git push
