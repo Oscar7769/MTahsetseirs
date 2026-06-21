@@ -57,20 +57,15 @@ Related Work 的部分，我主要會分三個部分說明，
 \clearpage
 
 \section{FMQA/SA for Photonic Inverse Design}
-為了克服連續優化方法中非凸(Non-convex)邊界投影導致的數值不穩定性，學術界逐漸將研究延伸至「離散組合優化(Combinatorial Optimization)」。
-這種方法必須將光學元件或結構參數嵌入(Embedding)為離散化的二元陣列(Binary Array)，並藉由基於退火型演算法進行全域搜尋，可以有效解決光學設計中容易
-陷入局部最小值(Local Minima)的瓶頸。\
-[11]\textbf{西元1983年}Kirkpatrick等人提出「模擬退火(Simulated Annealing, SA)演算法」，此演算法將熱力學中的退火概念轉換為數學運算，透過隨機性選擇與
-允許有限機率的能量爬升的機制，可以有效突破局部最佳解的限制，成為了組合優化理論的根源，也奠定了後續所有啟發式全域搜尋演算法的物理基礎。
-[12]\textbf{西元1998年}Kadowaki與Nishimori提出了量子退火(Quantum Annealing, QA)理論，
-奠定了透過全域搜尋Ising/QUBO能量基態的物理基礎，透過量子穿隧效應或機率性能量爬升，可以有效突破複雜設計空間的局部最小值瓶頸。
-[13]\textbf{西元2010年}Rendle將「因子分解機(Factorization Machines, FM)」引入機器學習領域，FM的數學表達式可以直接映射為QUBO模型的二次多項式，
-可以將原本高維度的複雜組合問題轉化為QUBO模型，提供了直接利用硬體進行優化的可能。
-[14]\textbf{西元2015年}Shen, Menon等人在不需要量子電腦的情形下，利用「直接二元搜尋法(Direct Binary Search, DBS)」證明二元像素化在光學元件設計上的潛力。
-[15]\textbf{西元2020年}Kita,Tamura與東京大學團隊，將因子分解機與D-Wave量子退火硬體結合，提出了FMQA(Factorization Machines Quantum Annealing)架構，
-在超穎材料的設計上證明此方法有效突破人類直覺的效能限制。
-[16]\textbf{西元2022年}Inoue, Noda與京都大學團隊，將FMQA應用於PCSEL的設計，證明了該架構在處理複雜非均勻結構與高維度離散參數時的巨大潛力。
-[17]\textbf{西元2024年}Zhu, Li等人發表的綜述，確立了「代理模型結合退火(Surrogate Model + Annealing)」的混合式框架在複雜物理反向設計領域的可靠性與高效率。
+為了克服連續優化方法中非凸(Non-convex)邊界投影導致的數值不穩定性，研究逐漸轉向「離散組合優化(Combinatorial Optimization)」。此方法將光學元件或結構參數映射為離散的二元陣列(Binary Array)，並藉由退火型演算法進行全域搜尋，以避開光學設計中易陷入局部最小值(Local Minima)的瓶頸。\
+
+[11]\textbf{西元1983年}Kirkpatrick等人提出「模擬退火(Simulated Annealing, SA)演算法」，將熱力學退火概念轉化為數學模型，藉由隨機選擇與允許機率性攀爬能量障壁的機制突破局部最佳解，成為組合優化理論與後續啟發式全域搜尋演算法的基礎。
+[12]\textbf{西元1998年}Kadowaki與Nishimori提出量子退火(Quantum Annealing, QA)理論，奠定尋找 Ising/QUBO 能量基態的物理基礎，利用量子穿隧效應或機率性躍遷跨越複雜設計空間中的局部極小值。
+[13]\textbf{西元2010年}Rendle提出「因子分解機(Factorization Machines, FM)」，其數學表達式可直接映射為 QUBO 模型的二次多項式，將高維組合問題轉換為 QUBO 形式，使直接利用退火硬體加速最佳化成為可能。
+[14]\textbf{西元2015年}Shen與Menon等人提出「直接二元搜尋法(Direct Binary Search, DBS)」，無需量子計算設備即可利用二元像素化結構實現高效的光學元件設計。
+[15]\textbf{西元2020年}Kitai與Tamura等東京大學團隊結合因子分解機與 D-Wave 量子退火硬體，提出 FMQA 架構，於超穎材料設計中突破了傳統物理直覺的限制。
+[16]\textbf{西元2022年}Inoue與Noda等京都大學團隊將 FMQA 應用於 PCSEL 設計，驗證了該架構處理複雜非均勻結構與高維離散參數的有效性。
+[17]\textbf{西元2024年}Zhu與Li等人的綜述確立了「代理模型結合退火(Surrogate Model + Annealing)」混合架構在複雜物理反向設計中的可靠性與高效性。
 
 \begin{table}[H] 
 \centering
@@ -100,24 +95,19 @@ Related Work 的部分，我主要會分三個部分說明，
 
 \section{Low-dimensional Encoding-Based Methods}
 
-在本篇研究中，為了解決組合優化演算法在遇到高解析度網格時，量子位元（QuBits）常常不夠用的限制，以及離散像素結構在製程上帶來的鋸齒效應和光學散射損耗，
-我引進了潛在空間降維以及空間頻率平滑化等機制來對元件結構進行改良。為了讓此研究設計的編碼機制有更紮實的理論根據，我特別整理了相關技術的年份演進跟發展脈絡。\
+為了解決組合最佳化演算法在高解析度網格下量子位元（qubits）不足的問題，並降低離散像素結構造成的製程鋸齒與光學散射損耗，本研究引入潛在空間降維及空間頻率平滑化機制。為奠定此編碼架構的理論基礎，以下整理相關技術的發展脈絡。\
 
-[18]\textbf{西元2011年}Lazarov與Sigmund探討了如何消除拓撲優化中棋盤格效應（Checkerboard effect），
-他們引入基於Helmholtz偏微分方程的濾波算子，可以用隱式求解的方式做到低通濾波的效果。
-[19]\textbf{西元2016年}Odena 等人分析了神經網路在用反卷積（Deconvolution）放大幾何訊號時，時常會因為網格不均勻重疊而產生離散的棋盤格邊界瑕疵，
-這篇研究證實了改用「插值放大再搭配標準卷積（Resize-Convolution）」的架構能夠真正消除網格瑕疵並還原出平滑的邊界。
-同年，[20]Shi等人提出次像素卷積（Sub-pixel Convolution）的超解析度技術，展示了透過重新排列特徵圖的空間維度，能直接將低解析度特徵映射為高解析度輸出。
-[21]\textbf{西元2017年}Higgins等人提出$\beta$-VAE（變分自編碼器）架構，透過超參數 $\beta$ 來限制潛在空間的容量，
-並且在損失函數中引入KL散度懲罰項，有效控制潛在空間的自由度，
-同年，[22]Piggott 與 Vučković 等人在光學反向設計中採用了水平集方法(Level Set Method)描述結構邊界，並且透過加入曲率限制來消除隙縫與孤島結構，
-使生成的波導邊界更加平滑且更具可製造性。
-[23]\textbf{西元2018年}Burgess等人提出Capacity Annealing，改善$\beta$-VAE 在特徵解耦與重建精度之間的權衡，奠定低維度潛在空間表示的理論基礎。
-\textbf{西元2019年}[24]Ma 與 Liu 等人將變分自編碼器（VAE）應用於超穎材料的反向設計。
-同年，[25]Zhang 等人指出卷積網路在縮放影像時容易產生混疊現象，造成特徵不穩定，而加入低通濾波可減少此問題，為上採樣(Upsampling)階段的高斯平滑提供理論依據。
-\textbf{西元2020年}[26]Li與Anandkumar等人提出傅立葉神經算子（FNO），利用低頻參數化實現偏微分方程映射的網格獨立性，也支持以傅立葉方法平滑幾何邊界。
-\textbf{西元2021年}[27]Kudyshev與Liao等人結合對抗式自編碼器（AAE）與全域最佳化，在低維潛在空間中進行反向設計，提升了設計效率。
-同年，[28]Karras等人與NVIDIA團隊提出了StyleGAN3，透過抗混疊設計減少網格造成的偽影，使生成的結果可以更加平滑且穩定。
+[18]\textbf{西元2011年}Lazarov與Sigmund為消除拓撲優化中的棋盤格效應（checkerboard effect），引入基於 Helmholtz 偏微分方程式的濾波算子，透過隱式求解達到低通濾波效果。
+[19]\textbf{西元2016年}Odena 等人指出，神經網路使用反卷積（deconvolution）放大幾何訊號時，常因網格不均勻重疊產生棋盤格邊界偽影，而研究證實，改用「插值放大搭配標準卷積（resize-convolution）」能有效消除網格瑕疵並還原平滑邊界。
+同年，[20]Shi等人提出次像素卷積（sub-pixel convolution）超解析度技術，透過重組特徵圖空間維度，直接將低解析度特徵映射為高解析度輸出。
+\textbf{西元2017年}[21]Higgins等人提出 $\beta$-VAE 架構，藉由超參數 $\beta$ 限制潛在空間容量，並於損失函數引入 KL 散度懲罰項以控制潛在空間自由度。
+同年，[22]Piggott 與 Vučković 等人在光學反向設計中採用水平集方法（level set method）描述結構邊界，並加入曲率限制以消除細縫與孤島，提升波導邊界平滑度與製程可行性。
+\textbf{西元2018年}[23]Burgess等人提出容量退火（capacity annealing），改善了 $\beta$-VAE 在特徵解耦與重建精度間的取捨，優化低維潛在空間的表示能力。
+\textbf{西元2019年}[24]Ma 與 Liu 等人將 VAE 應用於超穎材料的反向設計。
+同年，[25]Zhang 等人指出卷積網路縮放影像時易產生混疊（aliasing）而導致特徵不穩定，證實引入低通濾波可緩解此現象，為上採樣（upsampling）階段的高斯平滑提供理論支持。
+\textbf{西元2020年}[26]Li與Anandkumar等人提出傅立葉神經算子（FNO），以低頻參數化實現偏微分方程式映射的網格獨立性，並支持利用傅立葉轉換平滑幾何邊界。
+\textbf{西元2021年}[27]Kudyshev與Liao等人結合對抗式自編碼器（AAE）與全域最佳化，於低維潛在空間中搜索最佳結構，顯著縮減高維設計的運算開銷。
+同年，[28]Karras等人與 NVIDIA 團隊發表 StyleGAN3，藉由抗混疊設計抑制網格偽影，生成更平滑穩定的幾何圖樣。
 
 
 \begin{table}[H] 
