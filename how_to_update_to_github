@@ -1,5 +1,5 @@
 git add .
 
-git commit -m "把Related work打完"
+git commit -m "把Theory 3.1.1打完"
 
 git push

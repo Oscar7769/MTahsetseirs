@@ -1,44 +1,69 @@
-\chapter{System Model}
+\chapter{Theory}
 \label{ch:architecture}
 
-如果想在latex裡面插入表格, 可以搜尋latex table generator, 有很多線上網站可以參考. 我個人都是使用線上網站去產生大致的語法, 然後再根據個人喜好去做微調, wikibook有很多資料可以參考, 網址在這邊: https://en.wikibooks.org/wiki/LaTeX/Tables
+\section{Optical Principles and Numerical Simulation}
+在這個章節中，我會詳細推導並說明光在矽基整合光學波導中的傳播物理，以及模態分波多工器運作的理論基礎，
+最後會介紹數值模擬的基礎理論。我們將從電磁場數學模型出發，分析奈米級波導的邊界條件與模態行為，
+作為後續反向設計演算法與模型預測的依據。
+\subsection{Waveguide Physics and Eigenmode Theory}
+首先，在波導中，光會被侷限在折射率較高的矽核心中，並透過全反射(Total internal reflection, TIR)進行傳播。
+在無自由電荷($\rho = 0$)且無源($\vec{J} = 0$)的介電質波導環境中，
+我們可以用馬克士威方程(Maxwell equations)中的法拉第電磁感應定律(3.1)與馬克士威-安培定律(3.2)微分式
+來描述光的傳播行為，如下所示：
+\begin{align}
+\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t}
+\label{eq:maxwell1} \\
+\nabla \times \vec{H} &= \frac{\partial \vec{D}}{\partial t}
+\label{eq:maxwell2}
+\end{align}
+這時候引入了材料的介電質($\epsilon$)和導磁率($\mu$)，假設光場在具有時諧性(Time-Harmonic)，則(3.1)和(3.2)
+馬克士威方程可以寫成頻域複數形式:
+\begin{align}
+\nabla \times \vec{E} &= -i\omega\mu\vec{H}
+\label{eq:freq_maxwell1} \\
+\nabla \times \vec{H} &= i\omega\epsilon\vec{E}
+\label{eq:freq_maxwell2}
+\end{align}
+接著，我們再對馬克士威方程頻域複數形式(3.3)(3.4)取旋度，再均勻的介質中，由於$\nabla\cdot\vec{E} = 0$ ，
+因此，我們即可推導出經典的亥姆霍茲方程(Helmholtz Equation):
+\begin{align}
+\nabla^2\vec{E} + k_0^2 n^2(\vec{r})\vec{E} = 0
+\label{eq:helmholtz}
+\end{align}
+其中，$k_0 = \frac{\omega}{c}$為真空中的波數，介電常數與折射率($n$)關係為$\epsilon = n^2\epsilon_0$，
+因此光子能夠被侷限在波導內部傳播，就是因為波導核心層與包層之間的折射率差而產生的全反射(TIR)，在本篇矽基波導的核心
+材料為矽(Silicon, Si)，其折射率($n_{\mathrm{Si}}$)約為3.48; 而包層為二氧化矽(Silicon dioxide, $\mathrm{SiO_2}$)，
+其折射率($n_{\text{SiO}_2}$)約為1.44。
 
-如果要引用表格, 記得在table裡加上label的語法, 然後就可以呼叫 Tab~\ref{tab1}, 寫中文的就是表~\ref{tab1}. 通常Table的caption是寫在表格的上面, 圖片則是放在下面.
+當波導結構在傳播方向($z$軸)上具備平移對稱性(Translation symmetry)時，我們可以透過將電場進行解分離變數，
+寫成沿著$z$方向傳播的形式:
+\begin{align}
+\vec{E} = \vec{E}(x, y)e^{-i\beta z}
+\label{eq:Translation symmetry in Z}
+\end{align}
 
-\begin{table}[!ht]
-    \centering
-    \caption{This is a table.}
-    \label{tab1}
-    \begin{tabular}{|l|l|l|l|}
-    \hline
-        A & 1 & 4 & 7 \\ \hline
-        B & 2 & 5 & 8 \\ \hline
-        C & 3 & 6 & 9 \\ \hline
-    \end{tabular}
-\end{table}
+接著將$z$方向傳播形式(3.6)帶入亥姆霍茲方程(3.5)後，對$z$做二次偏微分會得到$-\beta^2$(也就是$\frac{\partial^2}{\partial z^2} \rightarrow -\beta^2$)，
+整理後我們可以得到橫截面($xy$平面)上的二維波動方程:
+\begin{align}
+\left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} \right)\vec{E} + k_0^2 n^2(\vec{r})\vec{E} = \beta^2\vec{E}
+\label{eq:xy 2D Wave Equation}
+\end{align}
 
-後來在圖書館的``2022 研究攻略營 論文寫作實戰技巧(顏安孜老師)''看到另一種作法，網址: http://bit.ly/3yE06Hx
+這邊可以定義成一個線性算子(Linear operator)$L$:
+\begin{align}
+L \triangleq \left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} \right) + k_0^2 n^2(\vec{r})
+\label{eq:linear_operator}
+\end{align}
 
-裡面的講義有提到Excel2LaTeX，細節可以去看圖書館的連結，裡面有放講義，下方是顏安孜老師的講義截圖。(不過我個人偏好直接使用latex的表格語法, 這種轉檔的東西有時候會怪怪的)
+因此可以將整個光學波導的模態傳播問題簡化為標準的特徵值問題(Eigenvalue Problem, EVP):
+\begin{align}
+L\vec{E} = \beta^2\vec{E}
+\label{eq:WG Eigenvalue Problem}
+\end{align}
 
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.8\textwidth]{img/excel2latex.png}
-	\caption{Excel2LaTeX.}
-	\label{fig:excel2latex}
-\end{figure}
+在這個式子中，模態(Modes)的空間場分佈就會等於該算子 $L$ 的特徵函數(Eigenfunction)，
+而傳播常數的平方 $\beta^2$ 則會等於其對應的特徵值(Eigenvalue)。
 
 
-\begin{table} [h]
-\centering
-\caption{Comparison on model efficiency and model size.}
-\begin{tabular}{c|c|c}
-\toprule[1.25pt]
-Model   & {Training \& Test }  & {Model Size }      \\ 
-\midrule
-LTD-GCN   & \textbf{11ms}    \& \textbf{4.5ms}       & 2.50M             \& 2.50M     \\ 
-LTD-GCN-i & \underline{13ms} \& \underline{4.6ms}    & 2.75M             \& 2.76M     \\  
-\bottomrule[1.25pt]
-\end{tabular}
-\label{table:model_com}
-\end{table}
+\subsection{Waveguide Discontinuities and Device Principles}
+\subsection{Finite-Difference Time-Domain (FDTD) Method}

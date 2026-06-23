@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  21 JUN 2026 16:04
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  23 JUN 2026 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -784,7 +784,14 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[4] (./main.toc)
+[4] (./main.toc
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [5
+
+])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
@@ -792,9 +799,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [5
-
-] (./main.lof)
+ [6] (./main.lof)
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
@@ -802,7 +807,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [6
+ [7
 
 ] (./main.lot)
 \tf@lot=\write5
@@ -812,7 +817,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [7
+ [8
 
 ]) (./Sections/1.Introduction_Motivation.tex
 Chapter 1.
@@ -882,22 +887,24 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [10]) (./Sections/3.Theory.tex
 Chapter 3.
-File: img/excel2latex.png Graphic file (type bmp)
-<img/excel2latex.png>
-)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [11
+[11
 
 
-] (./Sections/4.Method_Result.tex
+]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [12]
+ [12])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [13] (./Sections/4.Method_Result.tex
 Chapter 4.
 File: img/1.system_architecture.pdf Graphic file (type pdf)
 <use img/1.system_architecture.pdf>
@@ -908,21 +915,21 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [13
+ [14
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [14] (./Sections/5.Conclusion.tex
+ [15] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [15
+ [16
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -937,21 +944,21 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [16
+ [17
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [17
+ [18
 
 ]) (./Sections/appendix.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [18]
+ [19]
 Chapter 7.
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
@@ -962,21 +969,29 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[19
+[20
 
-])
+]
+
+LaTeX Warning: Reference `fig:excel2latex' on page 21 undefined on input line 29.
+
+)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [20] (./main.aux) ) 
+ [21] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 16436 strings out of 477728
- 362793 string characters out of 5842238
- 689918 words of memory out of 5000000
- 36682 multiletter control sequences out of 15000+600000
- 480347 words of font info for 107 fonts, out of 8000000 for 9000
+ 16438 strings out of 477728
+ 362895 string characters out of 5842238
+ 689990 words of memory out of 5000000
+ 36683 multiletter control sequences out of 15000+600000
+ 480363 words of font info for 109 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 78i,13n,80p,362b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,14n,80p,362b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (30 pages).
+Output written on main.pdf (32 pages).
