@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  23 JUN 2026 19:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  24 JUN 2026 19:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -208,24 +208,24 @@ File: ctex-scheme-plain.def 2021/12/12 v2.5.8 Plain scheme for generic (CTEX)
 File: ctex.cfg 2021/12/12 v2.5.8 Configuration file (CTEX)
 )
 
-Package fontspec Info: Font family 'TW-Kai.ttf(0)' created for font
-(fontspec)             'TW-Kai.ttf' with options
+Package fontspec Info: Font family 'TW-Kai(0)' created for font 'TW-Kai' with
+(fontspec)             options
 (fontspec)             [Script={CJK},Path={./fonts/},AutoFakeBold={4},AutoFakeSlant={0.2}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;slant=0.2;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
  (/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
@@ -756,7 +756,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 
 ] (./covers/toc_var.tex (./Sections/0.2.Abstract_chinese.tex
 Overfull \hbox (8.48245pt too wide) in paragraph at lines 39--41
-[]\TU/TW-Kai.ttf(0)/m/n/12 數 值 模 擬 的 部 分，|  本 研 究 利 用 有 限 差 分 時 域 法 \TU/TimesNewRoman(0)/m/n/12 (Finite-Difference Time-Domain\TU/TW-Kai.ttf(0)/m/n/12 ，| \TU/TimesNewRoman(0)/m/n/12 FDTD)
+[]\TU/TW-Kai(0)/m/n/12 數 值 模 擬 的 部 分，|  本 研 究 利 用 有 限 差 分 時 域 法 \TU/TimesNewRoman(0)/m/n/12 (Finite-Difference Time-Domain\TU/TW-Kai(0)/m/n/12 ，| \TU/TimesNewRoman(0)/m/n/12 FDTD)
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -899,12 +899,32 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [12])
+ [12]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [13] (./Sections/4.Method_Result.tex
+ [13]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [14]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [15])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [16]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [17] (./Sections/4.Method_Result.tex
 Chapter 4.
 File: img/1.system_architecture.pdf Graphic file (type pdf)
 <use img/1.system_architecture.pdf>
@@ -915,21 +935,21 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [14
+ [18
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [15] (./Sections/5.Conclusion.tex
+ [19] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [16
+ [20
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -944,21 +964,21 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [17
+ [21
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [18
+ [22
 
 ]) (./Sections/appendix.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [19]
+ [23]
 Chapter 7.
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
@@ -969,29 +989,29 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[20
+[24
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 21 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 25 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [21] (./main.aux)
+ [25] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16438 strings out of 477728
- 362895 string characters out of 5842238
- 689990 words of memory out of 5000000
- 36683 multiletter control sequences out of 15000+600000
- 480363 words of font info for 109 fonts, out of 8000000 for 9000
+ 16462 strings out of 477728
+ 362717 string characters out of 5842238
+ 690042 words of memory out of 5000000
+ 36705 multiletter control sequences out of 15000+600000
+ 480379 words of font info for 111 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 78i,14n,80p,362b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,16n,80p,362b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (36 pages).

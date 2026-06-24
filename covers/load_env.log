@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  21 JUN 2026 15:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  24 JUN 2026 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -213,7 +213,7 @@ File: ctex.cfg 2021/12/12 v2.5.8 Configuration file (CTEX)
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -232,7 +232,7 @@ Package fontspec Warning: Font "TW-Kai" does not contain requested Script
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -247,7 +247,7 @@ A font might not be found for many reasons.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -262,7 +262,7 @@ A font might not be found for many reasons.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -277,7 +277,7 @@ A font might not be found for many reasons.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -292,7 +292,7 @@ A font might not be found for many reasons.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -307,7 +307,7 @@ A font might not be found for many reasons.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -322,7 +322,7 @@ A font might not be found for many reasons.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -337,7 +337,7 @@ A font might not be found for many reasons.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.11 ...toFakeBold={4}, AutoFakeSlant=0.2]{TW-Kai}
+l.11 ...keBold={4}, AutoFakeSlant=0.2]{TW-Kai.ttf}
                                                    % 設定預設中文字體
 
 A font might not be found for many reasons.
@@ -347,29 +347,29 @@ A font might not be found for many reasons.
 
 
 
-Package fontspec Info: Font family 'TW-Kai(0)' created for font 'TW-Kai' with
-(fontspec)             options
+Package fontspec Info: Font family 'TW-Kai.ttf(0)' created for font
+(fontspec)             'TW-Kai.ttf' with options
 (fontspec)             [Script={CJK},Path={./fonts/},AutoFakeBold={4},AutoFakeSlant={0.2}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:embolden=4;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:embolden=4;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:embolden=4;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:embolden=4;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:slant=0.2;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:slant=0.2;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:embolden=4;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:embolden=4;slant=0.2;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:embolden=4;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:embolden=4;slant=0.2;"
 
 (/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
 Package: CJKnumb 2015/04/18 4.8.4
@@ -777,10 +777,10 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
  
 Here is how much of TeX's memory you used:
  15572 strings out of 477728
- 332960 string characters out of 5842238
- 660104 words of memory out of 5000000
+ 333064 string characters out of 5842238
+ 660172 words of memory out of 5000000
  35973 multiletter control sequences out of 15000+600000
  470823 words of font info for 44 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 73i,0n,77p,340b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,0n,77p,340b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
 No pages of output.

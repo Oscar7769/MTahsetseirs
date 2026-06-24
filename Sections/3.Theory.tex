@@ -62,7 +62,107 @@ L\vec{E} = \beta^2\vec{E}
 \end{align}
 
 在這個式子中，模態(Modes)的空間場分佈就會等於該算子 $L$ 的特徵函數(Eigenfunction)，
-而傳播常數的平方 $\beta^2$ 則會等於其對應的特徵值(Eigenvalue)。
+而傳播常數的平方 $\beta^2$ 則會等於其對應的特徵值(Eigenvalue)。這個光學特徵值問題在數學形式上，
+與量子力學中的一維有限位能井問題(Particle in a box problem)有著異曲同工之妙，都必須在邊界條件下求得特定波數與對應的
+空間分布，一維定態薛丁格方程(Schrödinger equation)表示如下：
+\begin{align}
+-\frac{\hbar^2}{2m}\nabla^2\psi + V(\vec{r})\psi = E\psi
+\label{eq:1D schrodinger equation}
+\end{align}
+此式的波函數($\psi$)、位能分布(V($\vec{r}$))與能量特徵值($E$)，分別對應到了波導方程(3.7)中的電場($\vec{E}$)、折射率分布($k_0^2 n^2(\vec{r})$)
+以及傳播常數的平方($\beta^2$)。在數學形式的對等性中，我們可以得出光波導兩個核心物理特質的結論:模態量子化(Quantization)與能量侷限性
+(Confinement)，只有特定且不連續的$\beta$值才能夠穩定存在於波導中，且折射率的對比愈大，位能井就愈深，則波導對光場的侷限性就越好。
+
+另外，每個模態的傳播特徵可以由有效折射率(Effective Refractive Index)來定義:
+\begin{align}
+n_{eff} \triangleq \frac{\beta}{k_0} 
+\label{eq:effective refractive index}
+\end{align}
+因此，對於能夠在波導中穩定傳播的束縛模態，其有效折射率($n_{eff}$)必須介於核心折射率($n_2$)和包層折射率($n_1$)之間，也就是，
+\begin{align}
+n_{1} < n_{eff} < n_{2}
+\label{eq:effective refractive index range}
+\end{align}
+其原因可由電磁場在核心層與包層中的分布特性來理解。在核心層內，光場必須呈現簡諧波動解(Sinusoidal solution)傳播，因此橫向波數需滿足
+\begin{align}
+h^2\triangleq k_0^2 n_2^2 - \beta^2 > 0
+\label{eq:Sinusoidal solution}
+\end{align}
+由此可得$\beta < n_2 k_0$，也就是$n_{eff} < n_2$。\
+另一方面，在包層中光場需以指數衰減的形式向外傳播，也就是漸逝場(Evanescent Field)的形式向外衰減，以確保光能量被侷限於波導內，
+因此衰減係數必須滿足
+\begin{align}
+q^2 = \beta^2 - k_0^2 n_1^2 > 0
+\label{eq:Evanescent Field solution}
+\end{align}
+由此可得$\beta > n_1 k_0$，也就是$n_{eff} > n_1$。
+因此，束縛模態的有效折射率必須介於核心層與包層折射率之間，即使是結構較為複雜的反向設計波導，仍然需要滿足以上條件。\
+
+接著，我們以一維平板波導(Slab Waveguide)結構為例，考慮只有具備$y$軸分量的橫電模態(Transverse Electric Modes, TE modes)，
+其電場可以由以下公式表示:
+\begin{align}
+E_y(x,z,t)=E_m(x)e^{i(\omega t-\beta z)}
+\label{eq:TE mode electric field in slab waveguide}
+\end{align}
+代入二維波動方程(3.7)可以簡化為一維常微分方程，如下式所示:
+\begin{align}
+\frac{d^{2}}{d x^{2}}E_{m} + \left[ k_{0}^{2}n^{2}(x) - \beta^{2} \right] E_{m} = 0
+\label{eq:TE mode 1D differential equation in slab waveguide}
+\end{align}
+其中，核心層與包層之折射率分布表示如下:
+\begin{align}
+n(x) = \begin{cases} n_1, & |x| \ge \frac{d}{2} \\ n_2, & |x| < \frac{d}{2} \end{cases}
+\end{align}
+由於平板波導的幾何結構在中心軸($x$=0)具有對稱性，因此特徵解可以解為偶對稱(Symmetric)與奇對稱(Anti-Symmetric)的解，
+其電場特徵函數 $E_m(x)$ 表示如下：
+\begin{itemize}
+    \item 偶對稱模態(如TE$_0$, TE$_2$):
+    \begin{align}
+E_{m}(x) = \begin{cases} C \cos(hx), & |x| < \frac{d}{2} \\ B e^{-q |x|}, & |x| \ge \frac{d}{2} \end{cases}
+\label{eq:TE mode symmetric solution}
+\end{align}
+    \item 奇對稱模態(如TE$_1$, TE$_3$):
+    \begin{align}
+E_{m}(x) = \begin{cases} C \sin(hx) \cdot \text{sgn}(x), & |x| < \frac{d}{2} \\ B e^{-q |x|} \cdot \text{sgn}(x), & |x| \ge \frac{d}{2} \end{cases}
+\label{eq:TE mode anti symmetric solution}
+\end{align}
+\end{itemize}
+此處橫向波數 $h^2 \triangleq k_0^2 n_2^2 - \beta^2 > 0$ 且包層消散係數 $q^2 \triangleq \beta^2 - k_0^2 n_1^2 > 0$ 。\\
+根據電磁學邊界條件，在介電質交界面（$x = \pm d/2$）上，切線電場分量 $E_y$ 與切線磁場分量 $H_z$ 皆必須滿足連續條件。
+透過法拉第電磁感應定律可導出磁場分量關係式 $H_{z} = \frac{1}{-i\omega\mu}\frac{\partial E_{y}}{\partial x}$ 。
+將兩者的電場解代入並應用 $x = d/2$ 處的連續條件，可分別得到對應的齊次線性方程組：
+\begin{itemize}
+    \item 偶對稱邊界條件:
+    \begin{align}
+    B e^{-q\frac{d}{2}} - C \cos\left(h\frac{d}{2}\right) &= 0 \\
+    B q e^{-q\frac{d}{2}} - C h \sin\left(h\frac{d}{2}\right) &= 0
+    \end{align}
+    \item 奇對稱邊界條件:
+    \begin{align}
+    B e^{-q\frac{d}{2}} - C \sin\left(h\frac{d}{2}\right) &= 0 \\
+    B q e^{-q\frac{d}{2}} + C h \cos\left(h\frac{d}{2}\right) &= 0
+    \end{align}
+\end{itemize}
+
+若要使上述方程組存在非平凡解（Nontrivial solutions），其係數矩陣的行列式值必須嚴格等於零 。
+展開行列式並消去共同項 $e^{-qd/2}$ 後，即可成功導出兩種模態的特徵方程式（Characteristic Equations） ：
+\begin{align}
+    \begin{aligned}
+    \text{Symmetric (偶對稱):} \quad & q = h \tan\left(\frac{hd}{2}\right) \\
+    \text{Anti-symmetric (奇對稱):} \quad & q = -h \cot\left(\frac{hd}{2}\right)
+    \end{aligned}
+\end{align}
+
+將 $h$ 與 $q$ 的定義代回上式(3.24)，即可得到最終用來求解傳播常數 $\beta$ 的物理關係式 ：
+\begin{align}
+    \begin{aligned}
+    \text{Symmetric:} \quad & \sqrt{\beta^{2}-{k_{0}}^{2}{n_{1}}^{2}} = \sqrt{k_{0}^{2}n_{2}^{2}-\beta^{2}} \tan\left[\sqrt{k_{0}^{2}n_{2}^{2}-\beta^{2}}\frac{d}{2}\right] \\
+    \text{Anti-symmetric:} \quad & \sqrt{\beta^{2}-{k_{0}}^{2}{n_{1}}^{2}} = -\sqrt{k_{0}^{2}n_{2}^{2}-\beta^{2}} \cot\left[\sqrt{k_{0}^{2}n_{2}^{2}-\beta^{2}}\frac{d}{2}\right]
+    \end{aligned}
+\end{align}
+
+在實際的光電工程分析中，此方程式可以藉由數值計算工具來進行求解，來計算各階模態精確解的特徵值$\beta$，
+以此來描繪出如$\text{TE}_0, \text{TE}_1, \text{TE}_2, \text{TE}_3$ 等完整模態橫向波函數分佈。
 
 
 \subsection{Waveguide Discontinuities and Device Principles}
