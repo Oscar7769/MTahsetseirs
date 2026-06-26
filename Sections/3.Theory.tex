@@ -7,6 +7,7 @@
 作為後續反向設計演算法與模型預測的依據。
 \subsection{Waveguide Physics and Eigenmode Theory}
 首先，在波導中，光會被侷限在折射率較高的矽核心中，並透過全反射(Total internal reflection, TIR)進行傳播。
+關於介電質波導中電磁場行為與模態特徵值問題的完整理論架構，本節主要參考 A. Yariv 的經典著作 [29] 所建立的物理模型。
 在無自由電荷($\rho = 0$)且無源($\vec{J} = 0$)的介電質波導環境中，
 我們可以用馬克士威方程(Maxwell equations)中的法拉第電磁感應定律(3.1)與馬克士威-安培定律(3.2)微分式
 來描述光的傳播行為，如下所示：
@@ -98,7 +99,8 @@ q^2 = \beta^2 - k_0^2 n_1^2 > 0
 由此可得$\beta > n_1 k_0$，也就是$n_{eff} > n_1$。
 因此，束縛模態的有效折射率必須介於核心層與包層折射率之間，即使是結構較為複雜的反向設計波導，仍然需要滿足以上條件。\
 
-接著，我們以一維平板波導(Slab Waveguide)結構為例，考慮只有具備$y$軸分量的橫電模態(Transverse Electric Modes, TE modes)，
+接著，本節參考 A. Yariv 經典光電物理模型中所建立的分析架構 [29]，以一維平板波導(Slab Waveguide)結構為例，
+考慮只有具備$y$軸分量的橫電模態(Transverse Electric Modes, TE modes)，
 其電場可以由以下公式表示:
 \begin{align}
 E_y(x,z,t)=E_m(x)e^{i(\omega t-\beta z)}

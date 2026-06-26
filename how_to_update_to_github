@@ -1,5 +1,5 @@
 git add .
 
-git commit -m "把Theory 3.1.1補充"
+git commit -m "把Related work小改 加上學長論文貢獻"
 
 git push
