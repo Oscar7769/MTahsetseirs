@@ -8,11 +8,14 @@
 \contentsline {figure}{\numberline {5}{\ignorespaces 三維 Yee 晶格空間分量示意圖\cite {meep_docs}。\relax }}{25}{}%
 \contentsline {figure}{\numberline {6}{\ignorespaces 二維 Yee 晶格空間分量示意圖\cite {meep_docs}。\relax }}{26}{}%
 \contentsline {figure}{\numberline {7}{\ignorespaces 跳蛙法時間軸示意圖\cite {hao2008fdtd}。\relax }}{27}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces 傳統階梯化離散與次像素平滑之比較。左圖為連續幾何邊界橫切網格的原始狀態；右圖為 MEEP 於邊界網格配置等效介電常數，以改善材料介面的表示精度。\cite {meep_docs}。\relax }}{29}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces PML 在非均勻介質中的失效示意圖\cite {meep_docs}。\relax }}{31}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces PML 導電率函數之離散化處理對數值反射的影響。左圖(\texttt {is\_integrated=False})因採單純點取樣而產生明顯干涉波紋；右圖(\texttt {is\_integrated=True})透過像素內精確積分，大幅消除了殘留的數值反射 \cite {meep_docs}。\relax }}{32}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8}{\ignorespaces PDF Figure Example.\relax }}{33}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces PNG Example.\relax }}{34}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces PDF Figure Example.\relax }}{35}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces PNG Example.\relax }}{36}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10}{\ignorespaces Three simple graphs\relax }}{36}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Three simple graphs\relax }}{38}{}%
 \addvspace {10\p@ }
 \contentsfinish 
