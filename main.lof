@@ -11,11 +11,19 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces 傳統階梯化離散與次像素平滑之比較。左圖為連續幾何邊界橫切網格的原始狀態；右圖為 MEEP 於邊界網格配置等效介電常數，以改善材料介面的表示精度。\cite {meep_docs}。\relax }}{29}{}%
 \contentsline {figure}{\numberline {9}{\ignorespaces PML 在非均勻介質中的失效示意圖\cite {meep_docs}。\relax }}{31}{}%
 \contentsline {figure}{\numberline {10}{\ignorespaces PML 導電率函數之離散化處理對數值反射的影響。左圖(\texttt {is\_integrated=False})因採單純點取樣而產生明顯干涉波紋；右圖(\texttt {is\_integrated=True})透過像素內精確積分，大幅消除了殘留的數值反射 \cite {meep_docs}。\relax }}{32}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces 二元變數矩陣示意圖。\relax }}{35}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces 高斯上採樣後的灰階示意圖。\relax }}{36}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces 高斯上採樣後的二元平滑化示意圖。\relax }}{37}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces 二維頻譜係數$\alpha _{m,n}$展開為二元設計向量之示意圖\relax }}{39}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces 連續數值場$F(x,y)$之示意圖\relax }}{40}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces 由二元設計矩陣 $\rho (x,y)$ 所構成的二元矩陣即構成設計區域中的材料分布\relax }}{41}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces 變分自編碼器的整體架構與資料流向示意圖\relax }}{42}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces 不同的溫度參數 $\tau $ 對 Gumbel-Softmax 分布之影響示意圖\relax }}{44}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {11}{\ignorespaces PDF Figure Example.\relax }}{35}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces PNG Example.\relax }}{36}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces PDF Figure Example.\relax }}{46}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces PNG Example.\relax }}{47}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {13}{\ignorespaces Three simple graphs\relax }}{38}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Three simple graphs\relax }}{49}{}%
 \addvspace {10\p@ }
 \contentsfinish 

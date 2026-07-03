@@ -10,7 +10,7 @@
 \contentsline {chapter}{英文摘要}{iii}{}%
 \contentsline {chapter}{目錄}{v}{}%
 \contentsline {chapter}{圖目錄\vspace {0em}}{vii}{}%
-\contentsline {chapter}{表目錄\vspace {0em}}{viii}{}%
+\contentsline {chapter}{表目錄\vspace {0em}}{ix}{}%
 \contentsline {chapter}{\numberline {1}Introduction and Motivation}{1}{}%
 \contentsline {chapter}{\numberline {2}Related Work}{4}{}%
 \contentsline {section}{\numberline {2.1}Early Works on Inverse Design of Photonic Devices}{4}{}%
@@ -31,17 +31,17 @@
 \contentsline {subsubsection}{\numberline {3.1.3.5}Discrete Fourier Transform (DFT) and Mode Expansion}{32}{}%
 \contentsline {section}{\numberline {3.2}Structured Encoding and Dimensionality Reduction}{34}{}%
 \contentsline {subsection}{\numberline {3.2.1}Spatial Smoothing via Gaussian Upsampling}{34}{}%
-\contentsline {subsection}{\numberline {3.2.2}Boundary Generation via 2D Fourier Integral}{34}{}%
-\contentsline {subsection}{\numberline {3.2.3}$\beta $-VAE Generative Dimensionality Reduction Theory}{34}{}%
-\contentsline {section}{\numberline {3.3}Factorization Machines and Annealing Optimization}{34}{}%
-\contentsline {subsection}{\numberline {3.3.1}Factorization Machine-based Surrogate Model Theory}{34}{}%
-\contentsline {subsection}{\numberline {3.3.2}Combinatorial Optimization and QUBO Transformation}{34}{}%
-\contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{34}{}%
-\contentsline {chapter}{\numberline {4}Data Fusion Algorithm}{35}{}%
-\contentsline {section}{\numberline {4.1}Data Preprocessing}{35}{}%
-\contentsline {subsection}{\numberline {4.1.1}2D LiDAR Data}{36}{}%
-\contentsline {chapter}{\numberline {5}Conclusions}{37}{}%
-\contentsline {chapter}{\numberline {6}Performance Evaluation}{38}{}%
-\contentsline {chapter}{References}{39}{}%
-\contentsline {chapter}{\numberline {7}Appendix 附錄}{44}{}%
+\contentsline {subsection}{\numberline {3.2.2}2D Fourier-Based Representation via Basis Selection}{38}{}%
+\contentsline {subsection}{\numberline {3.2.3}$\beta $-Variational Autoencoder for Latent Space Representation}{41}{}%
+\contentsline {section}{\numberline {3.3}Factorization Machines and Annealing Optimization}{45}{}%
+\contentsline {subsection}{\numberline {3.3.1}Factorization Machine-based Surrogate Model Theory}{45}{}%
+\contentsline {subsection}{\numberline {3.3.2}Combinatorial Optimization and QUBO Transformation}{45}{}%
+\contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{45}{}%
+\contentsline {chapter}{\numberline {4}Data Fusion Algorithm}{46}{}%
+\contentsline {section}{\numberline {4.1}Data Preprocessing}{46}{}%
+\contentsline {subsection}{\numberline {4.1.1}2D LiDAR Data}{47}{}%
+\contentsline {chapter}{\numberline {5}Conclusions}{48}{}%
+\contentsline {chapter}{\numberline {6}Performance Evaluation}{49}{}%
+\contentsline {chapter}{References}{50}{}%
+\contentsline {chapter}{\numberline {7}Appendix 附錄}{55}{}%
 \contentsfinish 

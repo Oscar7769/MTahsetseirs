@@ -18,7 +18,7 @@
 \citation{meep_docs}
 \citation{meep_docs}
 \@writefile{toc}{\contentsline {chapter}{圖目錄\vspace  {0em}}{vii}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{表目錄\vspace  {0em}}{viii}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{表目錄\vspace  {0em}}{ix}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction and Motivation}{1}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -211,39 +211,74 @@
 \newlabel{eq:dtft_h}{{3.52}{33}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Structured Encoding and Dimensionality Reduction}{34}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Spatial Smoothing via Gaussian Upsampling}{34}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Boundary Generation via 2D Fourier Integral}{34}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}$\beta $-VAE Generative Dimensionality Reduction Theory}{34}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Factorization Machines and Annealing Optimization}{34}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Factorization Machine-based Surrogate Model Theory}{34}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Combinatorial Optimization and QUBO Transformation}{34}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{34}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Data Fusion Algorithm}{35}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces 二元變數矩陣示意圖。\relax }}{35}{}\protected@file@percent }
+\newlabel{fig:binary_variation_matrix}{{11}{35}}
+\newlabel{eq:Gaussian Convolution Kernel}{{3.53}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces 高斯上採樣後的灰階示意圖。\relax }}{36}{}\protected@file@percent }
+\newlabel{fig:High_Pixel_Grayscale}{{12}{36}}
+\newlabel{eq:Tanh Projection}{{3.54}{37}}
+\newlabel{eq:Tanh Projection approx}{{3.55}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces 高斯上採樣後的二元平滑化示意圖。\relax }}{37}{}\protected@file@percent }
+\newlabel{fig:High Pixel Binary smooth}{{13}{37}}
+\newlabel{eq:erf_threshold}{{3.56}{38}}
+\newlabel{eq:b_min}{{3.57}{38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}2D Fourier-Based Representation via Basis Selection}{38}{}\protected@file@percent }
+\newlabel{eq:2D_fourier_integral}{{3.58}{39}}
+\newlabel{eq:binary_alpha}{{3.59}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces 二維頻譜係數$\alpha _{m,n}$展開為二元設計向量之示意圖\relax }}{39}{}\protected@file@percent }
+\newlabel{fig:binary_alpha}{{14}{39}}
+\newlabel{fig:Continuous_variable_field_3d}{{15a}{40}}
+\newlabel{sub@fig:Continuous_variable_field_3d}{{a}{40}}
+\newlabel{fig:Continuous_variable_field_2d}{{15b}{40}}
+\newlabel{sub@fig:Continuous_variable_field_2d}{{b}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces 連續數值場$F(x,y)$之示意圖\relax }}{40}{}\protected@file@percent }
+\newlabel{fig:Continuous_variable_field}{{15}{40}}
+\newlabel{eq:Heaviside_step_function}{{3.60}{40}}
+\citation{higgins2017_betavae}
+\citation{Wilson_2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces 由二元設計矩陣 $\rho (x,y)$ 所構成的二元矩陣即構成設計區域中的材料分布\relax }}{41}{}\protected@file@percent }
+\newlabel{fig:binary_design}{{16}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}$\beta $-Variational Autoencoder for Latent Space Representation}{41}{}\protected@file@percent }
+\newlabel{eq:mu_sigma}{{3.61}{42}}
+\newlabel{eq:reparameterization_trick}{{3.62}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces 變分自編碼器的整體架構與資料流向示意圖\relax }}{42}{}\protected@file@percent }
+\newlabel{fig:vae_architecture}{{17}{42}}
+\newlabel{eq:gumbel_max}{{3.63}{43}}
+\newlabel{eq:gumbel_softmax}{{3.64}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces 不同的溫度參數 $\tau $ 對 Gumbel-Softmax 分布之影響示意圖\relax }}{44}{}\protected@file@percent }
+\newlabel{fig:gumbel_softmax_tau}{{18}{44}}
+\newlabel{eq:bVAE_target_function}{{3.65}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Factorization Machines and Annealing Optimization}{45}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Factorization Machine-based Surrogate Model Theory}{45}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Combinatorial Optimization and QUBO Transformation}{45}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{45}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Data Fusion Algorithm}{46}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:method}{{4}{35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces PDF Figure Example.\relax }}{35}{}\protected@file@percent }
-\newlabel{fig:system_architecture}{{11}{35}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Data Preprocessing}{35}{}\protected@file@percent }
-\newlabel{sec:SMA}{{4.1}{35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces PNG Example.\relax }}{36}{}\protected@file@percent }
-\newlabel{fig:model}{{12}{36}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}2D LiDAR Data}{36}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusions}{37}{}\protected@file@percent }
+\newlabel{ch:method}{{4}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces PDF Figure Example.\relax }}{46}{}\protected@file@percent }
+\newlabel{fig:system_architecture}{{19}{46}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Data Preprocessing}{46}{}\protected@file@percent }
+\newlabel{sec:SMA}{{4.1}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces PNG Example.\relax }}{47}{}\protected@file@percent }
+\newlabel{fig:model}{{20}{47}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}2D LiDAR Data}{47}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusions}{48}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:conclusion}{{5}{37}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Performance Evaluation}{38}{}\protected@file@percent }
+\newlabel{ch:conclusion}{{5}{48}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Performance Evaluation}{49}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:evaluation}{{6}{38}}
-\newlabel{fig:11111}{{13a}{38}}
-\newlabel{sub@fig:11111}{{a}{38}}
-\newlabel{fig:22222}{{13b}{38}}
-\newlabel{sub@fig:22222}{{b}{38}}
-\newlabel{fig:33333}{{13c}{38}}
-\newlabel{sub@fig:33333}{{c}{38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Three simple graphs\relax }}{38}{}\protected@file@percent }
-\newlabel{fig:three graphs}{{13}{38}}
+\newlabel{ch:evaluation}{{6}{49}}
+\newlabel{fig:11111}{{21a}{49}}
+\newlabel{sub@fig:11111}{{a}{49}}
+\newlabel{fig:22222}{{21b}{49}}
+\newlabel{sub@fig:22222}{{b}{49}}
+\newlabel{fig:33333}{{21c}{49}}
+\newlabel{sub@fig:33333}{{c}{49}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Three simple graphs\relax }}{49}{}\protected@file@percent }
+\newlabel{fig:three graphs}{{21}{49}}
 \bibstyle{IEEEtran}
 \bibdata{ref}
 \bibcite{meep_docs}{1}
@@ -254,7 +289,7 @@
 \bibcite{lalaukeraly2013_adjoint}{6}
 \bibcite{piggott2015_inverse_design}{7}
 \bibcite{shen2015_integrated_pbs}{8}
-\@writefile{toc}{\contentsline {chapter}{References}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{References}{50}{}\protected@file@percent }
 \bibcite{frellsen2016_topology_mdm}{9}
 \bibcite{piggott2017_fabrication}{10}
 \bibcite{molesky2018_inverse}{11}
@@ -282,9 +317,10 @@
 \bibcite{heiblum1975_curved_waveguides}{33}
 \bibcite{chrostowski2015_silicon_photonics}{34}
 \bibcite{oskooi2010_meep}{35}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Appendix 附錄}{44}{}\protected@file@percent }
+\bibcite{Wilson_2021}{36}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Appendix 附錄}{55}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:appendix}{{7}{44}}
+\newlabel{ch:appendix}{{7}{55}}
 \ttl@finishall
-\gdef \@abspage@last{56}
+\gdef \@abspage@last{68}

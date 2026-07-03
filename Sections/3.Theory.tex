@@ -553,34 +553,256 @@ MEEP 採用離散時間傅立葉轉換(Discrete-Time Fourier Transform, DTFT)的
 
 因此，透過 DFT 與 Mode Expansion 的結合，MEEP 能同時提供元件的頻譜響應、功率通量以及計算各模態的傳輸效率，
 這使它成為模擬分析矽光子、光學元件的強大工具。
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%分隔線%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Structured Encoding and Dimensionality Reduction}
+本研究採用退火最佳化(Annealing Optimization)作為全域最佳化方法，以搜尋二維光學結構的最佳設計。
+由於退火最佳化需將設計問題表示為二元二次最佳化(Quadratic Unconstrained Binary Optimization, QUBO)形式，
+因此設計結構必須以二元設計變數(binary design variables)進行表示。
+若採用傳統的像素化(pixel-based)設計方式，通常需要透過增加設計區域的解析度來提升結構的設計自由度。
+然而，解析度的提升意味著設計變數將會大幅增加，使得最佳化問題的維度與 QUBO 問題的規模大幅成長，進而提高計算成本。
+而對於量子退火(Quantum Annealing)而言，龐大的問題規模更會導致量子位元(qubits)資源需求大增，受限於當前量子硬體的物理限制。
 
-
-
-
-
+為了克服高維度結構所帶來的計算瓶頸，本章節將會探討三種不同的編碼(Encoding)方法，
+包括高斯上採樣(Gaussian Upsampling)、二維傅立葉積分(2D Fourier Integral)以及$\beta$-Variational AutoEncoder($\beta$-VAE)。
+其中，高斯上採樣利用高斯平滑(Gaussian Smoothing)改善離散二元結構的空間表示，以產生更平滑的結構邊界；
+二維傅立葉積分則透過二元變數$\alpha_{m,n}$來控制各個傅立葉基底的啟用與否，以傅立葉基底的組合形式來建立二維光學結構；
+最後，$\beta$-VAE 透過訓練生成式模型來學習將高維度的結構資料映射成低維度的潛在空間(latent space)，
+進一步降低最佳化問題的維度並且提升搜尋效率。以下各個小節將會介紹上述三種編碼方法的理論基礎。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spatial Smoothing via Gaussian Upsampling}
 
+傳統的像素化設計方法通常是將光學結構離散化為一個二元矩陣，其中每個元素分別代表著不同材料。然而這種離散的表示法存在兩個問題
+:第一個，隨著結構解析度的提升，設計變數的數量將會呈現二次方增加，導致退火演算法面臨嚴重的維度災難; 
+第二個，二元獨立變數容易在邊界產生鋸齒狀，這種結構在實際半導體製程是無法實現的。
 
+為了解決上述問題，在本篇研究中引入了高斯上採樣(Gaussian Upsampling)的編碼方式。
+此方法的核心概念為「低維度離散變數，高解析度連續結構」。
+我們首先在一個低解析度的二維實數空間中定義一組較少的二元設計變數矩陣$X_{\text{low}} \in \{0, 1\}^{N_{\text{low}} \times N_{\text{low}}}$，
+如圖~\ref{fig:binary variation matrix}所示，其中矩陣元素中的$1$表示在該位置放置某個特定材料(例如高折射率材料)，
+而$0$表示背景預設材料(例如矽的基底)，而我們使用的退火演算法只需要在這種低維度的搜尋空間中尋找最佳解。
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.7\textwidth]{img/binary_variation_matrix.png}
+	\caption{二元變數矩陣示意圖。}
+	\label{fig:binary_variation_matrix}
+\end{figure}
 
+上採樣的第一步，是針對低維度二元方塊中數值為1的部分進行上採樣映射。為了消除放大後的鋸齒邊界與尖角，
+我們在像素空間中定義一個二維對稱的高斯捲積核(Gaussian Convolution Kernel)$K(i, j)$，其權重分布符合高斯分布，並且進行歸一化確保總和為1，
+如公式\ref{eq:Gaussian Convolution Kernel}所示:
+\begin{align}
+K(i, j) = A \cdot \exp\left(-\frac{i^2 + j^2}{2\sigma_{\text{pix}}^2}\right)
+\label{eq:Gaussian Convolution Kernel}
+\end{align}
+其中，$\sigma_{\text{pix}}$ 為像素單位下的高斯標準差，$A$ 為歸一化因子，使得在卷積核視窗大小$W$內的權重總和滿足 $\sum_{i,j} K(i, j) = 1$。
 
+接著進行空間濾波，原本陡峭的(0/1)方塊邊界會被模糊化，形成介於 0 與 1 之間的「灰階過渡帶」，物理上也等同於對結構進行了空間平滑化，
+因此我們會得到一張由二元設計變數矩陣卷積過後的高解析度灰階圖，如圖~\ref{fig:High_Pixel_Grayscale}所示。
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.7\textwidth]{img/High_Pixel_Grayscale.png}
+	\caption{高斯上採樣後的灰階示意圖。}
+	\label{fig:High_Pixel_Grayscale}
+\end{figure}
 
+但是灰階圖無法進行光學模擬，因此我們為了重新將連續灰階值轉換回接近二元的結構邊界，
+我們採用了雙曲正切投影(Tanh Projection)，如公式\eqref{eq:Tanh Projection}所示，
+對濾波後的連續密度場$\tilde{\rho}$ 進行非線性投影:
+\begin{align}
+\bar{\rho} = \frac{\tanh(\beta\cdot\eta) + \tanh(\beta\cdot(\tilde{\rho} - \eta))}{\tanh(\beta\cdot\eta) + \tanh(\beta\cdot(1 - \eta))}
+\label{eq:Tanh Projection}
+\end{align}
+其中，$\beta$ 為控制投影的陡峭程度，$\eta$ 為投影閥值。
+
+當 $\beta$ 足夠大時，該投影函數極度接近階梯函數（Heaviside step function），最終的物理密度分佈 $\bar{\rho}$ 可簡化為:
+\begin{align}
+\bar{\rho} \approx \begin{cases} 1, & \text{if } \tilde{\rho} > 0.5 \\ 0, & \text{if } \tilde{\rho} \le 0.5 \end{cases}
+\label{eq:Tanh Projection approx}
+\end{align}
+這表示只有在高斯濾波後的局部密度大於 0.5 的區域，才會在投影後被判定為$1$(例如高折射材料)，否則會被判定為0(預設基底材料)，如圖~\ref{fig:High Pixel Binary smooth}所示。
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.7\textwidth]{img/High_Pixel_Binary_smooth.png}
+	\caption{高斯上採樣後的二元平滑化示意圖。}
+	\label{fig:High Pixel Binary smooth}
+\end{figure}
+
+在這種結合高斯濾波與雙曲正切投影架構下，最後產生幾何結構的最小特徵尺寸(Minimum Feature Size, MFS) $b_{\text{min}}$ 將會受到高斯標準差$\sigma$的限制。
+滿足製程可行性的臨界條件為:
+\begin{align}
+\text{erf}\left(\frac{b}{2\sqrt{2}\sigma}\right) \ge 0.5 \implies \frac{b}{2\sqrt{2}\sigma} \ge \text{erf}^{-1}(0.5) \approx 0.47693
+\label{eq:erf_threshold}
+\end{align}
+透過公式\eqref{eq:erf_threshold}可推導出物理空間容許存在的最小特徵尺寸 $b_{\text{min}}$ 關係式:
+\begin{align}
+ b_{\text{min}} \approx 1.35 \cdot \sigma_{\text{pix}} \cdot d
+\label{eq:b_min}
+\end{align}
+由公式\eqref{eq:b_min}可知，當設計區域的細網格尺寸 $d$ 固定時，此方法可以透過定量調整$\sigma_{\text{pix}}$ 來控制結構的最小特徵尺寸，
+使其嚴格符合半導體製程的最小線寬限制（$b_{\text{min}} \ge b_{\text{fab}}$）。同時，為了避免高斯核在邊緣因為強行截斷而導致幾何結構變形，
+卷積核的視窗大小$W$必須滿足 $W \ge 6\sigma_{\text{pix}} + 1$ 且取奇數，以保證高斯分布的完整性與結構的幾何對稱性。
+
+為了具體說明如何應用公式\eqref{eq:b_min}來控制設計區域的最小特徵尺寸，我將會在第四章方法中詳細舉例並說明。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Boundary Generation via 2D Fourier Integral}
+\subsection{2D Fourier-Based Representation via Basis Selection}
 
+為了降低二維光學結構反向設計問題的自由度，此方法不直接以設計區域中每一個像素的材料選擇作為最佳化變數，
+而是採用頻譜編碼(Spectral Encoding)的方法，將結構的設計變數表示為有限個二維正弦基底函數所構成的低維頻域空間中。
+透過限制可使用的空間頻率成分，使生成出的結構具有較平滑的幾何特徵，並且可以有效減少設計變數的維度，使退火演算法能夠更容易搜尋到最佳解。
 
+假設設計區域的物理尺寸為 $L_x \times L_y$，離散後的空間座標分別記為 $x$ 與 $y$。
+結構的連續場可以透過有限個二維正弦基底函數透過設計變數疊加來表示:
+\begin{align}
+F(x, y) = \sum_{m=1}^{M} \sum_{n=1}^{N} \alpha_{m,n} \cdot \sin(m \pi x) \cdot \sin(n \pi y)
+\label{eq:2D_fourier_integral}
+\end{align}
+其中，$m$ 與 $n$ 分別表示 $x$ 與 $y$ 方向的頻譜模態階數，$M$ 與 $N$ 表示能夠選擇的最大頻譜模態數，
+而 $\alpha_{m,n}$ 分別對應第 $(m,n)$ 個頻譜基底的係數，也就是我們的設計變數，其定義為二元變數:
+\begin{align}
+\alpha_{m,n} \in \{0, 1\}.
+\label{eq:binary_alpha}
+\end{align}
+當 $\alpha_{m,n}$中的某階元素數值為$1$時，表示此階的頻率成分被納入頻率疊加中；相反地，當 $\alpha_{m,n}$中的某階元素值為$0$時，
+表示此階的頻率成分不參與疊加。因此，所有頻譜係數可展開為二元向量，如圖~\ref{fig:binary_alpha}所示。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/binary_alpha.png}
+	\caption{二維頻譜係數$\alpha_{m,n}$展開為二元設計向量之示意圖}
+	\label{fig:binary_alpha}
+\end{figure}
 
+相較於直接為設計區域中的每一個網格指定材料，這種方法只需要調整有限數量的頻譜係數就可以設計出完整的二維結構。因此，可以大幅減少需要優化的變數數量。
+\begin{figure}
+     \centering
+     \begin{subfigure}[]{0.5\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Continuous_variable_field.png}
+         \caption{三維連續數值場$F(x,y)$之示意圖}
+         \label{fig:Continuous_variable_field_3d}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Continuous_variable_field_2d.png}
+         \caption{二維連續數值場$F(x,y)$之示意圖}
+         \label{fig:Continuous_variable_field_2d}
+     \end{subfigure}
+        \caption{連續數值場$F(x,y)$之示意圖}
+        \label{fig:Continuous_variable_field}
+\end{figure}
+由於公式\eqref{eq:2D_fourier_integral}所疊加出的連續數值場$F(x,y)$，如圖~\ref{fig:Continuous_variable_field}所示，還不能直接當作二元材料結構使用，
+因此，如公式\eqref{eq:Heaviside_step_function}所示，我引用了Heaviside step function，並且定義一個閥值常數$C_{\mathrm{th}}$，
+將立體的連續場轉換為平面的二元結構函數 $\rho(x,y)$:
+\begin{align}
+\rho(x,y) = H\left[F(x,y)-C_{\mathrm{th}}\right]
+\label{eq:Heaviside_step_function}
+\end{align}
+其中，$H[\cdot]$ 為Heaviside step function，在此研究中設定$C_{\mathrm{th}} = 0$，
+當頻譜疊加場在某個位置的數值大於零時，這個位置就會被視為 $\rho=1$；相反地，小於零時則會被視為 $\rho=0$，
+因此二元矩陣 $\rho(x,y)$ 所構成的二元矩陣就成了設計區域中的材料分布，如圖~\ref{fig:binary_design}所示。
 
-
+在本研究中的電磁模擬，二元結構函數 $\rho(x,y)$被映射為兩種材料的材料分布，其中$\rho(x,y)=1$對應為矽(Si)，$\rho(x,y)=0$則對應為二氧化矽($\mathrm{SiO_2}$)。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/binary_design.png}
+    \caption{由二元設計矩陣 $\rho(x,y)$ 所構成的二元矩陣即構成設計區域中的材料分布}
+    \label{fig:binary_design}
+\end{figure}
+由於只有保留有限數量的低階正弦模態，這種頻譜編碼的方式會自動減少過高的空間頻率的成分。
+也就是說，生成結構的最小特徵尺寸會受到最大模態階數 $M$ 與 $N$ 的限制。
+當今天退火演算法選擇了較低的模態數時，結構通常會較平滑且尺度較大；相反地，當演算法選擇較高的模態數時，結構的形狀會更複雜並且有更多細小結構。
+因此，模態數$M, N$的選擇就成了需要在設計自由度、結構可製造性與最佳化效率之間取得平衡的設計參數。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{$\beta$-VAE Generative Dimensionality Reduction Theory}
+\subsection{$\beta$-Variational Autoencoder for Latent Space Representation}
 
+本研究中另外參考了DeepMind團隊在2017年發布的研究\cite{higgins2017_betavae}以及普渡大學在2021年發布的研究\cite{Wilson_2021}，
+採用了第三種的編碼策略:引入$\beta$變分自編碼器(beta-Variational Autoencoder $\beta$-VAE) 作為低維潛在空間(Latent Space)表示的模型，
+此方法可將原始高維結構資料映射至低維潛在向量，
+並透過因子分解機與退火演算法去尋找怎麼樣的低維潛在空間能夠透過解碼器有效地描述出我們想要的光學結構。
+本節將說明 $\beta$-VAE 的基本理論；其實際模型架構、訓練流程與最佳化方法，則於第四章中進一步介紹。
 
+變分自編碼器(Variational Autoencoder, VAE)為一種生成式模型，其目的在於學習資料之潛在機率分布，
+並建立由低維潛在空間重建原始資料之映射關係。在本研究中，$\beta$-VAE 將高維結構資料 $\mathbf{x}$ 經由編碼器壓縮至低維潛在向量 $\mathbf{z}$，
+再由解碼器重建為對應結構 $\hat{\mathbf{x}}$。
+
+傳統自編碼器直接學習確定性映射，也就是輸出在相同輸入條件下是唯一且固定的; 而 VAE 則將潛在變數視為機率分布，表示潛在空間會具有可採樣性與一定程度的不確定性。
+編碼器不直接輸出潛在向量，
+而是輸出近似後驗分布 $q_\phi(\mathbf{z}|\mathbf{x})$ 的參數(平均值 $\boldsymbol{\mu}$ 與標準差 $\boldsymbol{\sigma}$):
+\begin{align}
+q_\phi(\mathbf{z}|\mathbf{x})=\mathcal{N}\left(\boldsymbol{\mu}(\mathbf{x}),\mathrm{diag}(\boldsymbol{\sigma}^2(\mathbf{x}))\right)
+\label{eq:mu_sigma}
+\end{align}
+接著由該分布取樣得到潛在向量 $\mathbf{z}$，並輸入解碼器以生成重建結果 $\hat{\mathbf{x}}$。
+為使模型可透過反向傳播進行訓練，引入重參數化技巧(reparameterization trick):
+\begin{align}
+\mathbf{z} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\epsilon},
+\qquad
+\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
+\label{eq:reparameterization_trick}
+\end{align}
+其中 $\odot$ 表示逐元素相乘(element-wise product)。
+變分自編碼器的整體架構與資料流向示意圖如圖~\ref{fig:vae_architecture}所示。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{img/vae_architecture.png}
+    \caption{變分自編碼器的整體架構與資料流向示意圖}
+    \label{fig:vae_architecture}
+\end{figure}
+
+由於本研究之設計變數為二元離散形式，若直接進行離散取樣將造成不可微分問題，因此在解碼端採用 Gumbel-Softmax 方法，可以建立離散設計變數的可微分近似表示。
+
+如果要從具有 $K$ 個類別的機率分布中進行採樣，
+Gumbel-Max 方法會在各類別的對數機率 $\log \alpha_k$ 中加入獨立同分布的 Gumbel 雜訊 $G_k$，並將離散採樣表示為:
+\begin{align}
+y_k = \text{one\_hot} \left( \arg\max_{k} (\log \alpha_k + G_k) \right)
+\label{eq:gumbel_max}
+\end{align}
+其中 $G_k = -\log(-\log U_k)$，且 $U_k$ 滿足均勻分布 $\text{Uniform}(0, 1)$。
+
+然而，公式 \eqref{eq:gumbel_max} 中的 $\arg\max$ 為離散操作，在大部分區域梯度皆為零，
+表示它本質上還是不可微。Gumbel-Softmax 進一步使用連續可微的 Softmax 函數來接近 $\arg\max$ 的離散輸出。
+其連續近似的輸出向量 $\mathbf{y} = [y_1, y_2, \dots, y_K]^T$ 中，第 $k$ 個元件的計算公式可以表示為:
+\begin{align}
+y_k = \frac{\exp\left( \frac{\log \alpha_k + G_k}{\tau} \right)}{\sum_{j=1}^{K} \exp\left( \frac{\log \alpha_j + G_j}{\tau} \right)}
+\label{eq:gumbel_softmax}
+\end{align}
+其中 $\tau$ 表示為溫度參數(Temperature Parameter)。
+如圖~\ref{fig:gumbel_softmax_tau}所示，溫度參數 $\tau$ 對分布的控制機制為:
+\begin{itemize}
+\item \textbf{當 $\tau$ 較大時：} 輸出機率分布較為平滑，各類別之間的差異較小。在二元情況下，輸出值通常較接近 $0.5$。
+\item \textbf{當 $\tau$ 逐漸降低時：} 輸出分布會逐漸集中於其中一個類別，並趨近於 one-hot 向量。在二元情況下，輸出將接近 $0$ 或 $1$。
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{img/gumbel_softmax_tau.png}
+	\caption{不同的溫度參數 $\tau$ 對 Gumbel-Softmax 分布之影響示意圖}
+	\label{fig:gumbel_softmax_tau}
+\end{figure}
+$\beta$-VAE 則是保留著傳統 VAE 的基礎，透過在目標函數下界(Evidence Lower Bound, ELBO)中引入一個用來調節的超參數 $\beta$。
+其核心優化目標函數可表示為：
+\begin{align}
+\mathcal{L}_{\beta\text{-VAE}}(\theta, \phi; \mathbf{x}) = \mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})}[\log p_\theta(\mathbf{x}|\mathbf{z})] - \beta D_{\text{KL}}(q_\phi(\mathbf{z}|\mathbf{x}) \parallel p(\mathbf{z}))
+\label{eq:bVAE_target_function}
+\end{align}
+
+此目標函數可以拆解成兩個部分:
+\begin{itemize}
+    \item \textbf{重建損失(Reconstruction Term):}
+    在公式\eqref{eq:bVAE_target_function}中的第一項 $\mathbb{E}_{q_\phi(\mathbf{z}|\mathbf{x})}[\log p_\theta(\mathbf{x}|\mathbf{z})]$，
+    主要功能是用來衡量重建結構 $\hat{\mathbf{x}}$ 與原始結構 $\mathbf{x}$ 之間的差異程度。此項越大，代表解碼器重建的結果越接近原始輸入資料。
+    \item \textbf{KL 散度(Kullback-Leibler Divergence, KL Divergence):}
+    在公式\eqref{eq:bVAE_target_function}中的第二項$D_{\text{KL}}(\cdot)$，
+    主要功能是用來衡量後驗分布 $q_\phi(\mathbf{z}|\mathbf{x})$ 與先驗分布 $p(\mathbf{z})$之間的差異。
+\end{itemize}
+
+當 $\beta > 1$ 時，KL 散度項的權重提高，使近似後驗分布受到更強的先驗約束。此約束可以降低不同潛在維度之間的相關性，使得潛在空間較為傾向於解耦特性。
+
+在解耦後的潛在空間中，潛在向量$\mathbf{z}$的每一個獨立維度(獨立變數)對應到了光學結構中的幾何特徵，例如材料分布、幾何結構等等，但並不是絕對，
+因此本研究在後續透過因子分解機建立潛在向量與光學性能之間的近似關係，並結合退火演算法於潛在空間中搜尋，以設計出符合我們預期的光學結構。
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

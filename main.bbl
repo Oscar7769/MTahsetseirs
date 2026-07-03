@@ -197,4 +197,13 @@ A.~F. Oskooi, D.~Roundy, M.~Ibanescu, P.~A. Bermel, J.~D. Joannopoulos, and
   simulations by the fdtd method,'' \emph{Computer Physics Communications},
   vol. 181, no.~3, pp. 687--702, 2010.
 
+\bibitem{Wilson_2021}
+\BIBentryALTinterwordspacing
+B.~A. Wilson, Z.~A. Kudyshev, A.~V. Kildishev, S.~Kais, V.~M. Shalaev, and
+  A.~Boltasseva, ``Machine learning framework for quantum sampling of highly
+  constrained, continuous optimization problems,'' \emph{Applied Physics
+  Reviews}, vol.~8, no.~4, Dec. 2021. [Online]. Available:
+  \url{http://dx.doi.org/10.1063/5.0060481}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
