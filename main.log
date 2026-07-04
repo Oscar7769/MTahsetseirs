@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  4 JUL 2026 04:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  4 JUL 2026 22:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1129,7 +1129,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [43])
+ [43]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1139,7 +1139,17 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [45] (./Sections/4.Method_Result.tex
+ [45]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [46])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [47] (./Sections/4.Method_Result.tex
 Chapter 4.
 File: img/1.system_architecture.pdf Graphic file (type pdf)
 <use img/1.system_architecture.pdf>
@@ -1150,21 +1160,21 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [46
+ [48
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [47] (./Sections/5.Conclusion.tex
+ [49] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [48
+ [50
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -1179,64 +1189,64 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [49
+ [51
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [50
+ [52
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [51]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [52]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [53]) (./Sections/appendix.tex
+ [53]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [54]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [55]) (./Sections/appendix.tex
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [56]
 Chapter 7.
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[55
+[57
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 56 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 58 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [56] (./main.aux)
+ [58] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16763 strings out of 477728
- 369866 string characters out of 5842238
- 691717 words of memory out of 5000000
- 36974 multiletter control sequences out of 15000+600000
+ 16766 strings out of 477728
+ 369930 string characters out of 5842238
+ 691753 words of memory out of 5000000
+ 36977 multiletter control sequences out of 15000+600000
  486973 words of font info for 138 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,413b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (68 pages).
+Output written on main.pdf (70 pages).

@@ -799,7 +799,7 @@ $\beta$-VAE 則是保留著傳統 VAE 的基礎，透過在目標函數下界(Ev
     主要功能是用來衡量後驗分布 $q_\phi(\mathbf{z}|\mathbf{x})$ 與先驗分布 $p(\mathbf{z})$之間的差異。
 \end{itemize}
 
-當 $\beta > 1$ 時，KL 散度項的權重提高，使近似後驗分布受到更強的先驗約束。此約束可以降低不同潛在維度之間的相關性，使得潛在空間較為傾向於解耦特性。
+當 $\beta > 1$ 時，KL 散度項的權重提高，使近似後驗分布受到更強的先驗約束。這個約束可以降低不同潛在維度之間的相關性，使得潛在空間較為傾向於解耦特性。
 
 在解耦後的潛在空間中，潛在向量$\mathbf{z}$的每一個獨立維度(獨立變數)對應到了光學結構中的幾何特徵，例如材料分布、幾何結構等等，但並不是絕對，
 因此本研究在後續透過因子分解機建立潛在向量與光學性能之間的近似關係，並結合退火演算法於潛在空間中搜尋，以設計出符合我們預期的光學結構。
@@ -807,18 +807,57 @@ $\beta$-VAE 則是保留著傳統 VAE 的基礎，透過在目標函數下界(Ev
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Factorization Machines and Annealing Optimization}
-
-
-
-
+在這個章節中，我會說明如何利用因子分解機(Factorization Machine, FM)建立多元非線性映射之代理模型(Surrogate Model)，
+並推導如何將目標函數精確地映射為二次無約束離散優化問題(Quadratic Unconstrained Binary Optimization, QUBO)的形式，
+最後，我們會探討如何透過模擬退火(Simulated Annealing, SA)或量子退火(Quantum Annealing, QA)來求解QUBO問題，進行最佳組合搜尋的基礎理論。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Factorization Machine-based Surrogate Model Theory}
+此小節主要參考Rendle在2010年發表的Factorization Machine\cite{rendle2010_factorization}，在多元非線性函數中，
+自變數與因變數之間往往存在著複雜且非線性的映射關係，通常需要引入高泛化能力的代理模型來建立近似關係。
+傳統多項式回歸模型(如Support Vector Machine, SVM)在處理高維度的特徵組合時，其二階交互項的參數皆為完全獨立。
+若要要求在此架構下的特徵組合 $x_i$ 與 $x_j$同時有足夠的非零觀測值，在稀疏的資料集下會無法估算參數(即 $w_{i,j}=0$)，進而導致模型的泛化能力大幅下降。
 
+因此，Steffen Rendle 提出了具有二階項的因子分解機(Second-order Factorization Machine)，其數學表示式定義如下:
+\begin{align}
+\hat{y}(\mathbf{x}) = w_0 + \sum_{i=1}^{n} w_i x_i + \sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle \mathbf{v}_i, \mathbf{v}_j \rangle x_i x_j
+\label{eq:factorization_machine}
+\end{align}
+其中$\mathbf{x} = [x_1, x_2, \dots, x_n]^T \in \mathbb{R}^n$為一組輸入特徵向量，$\hat{y}(\mathbf{x})$為輸出的預測值，
+$w_0 \in \mathbb{R}$ 為全域偏差(Global Bias)，$w_i \in \mathbb{R}$ 為一階線性權重向量 $\mathbf{w}$ 的分量，
+功能為計算單一變數的強度。
 
+FM 的核心在於將二階交互作用之權重定義為兩個低維向量的點積，
+也就是 $\hat{w}_{i,j} = \langle \mathbf{v}_i, \mathbf{v}_j \rangle$。
+參數矩陣 $\mathbf{V} \in \mathbb{R}^{n \times k}$ 包含所有特徵維度之隱向量(Latent Vector)，
+$k \in \mathbb{N}_{0}^{+}$ 表示潛在向量的維度（$k \ll n$），其點積項展開如下:
+\begin{align}
+\langle \mathbf{v}_i, \mathbf{v}_j \rangle = \sum_{f=1}^{k} v_{i,f} \cdot v_{j,f}
+\label{eq:fm_dot_product}
+\end{align}
+因此，$k$可以控制FM表達二階交互作用的能力與模型複雜度:
+\begin{itemize}
+    \item  \textbf{$k$ 越大:} 參數較少，訓練時間也較短，比較不容易過擬合(Overfitting)，但也可能無法充分地描述複雜的特徵。
+    \item  \textbf{$k$ 越小:} 可以表達更複雜的交互作用關係，但需要更多訓練資料與計算成本，同時也較容易過擬合。
+\end{itemize}
 
+雖然公式 \eqref{eq:factorization_machine} 中的二階交互作用項需考慮所有特徵對 ((i,j))，若直接計算其內積，
+時間複雜度將為 $\mathcal{O}(kn^2)$。然而，Rendle 在文獻 \cite{rendle2010_factorization} 中所提出之 FM 模型可透過代數重組，
+將二階交互作用項推導為只需線性時間即可完成的形式。其推導如下:
+\begin{align}
+\sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle \mathbf{v}_i, \mathbf{v}_j \rangle x_i x_j 
+&= \frac{1}{2} \sum_{i=1}^{n} \sum_{j=1}^{n} \langle \mathbf{v}_i, \mathbf{v}_j \rangle x_i x_j - \frac{1}{2} \sum_{i=1}^{n} \langle \mathbf{v}_i, \mathbf{v}_i \rangle x_i^2 \nonumber \\
+&= \frac{1}{2} \left( \sum_{i=1}^{n} \sum_{j=1}^{n} \sum_{f=1}^{k} v_{i,f} v_{j,f} x_i x_j - \sum_{i=1}^{n} \sum_{f=1}^{k} v_{i,f}^2 x_i^2 \right) \nonumber \\
+&= \frac{1}{2} \sum_{f=1}^{k} \left( \left( \sum_{i=1}^{n} v_{i,f} x_i \right) \left( \sum_{j=1}^{n} v_{j,f} x_j \right) - \sum_{i=1}^{n} v_{i,f}^2 x_i^2 \right) \nonumber \\
+&= \frac{1}{2} \sum_{f=1}^{k} \left( \left( \sum_{i=1}^{n} v_{i,f} x_i \right)^2 - \sum_{i=1}^{n} v_{i,f}^2 x_i^2 \right)
+\label{eq:fm_linear_time}
+\end{align}
+經由上述代數重組後，二階交互作用項不需逐一計算所有特徵對。
+對於每一個因子維度 $f$，僅需計算 $\sum_{i=1}^{n} v_{i,f}x_i$ 與 $\sum_{i=1}^{n} v_{i,f}^{2}x_i^{2}$ 兩項，
+其計算時間皆為 $\mathcal{O}(n)$。因此，當潛在向量維度為 $k$ 時，二階交互作用項的總時間複雜度可由 $\mathcal{O}(kn^2)$ 降為 $\mathcal{O}(kn)$。
 
-
+在此研究中所使用的Factorization Machines模型皆透過Pytorch重新實作，並且依照公式\eqref{eq:fm_linear_time}推導結果計算二階交互作用項，
+採用線性時間的形式，使其時間複雜度維持為 $\mathcal{O}(kn)$，進而降低模型訓練時的運算成本並提升訓練效率。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Combinatorial Optimization and QUBO Transformation}
