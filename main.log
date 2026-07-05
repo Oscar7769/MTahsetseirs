@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  4 JUL 2026 22:19
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  5 JUL 2026 18:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1064,16 +1064,13 @@ File: covers/logo2.pdf Graphic file (type pdf)
  [34
 
 ]
-
-LaTeX Warning: Reference `fig:binary variation matrix' on page 35 undefined on input line 583.
-
 File: img/binary_variation_matrix.png Graphic file (type bmp)
 <img/binary_variation_matrix.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[35]
+ [35]
 File: img/High_Pixel_Grayscale.png Graphic file (type bmp)
 <img/High_Pixel_Grayscale.png>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1144,12 +1141,32 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [46])
+ [46]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [47] (./Sections/4.Method_Result.tex
+ [47]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [48]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [49]
+Overfull \hbox (10.7812pt too wide) in paragraph at lines 942--944
+\TU/TW-Kai(0)/m/n/12 其 中，| $\OML/cmm/m/it/12 ^^[[]$ \TU/TW-Kai(0)/m/n/12 為 第 $\OML/cmm/m/it/12 i$ \TU/TW-Kai(0)/m/n/12 個 量 子 位 元 的 \TU/TimesNewRoman(0)/m/n/12 Pauli-Z \TU/TW-Kai(0)/m/n/12 算 符，|  其 測 量 結 果 會 對 應 至 自 旋 狀 態 $\OML/cmm/m/it/12 s[] \OMS/cmsy/m/n/12 2 f^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 +1\OMS/cmsy/m/n/12 g$\TU/TW-Kai(0)/m/n/12 。| 
+ []
+
+)
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [50] (./Sections/4.Method_Result.tex
 Chapter 4.
 File: img/1.system_architecture.pdf Graphic file (type pdf)
 <use img/1.system_architecture.pdf>
@@ -1160,21 +1177,21 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [48
+ [51
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [49] (./Sections/5.Conclusion.tex
+ [52] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [50
+ [53
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -1189,64 +1206,64 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [51
+ [54
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [52
+ [55
 
 ]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [53]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [54]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [55]) (./Sections/appendix.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [56]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [57]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [58]) (./Sections/appendix.tex
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [59]
 Chapter 7.
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[57
+[60
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 58 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 61 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [58] (./main.aux)
+ [61] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16766 strings out of 477728
- 369930 string characters out of 5842238
- 691753 words of memory out of 5000000
- 36977 multiletter control sequences out of 15000+600000
+ 16773 strings out of 477728
+ 370065 string characters out of 5842238
+ 691841 words of memory out of 5000000
+ 36984 multiletter control sequences out of 15000+600000
  486973 words of font info for 138 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,413b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (70 pages).
+Output written on main.pdf (73 pages).

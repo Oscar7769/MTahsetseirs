@@ -206,4 +206,8 @@ B.~A. Wilson, Z.~A. Kudyshev, A.~V. Kildishev, S.~Kais, V.~M. Shalaev, and
   \url{http://dx.doi.org/10.1063/5.0060481}
 \BIBentrySTDinterwordspacing
 
+\bibitem{dwave_ocean_sdk}
+{D-Wave Systems}, ``Ocean sdk documentation,''
+  \url{https://docs.ocean.dwavesys.com/}, 2026, accessed: 2026-07-05.
+
 \end{thebibliography}

@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex main"] 1783095510 "main.aux" "main.bbl" "main" 1783095513
+["bibtex main"] 1783247191 "main.aux" "main.bbl" "main" 1783247195
   "./IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1783095511 18776 a8c3a92972370c1f91c9a1d503989188 "xelatex"
-  "ref.bib" 1783076775 11451 a3990ccf3f7d595a440ea9247a08fbb9 ""
+  "main.aux" 1783247192 20081 43005d11c0392d7439d01eedb66cdec0 "xelatex"
+  "ref.bib" 1783247176 11680 c9c082cbdfe04359b759f4900e5f2f6e ""
   (generated)
   "main.bbl"
   "main.blg"
-["xdvipdfmx"] 1783095511 "main.xdv" "main.pdf" "main" 1783095513
-  "main.xdv" 1783095511 783468 f8ff49b22b3113e20fe682246bf9b86f "xelatex"
+["xdvipdfmx"] 1783247193 "main.xdv" "main.pdf" "main" 1783247195
+  "main.xdv" 1783247192 863080 c473a357d03c4735cc8f8acabf05e9dd "xelatex"
   (generated)
   "main.pdf"
-["xelatex"] 1783095510 "main.tex" "main.xdv" "main" 1783095513
+["xelatex"] 1783247191 "main.tex" "main.xdv" "main" 1783247195
   "/etc/texmf/web2c/texmf.cnf" 1779784168 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -156,7 +156,7 @@
   "Sections/0.3.Abstract.tex" 1779882566 3256 7ec50e6d13f79a33e7edc3e55dbd17c7 ""
   "Sections/1.Introduction_Motivation.tex" 1780090112 5762 bc3a2d657cf5ef5ef5a222de40ef9056 ""
   "Sections/2.Relatedwork.tex" 1782554031 15453 deff7e0a278526530216e64f95035141 ""
-  "Sections/3.Theory.tex" 1783095462 56065 aa9b5f416216b76419e4e3cb08a2e161 ""
+  "Sections/3.Theory.tex" 1783247176 68574 1bff93e0ac1968005563c53bedff1fd9 ""
   "Sections/4.Method_Result.tex" 1779783645 1487 6a3ea0fe8b943dcbb26567beafff0874 ""
   "Sections/5.Conclusion.tex" 1779783645 74 fd96186563424648c9756e8118922fe1 ""
   "Sections/6.Future_Work.tex" 1779783645 941 da9bfd66bab51df6ccf05253dea46a5f ""
@@ -177,6 +177,7 @@
   "img/TE0_Profile.png" 1782636159 43666 12b5047c01e800d8ce49cc132ead184e ""
   "img/TE1_Profile.png" 1782636185 46805 ab552483de72ec316f751356aa6563eb ""
   "img/TE2_Profile.png" 1782636203 49815 bf625b669a8874e568b161c83251a6f8 ""
+  "img/VAE_Architecture.png" 1783111541 179636 22ec3341a7dffa3cdf393cf4d2b2a070 ""
   "img/Waveguide schematic diagram.png" 1782546015 45413 85e8e67514b0e0c3c86b17c8e3a911f4 ""
   "img/bend_wavegidue.png" 1782570331 152920 2c49e3c3ab9acae1d317f996973fdf3a ""
   "img/binary_alpha.png" 1783049986 70392 4514968c4b619386d8b421bdfe762836 ""
@@ -186,16 +187,17 @@
   "img/fig1.png" 1779783644 7858 4a4a407cb42d031dfa3d02b138baa979 ""
   "img/fig2.png" 1779783644 1147 b47d9fb62c14e495240be3c8d7e28148 ""
   "img/fig3.png" 1779783644 7466 c34e91a6c32d52674f021f55a3957f50 ""
+  "img/gumbel_softmax_tau.png" 1783107265 60147 42cf34d8a3147a073f92c60476543838 ""
   "img/leapfrog.png" 1782748632 31601 54b74c1179eea9c4d9534f4349c46ad1 ""
   "img/pml_failure.png" 1782849884 87084 314d9a5180e1e7a51b3d4a2676a31b70 ""
   "img/pml_integrated.png" 1782850258 269566 331c182e0d5694cb31752f7ae63445a0 ""
   "img/subpixel.png" 1782848121 49508 dbfa3687f00fd62911e4f863e40efc22 ""
-  "main.aux" 1783095511 18776 a8c3a92972370c1f91c9a1d503989188 "xelatex"
-  "main.bbl" 1783095510 9364 696fb46e772c3bdec5fcb2a73516c818 "bibtex main"
-  "main.lof" 1783095511 2757 301f574d62c4aaae2341a05527c062b5 "xelatex"
-  "main.lot" 1783095511 607 d8cc8a214cc8b9c77aee98885f5ba810 "xelatex"
+  "main.aux" 1783247192 20081 43005d11c0392d7439d01eedb66cdec0 "xelatex"
+  "main.bbl" 1783247191 9508 09b144b9e19bd9ffb9814ba8bad298da "bibtex main"
+  "main.lof" 1783247192 3029 807f39ca19fa2f94e8b9fc3131d61439 "xelatex"
+  "main.lot" 1783247192 607 d8cc8a214cc8b9c77aee98885f5ba810 "xelatex"
   "main.tex" 1782576906 7670 8f88c11c375071463156702156ebd1e1 ""
-  "main.toc" 1783095511 3717 009bf05f62d69ddf421cd8ef5c1fccff "xelatex"
+  "main.toc" 1783247192 3893 595e30bbe77a042eff10a152a96daa12 "xelatex"
   (generated)
   "main.aux"
   "main.lof"

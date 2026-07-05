@@ -36,12 +36,14 @@
 \contentsline {section}{\numberline {3.3}Factorization Machines and Annealing Optimization}{45}{}%
 \contentsline {subsection}{\numberline {3.3.1}Factorization Machine-based Surrogate Model Theory}{45}{}%
 \contentsline {subsection}{\numberline {3.3.2}Combinatorial Optimization and QUBO Transformation}{47}{}%
-\contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{47}{}%
-\contentsline {chapter}{\numberline {4}Data Fusion Algorithm}{48}{}%
-\contentsline {section}{\numberline {4.1}Data Preprocessing}{48}{}%
-\contentsline {subsection}{\numberline {4.1.1}2D LiDAR Data}{49}{}%
-\contentsline {chapter}{\numberline {5}Conclusions}{50}{}%
-\contentsline {chapter}{\numberline {6}Performance Evaluation}{51}{}%
-\contentsline {chapter}{References}{52}{}%
-\contentsline {chapter}{\numberline {7}Appendix 附錄}{57}{}%
+\contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{48}{}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}Simulated Annealing Mechanism}{48}{}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}Quantum Annealing Mechanism}{49}{}%
+\contentsline {chapter}{\numberline {4}Data Fusion Algorithm}{51}{}%
+\contentsline {section}{\numberline {4.1}Data Preprocessing}{51}{}%
+\contentsline {subsection}{\numberline {4.1.1}2D LiDAR Data}{52}{}%
+\contentsline {chapter}{\numberline {5}Conclusions}{53}{}%
+\contentsline {chapter}{\numberline {6}Performance Evaluation}{54}{}%
+\contentsline {chapter}{References}{55}{}%
+\contentsline {chapter}{\numberline {7}Appendix 附錄}{60}{}%
 \contentsfinish 
