@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  5 JUL 2026 18:41
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  7 JUL 2026 13:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -791,7 +791,12 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [5
 
-])
+]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [6])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
@@ -799,7 +804,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [6] (./main.lof
+ [7] (./main.lof
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -814,7 +819,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[7
+[8
 
 ])
 \tf@lof=\write4
@@ -824,7 +829,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [8] (./main.lot)
+ [9] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
@@ -832,7 +837,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [9
+ [10
 
 ]) (./Sections/1.Introduction_Motivation.tex
 Chapter 1.
@@ -1085,11 +1090,15 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [37]
+Overfull \hbox (13.63089pt too wide) in paragraph at lines 648--649
+[]\TU/TW-Kai(0)/m/n/12 為 了 具 體 說 明 如 何 應 用 公 式[]來 控 制 設 計 區 域 的 最 小 特 徵 尺 寸，|  我 將 會 在 第 \TU/TimesNewRoman(0)/m/n/12 4.2.1[]\TU/TW-Kai(0)/m/n/12 節
+ []
+
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [38]
+[38]
 File: img/binary_alpha.png Graphic file (type bmp)
 <img/binary_alpha.png>
 File: img/Continuous_variable_field.png Graphic file (type bmp)
@@ -1157,7 +1166,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [49]
-Overfull \hbox (10.7812pt too wide) in paragraph at lines 942--944
+Overfull \hbox (10.7812pt too wide) in paragraph at lines 943--945
 \TU/TW-Kai(0)/m/n/12 其 中，| $\OML/cmm/m/it/12 ^^[[]$ \TU/TW-Kai(0)/m/n/12 為 第 $\OML/cmm/m/it/12 i$ \TU/TW-Kai(0)/m/n/12 個 量 子 位 元 的 \TU/TimesNewRoman(0)/m/n/12 Pauli-Z \TU/TW-Kai(0)/m/n/12 算 符，|  其 測 量 結 果 會 對 應 至 自 旋 狀 態 $\OML/cmm/m/it/12 s[] \OMS/cmsy/m/n/12 2 f^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 +1\OMS/cmsy/m/n/12 g$\TU/TW-Kai(0)/m/n/12 。| 
  []
 
@@ -1168,30 +1177,68 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [50] (./Sections/4.Method_Result.tex
 Chapter 4.
-File: img/1.system_architecture.pdf Graphic file (type pdf)
-<use img/1.system_architecture.pdf>
-File: img/data_preprocessing.png Graphic file (type bmp)
-<img/data_preprocessing.png>
-)
+
+Overfull \hbox (22.29872pt too wide) in paragraph at lines 4--4
+|[]\TU/TimesNewRoman(0)/b/n/17.28 Factorization Machine with Annealing Optimization Frame-
+ []
+
+File: img/FMSA_flowchart.png Graphic file (type bmp)
+<img/FMSA_flowchart.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [51
+[51
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [52] (./Sections/5.Conclusion.tex
+ [52]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [53]
+Overfull \hbox (2.09715pt too wide) in paragraph at lines 85--89
+\TU/TW-Kai(0)/m/n/12 中 將 進 一 步 介 紹 \TU/TimesNewRoman(0)/m/n/12 Gaussian Upsampling Strategy\TU/TW-Kai(0)/m/n/12 、| \TU/TimesNewRoman(0)/m/n/12 2D Fourier Integral Strategy \TU/TW-Kai(0)/m/n/12 與 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -Variational
+ []
+
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+[54]
+File: img/GU_flowchart.png Graphic file (type bmp)
+<img/GU_flowchart.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [55]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [56]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [57])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [58] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [53
+ [59
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -1206,64 +1253,64 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [54
+ [60
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [55
+ [61
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [56]
+ [62]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [57]
+ [63]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [58]) (./Sections/appendix.tex
+ [64]) (./Sections/appendix.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [59]
+ [65]
 Chapter 7.
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[60
+[66
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 61 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 67 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [61] (./main.aux)
+ [67] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16773 strings out of 477728
- 370065 string characters out of 5842238
- 691841 words of memory out of 5000000
- 36984 multiletter control sequences out of 15000+600000
- 486973 words of font info for 138 fonts, out of 8000000 for 9000
+ 16825 strings out of 477728
+ 372865 string characters out of 5842238
+ 691898 words of memory out of 5000000
+ 37035 multiletter control sequences out of 15000+600000
+ 486981 words of font info for 139 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,413b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (73 pages).
+Output written on main.pdf (80 pages).

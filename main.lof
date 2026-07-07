@@ -20,10 +20,10 @@
 \contentsline {figure}{\numberline {17}{\ignorespaces 變分自編碼器的整體架構與資料流向示意圖\relax }}{42}{}%
 \contentsline {figure}{\numberline {18}{\ignorespaces 不同的溫度參數 $\tau $ 對 Gumbel-Softmax 分布之影響示意圖\relax }}{44}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {19}{\ignorespaces PDF Figure Example.\relax }}{51}{}%
-\contentsline {figure}{\numberline {20}{\ignorespaces PNG Example.\relax }}{52}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Factorization Machine with Annealing Optimization 整體流程圖。\relax }}{52}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces 高斯上採樣(Gaussian Upsampling)流程圖。\relax }}{55}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {21}{\ignorespaces Three simple graphs\relax }}{54}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Three simple graphs\relax }}{60}{}%
 \addvspace {10\p@ }
 \contentsfinish 

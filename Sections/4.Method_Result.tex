@@ -1,34 +1,202 @@
-\chapter{Data Fusion Algorithm}
-\label{ch:method}
+\chapter{Method and Results}
+\label{ch:Method_and_Result}
 
-這個是插入圖片的範例, 圖片都放在img資料夾裡面. 檔案格式有支援: JPG, PNG, PDF, EPS. 就使用自己習慣的繪圖工具, 比較常見的應該就是power point!? power point可以把繪圖區另存成PDF, JPG, PNG, 還有SVG. SVG可以再轉成PDF, 這樣圖片縮放還是會很清楚, 可以把範例的兩張圖片都放大來看, 應該可以看出差別. 
+\section{Factorization Machine with Annealing Optimization Framework}
+本研究採用的最佳化方法為 Factorization Machine with Annealing Optimization。
+這個方法主要是參考 Kitai 等人於 2020 年提出之 \textit{Designing Metamaterials with Quantum Annealing and Factorization Machines}\cite{kitai2020_fmqa}。
+此研究建立了一個結合因子分解機(Factorization Machine)與量子退火(Quantum Annealing)的 FMQA 架構，
+透過 因子分解機 建立目標函數的代理模型，並將其轉換為二元二次最佳化問題，再利用量子退火搜尋候選設計。
 
-最近常用的作法是, 先使用PPT畫一張大圖, 然後儲存成PDF, 如果有白邊想去除的話, 可以找線上網站裁切 (關鍵字: pdf crop free)
+然而，本研究並沒有直接使用量子退火作為 QUBO 求解器，而是採用模擬退火(Simulated Annealing, SA)進行候選結構搜尋。
+因此，本研究保留了 FMQA 架構中「FM 代理模型、QUBO 轉換與退火搜尋」的核心流程，並以 SA 取代原始架構中的 QA，
+將其應用於反向設計。
 
-圖片出現的位置是由latex去決定, 有時候會出現在奇怪的地方, 這時候只能多爬文、嘗試各種參數, 或者把整段圖片code放在前面試試看.
+在本章節中我會說明Factorization Machine with Annealing Optimization 的架構以及實際的完整執行流程。
+首先我會介紹初始結構資料集的建立方式，接著說明 FM 代理模型之訓練，以及其模型參數轉換為 QUBO 問題的流程。
+然後，我會說明本研究如何使用 SA 求解 QUBO 問題，以產生具潛力之候選結構。
+最後，我將介紹候選結構經過解碼與 FDTD 模擬評估後，如何回饋至訓練資料集，並透過重複訓練與搜尋一步一步完成結構最佳化。
+另外，不同結構編碼策略的設計與實作方式也不盡相同，因此我會於後續章節中進一步說明。
 
-overleaf上有插入圖片的介紹: https://www.overleaf.com/learn/latex/Inserting\_Images
-
-
+Factorization Machine with Annealing Optimization 整體流程如圖~\ref{fig:FMSA_flowchart}所示，
+主要流程可概分為下列步驟:
 \begin{figure}[htb]
-  \centering
-  \includegraphics[width=0.9\columnwidth]{img/1.system_architecture.pdf}
-  \caption{PDF Figure Example.} 
-  \label{fig:system_architecture}
+\centering
+\includegraphics[width=1.0\textwidth]{img/FMSA_flowchart.png}
+\caption{Factorization Machine with Annealing Optimization 整體流程圖。}
+\label{fig:FMSA_flowchart}
 \end{figure}
 
+\noindent \textbf{一、建立初始訓練資料集 (Initial Dataset Generation)}\\
+一開始會先隨機產生一組初始隨機二元變數(Initial Random Binary Variables)$x_i$，這些二元變數是沒有經過任何結構約束或模型訓練的。
+接著我們會透過特定的編碼策略(Encoding Strategies)來對初始二元變數進行編碼(Encoding)，
+這時候我們就會得到一組平滑化後的二維結構圖。
+接著，針對這些隨機二元變數編碼後的二維結構圖，利用有限時域差分法(Finite-Difference Time-Domain, FDTD)進行電磁模擬，
+取得其光學效率，例如特定波長下的傳輸率。再根據模擬結果計算品質因子(Figure of Merit, FoM)，這邊我們可以記為 $y_i$。
+最終可建立包含 $N$ 筆資料的初始訓練資料集$D_0$:
+\begin{align}
+D_0={(x_i,y_i)}_{i=1}^{N}.
+\end{align}
+此資料集會作為後續模型訓練的基礎。
+
+\noindent \textbf{二、訓練因子分解機代理模型（Training the FM Surrogate Model）}\\
+為了降低直接透過 FDTD 模擬龐大設計空間所需的計算成本，在研究中採用因子分解機(Factorization Machine, FM)作為代理模型。
+將第一步所建立的初始訓練資料集 $D_0$ 中的隨機設計變數$x_i$與對應 FoM $y_i$ 輸入 因子分解機 進行監督式訓練，
+使模型學習設計變數中每個矩陣元素與光學性能之間的關係。
+
+訓練完成後，因子分解機 可以得到線性權重 $w_i$ 與二階交互作用參數 $v_i$。
+其中，二階項 $v_i$ 用來描述不同結構變數間的交互作用，並作為下一步用來轉換為 QUBO 問題的依據。
+
+\noindent \textbf{三、建構無約束二元二次最佳化問題(Constructing the QUBO Problem)}\\
+根據訓練完成的因子分解機模型參數，可以將預測函數 $\hat{y}$ 轉換為無約束二元二次最佳化(Quadratic Unconstrained Binary Optimization, QUBO)形式。
+經過轉換後，目標能量函數可以表示為：
+\begin{align}
+E(x)=x^{T}Qx+b^{T}x+c,
+\end{align}
+其中，$Q$ 為二次交互作用矩陣，$b$ 為線性項，$c$ 為常數項。
+如果設計目標是最大化元件的傳輸率或 FoM，我們可以在程式中調整目標函數的正負號，讓最大化問題可以隨著最小化能量函數 $E(x)$降低而降低。
+
+\noindent \textbf{四、以模擬退火演算法搜尋候選結構(Candidate Structure Search via SA)}\\
+將 QUBO 問題輸入模擬退火(Simulated Annealing)演算法進行求解。SA 透過隨機擾動與逐步降溫等機制來進行採樣，以探索出它認為最有潛力的二元設計變數，
+並且可降低搜尋過程陷入局部最佳解的機率。
+求解完成後，就可以得到預測出的一組二元設計變數 $x^{*}$。
+
+接著，預測出的二元設計變數會依照不同的編碼策略再轉換為其對應的二維光學結構圖，來作為下一步 FDTD 模擬的候選結構。
+
+\noindent \textbf{五、FDTD 評估與資料集更新(FDTD Evaluation and Dataset Update)}\\
+將 SA 搜尋得到的候選結構輸入 FDTD 模擬，以用來計算其光學性能及目標函數值 $y_{\mathrm{new}}$。
+完成模擬後，將新結構 $x^*$及其對應 FoM $y_{new}$ 加入原本的資料集 $D_t$，得到更新後的訓練資料集 $D_{t+1}$:
+\begin{align}
+D_{t+1}=D_t\cup{(x^{*},y_{\mathrm{new}})}.
+\end{align}
+透過持續迭代並加入高光學性能的結構資料集，可以提升因子分解機模型的預測能力。
+
+\noindent \textbf{六、重複迭代至終止條件(Iterative Optimization Process)}\\
+上述的步驟可以構成一個閉環式的最佳化流程。
+在每次資料集$D_t$更新後，重新訓練 因子分解機 模型，並重複執行 QUBO 建構、SA 搜尋與 FDTD 模擬驗證。
+隨著迭代的進行，資料集$D_t$會慢慢增加 良好 FoM 的資料，使因子分解機 模型能夠更有效的在設計空間中引導搜尋方向。
+當達到程式預設的最大迭代次數(例如100次)時，將會停止整個最佳化的流程。
+
+\section{Encoding Strategies for Factorization Machine with Annealing Optimization}
+在因子分解機結合模擬退火的架構中，結構表示方式會直接影響因子分解機作為代理模型的訓練效率、QUBO 問題的維度，
+以及模擬退火的搜尋範圍。若直接將設計區域中每一個像素作為獨立設計變數，雖然可保留光學結構的完整資訊，
+但隨著設計區域解析度的提高，設計變數數量將會大幅增加，
+導致因子分解機模型訓練、QUBO 矩陣建構與模擬退火求解的計算成本也會大幅上升。
+
+如第~\ref{ch:Encoding_Strategies_Theory} 節中所述，此篇論文已說明各編碼策略的相關理論基礎。
+接著，在本小節中將進一步介紹 Gaussian Upsampling Strategy、2D Fourier Integral Strategy 與
+ $\beta$-Variational Autoencoder ($\beta$-VAE) Strategy 這三種編碼策略的具體實作方法以及
+其於 因子分解機 結合模擬退火架構中的運作流程。
+
+\subsection{Gaussian Upsampling Strategy}
+\label{ch:Gaussian_Upsampling_Strategy}
+在前一節說明的 因子分解機 結合模擬退火架構中，設計變數的表示方式會直接影響搜尋空間大小與最佳化的效率。
+因此，本小節將介紹利用 Gaussian Upsampling Strategy 作為二維光學結構的編碼方法，此編碼策略以低維二元矩陣作為設計變數，
+並透過 Gaussian convolution、Tanh projection 與 MaterialGrid mapping 等步驟將其轉換為高解析度的物理結構，
+使最佳化過程能於較低維度的搜尋空間中進行，並同時維持結構邊界的平滑性與製程可行性。
+
+\subsubsection{Flowchart}
+Gaussian Upsampling Strategy 的整體流程如圖 \ref{fig:Gaussian_Upsampling_Flowchart} 所示，
+其中主要包含了低維設計變數重建、高斯卷積平滑、Tanh 投影以及 MaterialGrid 建立等四個步驟。
 \begin{figure}[htb]
-	\centering
-	\includegraphics[width=0.9\textwidth]{img/data_preprocessing.png}
-	\caption{PNG Example.}
-	\label{fig:model}
+\centering
+\includegraphics[width=1.0\textwidth]{img/GU_flowchart.png}
+\caption{高斯上採樣(Gaussian Upsampling)流程圖。}
+\label{fig:Gaussian_Upsampling_Flowchart}
 \end{figure}
 
+在初始資料集建立階段，首先隨機產生 $i$ 組低維二元結構。
+此研究設定每組結構由 $N \times N$ 的二元矩陣表示，因此每一組樣本包含 $N^2$ 個二元設計變數。
+為了避免初始樣本產生過多沒有物理意義的隨機雜訊，會在隨機生成過程中加入平滑濾波處理，使初始結構具有較連續的幾何特徵。
 
-\section{Data Preprocessing}
-\label{sec:SMA}
-An example for section. Fig~\ref{fig:system_architecture} is PDF. Fig~\ref{fig:model} is PNG.
+首先，以 Gaussian kernel 對低維矩陣進行卷積運算，將原始二元分布轉換為連續密度場，以降低像素化結構所造成的鋸齒狀邊界以及局部孤島或尖角，
+使材料分布具有空間連續性。
+
+接著，利用Tanh projection將連續密度場重新映射為接近二元的材料分布。在這個步驟除了可以保留平滑邊界，
+也可以提高介面的清晰度，使生成出的光學結構具有可製造與可實現性。
+
+完成 Gaussian Upsampling 編碼後，可以得到對應的高解析度密度矩陣。
+接著，所得的密度矩陣會丟給 MEEP 的 MaterialGrid 中，用來建立其對應的介電常數分佈，
+也就是正式把二維光學結構與材料分布建構出來。最後透過 MEEP(FDTD) 進行電磁模擬，
+就可以得到每組低維二元設計變數$x_i$所對應的光學性能與品質因子$y_i$(Figure of Merit, FoM)。
+
+在後續最佳化迭代過程中，因子分解機(FM)模型與模擬退火演算法皆於低維二元設計空間中進行搜尋。
+每當模擬退火採樣出新的候選解$x^*$時，這些候選解就會再次透過相同的 Gaussian Upsampling 流程轉換為高解析度結構，
+並輸入 MEEP 進行驗證。透過此機制，Gaussian Upsampling 在最佳化流程中扮演低維設計變數與實際物理結構之間的轉換橋樑。
+
+相較於直接以高解析度像素作為設計變數，此方法可以大幅降低 QUBO 問題維度，同時透過高斯平滑與投影機制限制結構邊界變化，
+使最佳化結果更符合實際製程需求。
+
+\subsubsection{Fabrication Constraints}
+雖然 Gaussian Upsampling 可將低維二元設計變數轉換為連續的幾何結構，但若未納入實際製程限制，
+最佳化的結果還是有可能會出現窄波導、尖角或孤島區域等難以製造的物理特徵。
+因此，本研究中利用 Gaussian filter 的空間平滑特性來控制結構的最小特徵尺寸(Minimum Feature Size, MFS)，
+使生成之光學結構可以符合預期的製程限制。
+
+由第~\ref{ch:GU_theory}節中的公式\eqref{eq:b_min}可知:
+\begin{align}
+\sigma_{\text{pix}} \ge \frac{b_{\text{fab}}}{1.35d}
+\label{eq:sigma_pix_min}
+\end{align}
+其中，$b_{\text{fab}}$為製程允許的最小線寬(Minimum Feature Size, MFS)，
+$d$為單一網格(pixel)所對應的物理尺寸，而$\sigma_{\text{pix}}$為高斯濾波器的標準差。
+
+為了避免Gaussian Kernel遭到截斷，高斯核卷積核的視窗大小必須滿足:
+\begin{align}
+W \ge 6\sigma_{\text{pix}} + 1
+\label{eq:gaussian_kernel_size}
+\end{align}
+並且取奇數。
+
+因此，假設設計區域為
+\begin{align}
+5 \mu m \times 5 \mu m,
+\end{align}
+且其二元設計變數為$50 \times 50$，則我們可以計算出$d$:
+\begin{align}
+d = 100 nm
+\end{align}
+若製成要求為:
+\begin{align}
+b_{fab} = 100 nm
+\end{align}
+則
+\begin{align}
+\sigma_{pix} = \frac{150}{1.35 \times 100} \approx 1.11
+\end{align}
+因此我們可以透過設定$\sigma_{pix}=1.11$以及$W=7$來滿足製程限制$\ge 150 nm$。
+
+為方便實際參數設定，本研究整理不同製程限制與設計網格下所對應之$\sigma_{\text{pix}}$與$W$，如Table~\ref{tab:kernel_parameter} 所示。
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\hline
+Grid size & Target MFS & $\sigma_{\text{pix}}$ & $W$ \\ \hline
+50 nm     & 100 nm     & 1.48                               & 9   \\
+50 nm     & 120 nm     & 1.78                               & 11  \\
+100 nm    & 120 nm     & 0.89                               & 5   \\
+100 nm    & 150 nm     & 1.11                               & 7   \\
+100 nm    & 200 nm     & 1.48                               & 9   \\ \hline
+\end{tabular}
+
+\captionsetup{name=TABLE, font={color=blue, sf, footnotesize}}
+\caption{不同製程限制下 Gaussian Filter 之設計參數對照表。}
+\label{tab:kernel_parameter}
+\end{table}
+從Table~\ref{tab:kernel_parameter} 可知，隨著目標最小線寬增加，所需的 Gaussian 標準差也必須提高，
+以增強平滑效果並抑制較小的幾何特徵。
+另一方面，由於過小的 Gaussian 標準差會使濾波器的平滑效果有限，並可能會降低對部分幾何特徵的約束能力，
+因此當$\sigma_{\text{pix}} < 1$時，應該將$\sigma_{\text{pix}}$調整為$1$。
+
+\subsection{2D Fourier Integral Strategy}
 
 
-\subsection{2D LiDAR Data}
-An example for subsection. 寫中文就是 圖~\ref{fig:system_architecture} 跟圖~\ref{fig:model}.
+
+\subsection{$\beta$-Variational Autoencoder ($\beta$-VAE) Strategy}
+
+\section{Mode Division Demultiplexer Optimization Results}
+
+\section{Bend Waveguide Optimization Results}
+
+\section{Waveguide Crossing Optimization Results}
+
+

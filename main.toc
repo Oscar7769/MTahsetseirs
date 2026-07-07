@@ -9,8 +9,8 @@
 \contentsline {chapter}{中文摘要}{i}{}%
 \contentsline {chapter}{英文摘要}{iii}{}%
 \contentsline {chapter}{目錄}{v}{}%
-\contentsline {chapter}{圖目錄\vspace {0em}}{vii}{}%
-\contentsline {chapter}{表目錄\vspace {0em}}{ix}{}%
+\contentsline {chapter}{圖目錄\vspace {0em}}{viii}{}%
+\contentsline {chapter}{表目錄\vspace {0em}}{x}{}%
 \contentsline {chapter}{\numberline {1}Introduction and Motivation}{1}{}%
 \contentsline {chapter}{\numberline {2}Related Work}{4}{}%
 \contentsline {section}{\numberline {2.1}Early Works on Inverse Design of Photonic Devices}{4}{}%
@@ -39,11 +39,19 @@
 \contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{48}{}%
 \contentsline {subsubsection}{\numberline {3.3.3.1}Simulated Annealing Mechanism}{48}{}%
 \contentsline {subsubsection}{\numberline {3.3.3.2}Quantum Annealing Mechanism}{49}{}%
-\contentsline {chapter}{\numberline {4}Data Fusion Algorithm}{51}{}%
-\contentsline {section}{\numberline {4.1}Data Preprocessing}{51}{}%
-\contentsline {subsection}{\numberline {4.1.1}2D LiDAR Data}{52}{}%
-\contentsline {chapter}{\numberline {5}Conclusions}{53}{}%
-\contentsline {chapter}{\numberline {6}Performance Evaluation}{54}{}%
-\contentsline {chapter}{References}{55}{}%
-\contentsline {chapter}{\numberline {7}Appendix 附錄}{60}{}%
+\contentsline {chapter}{\numberline {4}Method and Results}{51}{}%
+\contentsline {section}{\numberline {4.1}Factorization Machine with Annealing Optimization Framework}{51}{}%
+\contentsline {section}{\numberline {4.2}Encoding Strategies for Factorization Machine with Annealing Optimization}{54}{}%
+\contentsline {subsection}{\numberline {4.2.1}Gaussian Upsampling Strategy}{55}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Flowchart}{55}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Fabrication Constraints}{56}{}%
+\contentsline {subsection}{\numberline {4.2.2}2D Fourier Integral Strategy}{58}{}%
+\contentsline {subsection}{\numberline {4.2.3}$\beta $-Variational Autoencoder ($\beta $-VAE) Strategy}{58}{}%
+\contentsline {section}{\numberline {4.3}Mode Division Demultiplexer Optimization Results}{58}{}%
+\contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{58}{}%
+\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{58}{}%
+\contentsline {chapter}{\numberline {5}Conclusions}{59}{}%
+\contentsline {chapter}{\numberline {6}Performance Evaluation}{60}{}%
+\contentsline {chapter}{References}{61}{}%
+\contentsline {chapter}{\numberline {7}Appendix 附錄}{66}{}%
 \contentsfinish 

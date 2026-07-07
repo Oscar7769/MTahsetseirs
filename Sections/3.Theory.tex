@@ -556,6 +556,7 @@ MEEP 採用離散時間傅立葉轉換(Discrete-Time Fourier Transform, DTFT)的
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%分隔線%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Structured Encoding and Dimensionality Reduction}
+\label{ch:Encoding_Strategies_Theory}
 本研究採用退火最佳化(Annealing Optimization)作為全域最佳化方法，以搜尋二維光學結構的最佳設計。
 由於退火最佳化需將設計問題表示為二元二次最佳化(Quadratic Unconstrained Binary Optimization, QUBO)形式，
 因此設計結構必須以二元設計變數(binary design variables)進行表示。
@@ -572,7 +573,7 @@ MEEP 採用離散時間傅立葉轉換(Discrete-Time Fourier Transform, DTFT)的
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spatial Smoothing via Gaussian Upsampling}
-
+\label{ch:GU_theory}
 傳統的像素化設計方法通常是將光學結構離散化為一個二元矩陣，其中每個元素分別代表著不同材料。然而這種離散的表示法存在兩個問題
 :第一個，隨著結構解析度的提升，設計變數的數量將會呈現二次方增加，導致退火演算法面臨嚴重的維度災難; 
 第二個，二元獨立變數容易在邊界產生鋸齒狀，這種結構在實際半導體製程是無法實現的。
@@ -644,7 +645,7 @@ K(i, j) = A \cdot \exp\left(-\frac{i^2 + j^2}{2\sigma_{\text{pix}}^2}\right)
 使其嚴格符合半導體製程的最小線寬限制（$b_{\text{min}} \ge b_{\text{fab}}$）。同時，為了避免高斯核在邊緣因為強行截斷而導致幾何結構變形，
 卷積核的視窗大小$W$必須滿足 $W \ge 6\sigma_{\text{pix}} + 1$ 且取奇數，以保證高斯分布的完整性與結構的幾何對稱性。
 
-為了具體說明如何應用公式\eqref{eq:b_min}來控制設計區域的最小特徵尺寸，我將會在第四章方法中詳細舉例並說明。
+為了具體說明如何應用公式\eqref{eq:b_min}來控制設計區域的最小特徵尺寸，我將會在第~\ref{ch:Gaussian_Upsampling_Strategy}節中詳細舉例並說明。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{2D Fourier-Based Representation via Basis Selection}
