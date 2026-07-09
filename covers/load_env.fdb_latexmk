@@ -3,9 +3,9 @@
   "load_env.xdv" 0 -1 0 "xelatex"
   (generated)
   "load_env.pdf"
-["xelatex"] 1783386036 "/home/oscar3102/Research_Latex/covers/load_env.tex" "load_env.xdv" "load_env" 1783386036
+["xelatex"] 1783477469 "/home/oscar3102/Research_Latex/covers/load_env.tex" "load_env.xdv" "load_env" 1783477469
   "/etc/texmf/web2c/texmf.cnf" 1779784168 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/oscar3102/Research_Latex/covers/load_env.tex" 1783332397 2962 8d0e6873cd5692d246ac5980d8cdb80e ""
+  "/home/oscar3102/Research_Latex/covers/load_env.tex" 1783474053 2962 8d0e6873cd5692d246ac5980d8cdb80e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -110,8 +110,8 @@
   "/usr/share/texmf/tex/latex/CJK/CJKnumb.sty" 1485503905 9524 d149dc7bd970a6f98e3a2031b27dbe33 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1779784835 3758729 1719e67b2f3d64efb70468d80e5be072 ""
-  "load_env.aux" 1783386036 32 3985256e7290058c681f74d7a3565a19 ""
-  "load_env.tex" 1783332397 2962 8d0e6873cd5692d246ac5980d8cdb80e ""
+  "load_env.aux" 1783477469 32 3985256e7290058c681f74d7a3565a19 ""
+  "load_env.tex" 1783474053 2962 8d0e6873cd5692d246ac5980d8cdb80e ""
   (generated)
   "load_env.log"
   "load_env.xdv"

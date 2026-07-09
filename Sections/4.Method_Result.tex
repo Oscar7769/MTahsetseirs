@@ -188,15 +188,123 @@ Grid size & Target MFS & $\sigma_{\text{pix}}$ & $W$ \\ \hline
 因此當$\sigma_{\text{pix}} < 1$時，應該將$\sigma_{\text{pix}}$調整為$1$。
 
 \subsection{2D Fourier Integral Strategy}
+接著，我將會說明2D Fourier Integral這套編碼策略的運作流程，如圖~\ref{fig:2D_fourier_flowchart}所示。
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{img/2D_fourier_flowchart.png}
+\caption{2D Fourier Integral編碼策略之整體流程圖。}
+\label{fig:2D_fourier_flowchart}
+\end{figure}
 
+首先，輸入數量為 $M \times N$ 的二元陣列 $\boldsymbol{\alpha}_{M \times N}$，此陣列會在初始隨機生成階段或模擬退火階段透過採樣產生。
+這邊假設以 $8 \times 8$ 的頻譜設定為例，輸入陣列包含 $64$ 個二元變數，可表示為:
+\begin{align}
+\alpha_1,\alpha_2,\ldots,\alpha_{64}
+\qquad
+\alpha_i \in {0,1}
+\end{align}
 
+將一維陣列重建為至二維的頻率係數矩陣$\alpha_{mn}$ ，其中的每個元素決定對應空間頻率模態是否會參與結構的生成。
+接著，在設計區域內建立歸一化空間，座標為 $(x,y)$，其中 $x,y\in[0,1]$，其取樣解析度設定為最終模擬結構的網格大小。
+連續疊加場$\boldsymbol{F}(x,y)$可透過各個頻率的模態疊加表示為:
+\begin{align}
+\boldsymbol{F}(x,y) = \sum_{m=1}^{M}
+\sum_{n=1}^{N}
+\alpha_{mn}
+\sin(m\pi x)
+\sin(n\pi y)
+\label{eq:2D_fourier_mode_summation}
+\end{align}
+
+由公式 \eqref{eq:2D_fourier_mode_summation} 可以得到連續的二維空間場，
+其中不同二元設計變數$\alpha_{mn}$的組合會決定各頻率成分的疊加結果，進而導致二維連續疊加場的不同。
+
+接著會將二維連續疊加場透過閾值 $C_{\mathrm{th}}$ 進行二值化，以將其轉換為二元材料分佈。
+
+在本研究中設定 $C_{\mathrm{th}}=0$。
+因為設計出的結構邊界是透過有限數量的正弦模態疊加後再經閾值進行二值化，因此與直接以二元像素表示結構的方法相比，
+此方法可以產生較為連續的幾何邊界，減少像素化的鋸齒邊界。
+
+完成二值化後會將 $\rho(x,y)$ 輸入 MEEP 的 MaterialGrid，並以 MaterialGrid 功能來建立設計區域的材料分佈，
+其中，$\rho(x,y)=1$ 代表高折射率材料區域，此研究中使用矽(Si)，$\rho(x,y)=0$ 則代表低折射率的背景預設材料，此研究中使用二氧化矽(SiO$_2$)。
+最後，將此設計區域與輸入及輸出波導結構結合，作為 FDTD 模擬中的幾何模型，以用來計算其光學性能與其對應的 FoM。
+
+在 FM 模型結合模擬退火的最佳化流程中，FM 模型的輸入為頻譜二元向量 $\boldsymbol{\alpha}_{M \times N}$。
+當模擬退火採樣出新的頻譜向量後，會透過相同的編碼程序重新建構候選結構，再透過 FDTD 模擬進行驗證。
 
 \subsection{$\beta$-Variational Autoencoder ($\beta$-VAE) Strategy}
+接著，在此小節我將說明 $\beta$-Variational Autoencoder($\beta$-VAE)編碼策略的運作流程，
+如圖~\ref{fig:bVAE_flowchart} 所示。此方法主要用於處理高解析度二維結構所造成的高維度設計問題，
+並將原始結構壓縮至較低維度的二元潛在空間，以降低後續模擬退火的搜尋難度。
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{img/bVAE_flowchart.png}
+\caption{$\beta$-VAE編碼策略之整體流程圖。}
+\label{fig:bVAE_flowchart}
+\end{figure}
+
+模型預訓練的部分，首先建立 $\beta$-VAE 所需的初始訓練資料集部分，程式會以隨機且高維的高斯雜訊作為初始輸入，
+並且會經過高斯濾波以及將灰階圖進行二值化處理，以產生具有連續幾何特徵的初始二維結構樣本。
+此步驟可以避免訓練資料中出現過多破碎或不連續的孤島結構，使模型能夠學習較為合理的結構分布。
+
+在編碼階段，輸入的初始高解析度二維結構 首先經由卷積神經網路(Convolutional Neural Network, CNN)Encoder 進行特徵擷取。
+透過多層卷積與下採樣，輸入的高解析度結構會被壓縮為低維的潛在空間$\boldsymbol{x}$(latent space)。
+
+為了使潛在空間的變數可以直接作為模擬退火的搜尋變數(必須二元值)，會利用 Gumbel-Softmax 方法進行離散化。
+Gumbel-Softmax 方法可以將編碼特徵轉換為 $N \times K$ 維的類別型潛在變數，使其可對應為離散的二元值。
+
+在解碼階段，CNN Decoder 接收離散潛在空間，並透過多層的上採樣以及卷積，會逐漸重建為近似原始高解析度的二維結構。
+為了降低重建結構中的鋸齒與部分雜訊，Decoder 輸出端同樣也會加入高斯平滑處理，並利用 Tanh 投影函數進行非線性轉換，
+使輸出值限制於 $0$ 至 $1$，進而形成近似二值化結構。
+
+在$\beta$-VAE 模型訓練時，損失函數主要是由重建損失$L_{recon}$(Reconstruction Loss)與 Kullback-Leibler 散度$L_{KL}$(KL Divergence)相加組成。
+其中，$\beta$ 參數用於調整兩者之間的權重，$\beta$ 理論的部分在第~\ref{ch:bVAE_theory}章有對此部分進行詳細說明。
+
+完成 $\beta$-VAE 的預訓練後，固定 Encoder 與 Decoder 的模型權重，並且
+取一部分經過Decoder處理的資料集$\boldsymbol{x}^*$以及其潛在空間$\boldsymbol{x}$用來計算他們的FoM $y$，
+當作是我們初始因子分解機的訓練資料。
+
+接著，我們會將這些資料利用因子分解機建立QUBO Matrix，並利用模擬退火採樣器挑選出指定數量的潛在空間較佳解$\boldsymbol{x}_{new}$。
+再透過我們訓練好的$\beta$-VAE Decoder重建出高解析度的二維結構$\boldsymbol{x}_{new}^*$作為候選結構，
+將得到的候選結構$\boldsymbol{x}_{new}^*$餵給MEEP模擬以驗證其光學性能並計算FoM $y_{new}$。
+
+最後，我們將這一次迭代所得的潛在空間解$\boldsymbol{x}_{new}$與其FoM $y_{new}$，
+加入到因子分解機的訓練資料集中，以進行下一次的迭代優化，重複此過程直到達到了最大的迭代次數。
 
 \section{Mode Division Demultiplexer Optimization Results}
+此小節我將展示本研究中所提出的利用Encoding策略結合因子分解機與模擬退火應用於模態分波解多工器反向設計的最佳化結果。
+
+首先，我們定義了 Mode Division Demultiplexer 的輸入、輸出通道以及其幾何結構的設計區域，
+如圖~\ref{fig:DEMUX_Structure}所示。
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=1.0\textwidth]{img/DEMUX_Structure.png}
+%\caption{Mode Division Demultiplexer 的輸入、輸出通道以及其幾何結構的設計區域。}
+%\label{fig:DEMUX_Structure}
+%\end{figure}
+
+接著，光源設定方面，我是使用了MEEP中的EigenModeSource，利用GaussianSource高斯脈衝作為基礎光源
+，以及分別設定了\text{eig\_band}以及\text{eig\_parity}參數來對應模態數和模態對稱性，
+指定要輸入到通道中的 TE$_0$ 與 TE$_1$ 模態。
+由於 TE$_0$ 與 TE$_1$ 模態彼此正交，因此於每次 FoM 計算時，分別進行兩次獨立的光學模擬：
+第一次在輸入通道激發 TE$_0$ 模態，第二次則激發 TE$_1$ 模態。
+
+本研究之設計目標為將單一輸入通道中的 TE$_0$ 與 TE$_1$ 模態分離並導引至各自對應的輸出通道。
+其中，輸入 TE$_0$ 模態時，應使其能量盡可能傳輸至指定輸出通道；輸入 TE$_1$ 模態時，則應使其能量傳輸至另一指定輸出通道。
+同時，非目標輸出通道中的模態能量應盡可能降低，以抑制模態串擾(crosstalk)。
+因此，本研究定義下列 Figure of Merit(FoM)作為 DEMUX 結構之最佳化目標:
+
+
+
+
 
 \section{Bend Waveguide Optimization Results}
+在彎曲波導的設計中，我們的核心目標是能夠將
+
+
+
 
 \section{Waveguide Crossing Optimization Results}
-
+在設計目標是能夠將模態分波解多工器中單一通道輸入的TE$_0$和TE$_1$模態有效的將能量分離至兩個輸出通道，
+並且在輸出的兩個通道中能夠偵測到我們想要的分離出去的TE$_0$模態，而目標模態的能量必須越大越好，模態串擾要越小越好。
 

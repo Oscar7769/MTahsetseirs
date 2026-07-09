@@ -46,12 +46,12 @@
 \contentsline {subsubsection}{\numberline {4.2.1.1}Flowchart}{55}{}%
 \contentsline {subsubsection}{\numberline {4.2.1.2}Fabrication Constraints}{56}{}%
 \contentsline {subsection}{\numberline {4.2.2}2D Fourier Integral Strategy}{58}{}%
-\contentsline {subsection}{\numberline {4.2.3}$\beta $-Variational Autoencoder ($\beta $-VAE) Strategy}{58}{}%
-\contentsline {section}{\numberline {4.3}Mode Division Demultiplexer Optimization Results}{58}{}%
-\contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{58}{}%
-\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{58}{}%
-\contentsline {chapter}{\numberline {5}Conclusions}{59}{}%
-\contentsline {chapter}{\numberline {6}Performance Evaluation}{60}{}%
-\contentsline {chapter}{References}{61}{}%
-\contentsline {chapter}{\numberline {7}Appendix 附錄}{66}{}%
+\contentsline {subsection}{\numberline {4.2.3}$\beta $-Variational Autoencoder ($\beta $-VAE) Strategy}{60}{}%
+\contentsline {section}{\numberline {4.3}Mode Division Demultiplexer Optimization Results}{61}{}%
+\contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{62}{}%
+\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{62}{}%
+\contentsline {chapter}{\numberline {5}Conclusions}{63}{}%
+\contentsline {chapter}{\numberline {6}Future Work}{64}{}%
+\contentsline {chapter}{References}{65}{}%
+\contentsline {chapter}{\numberline {7}Appendix 附錄}{70}{}%
 \contentsfinish 
