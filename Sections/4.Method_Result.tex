@@ -275,24 +275,45 @@ Gumbel-Softmax 方法可以將編碼特徵轉換為 $N \times K$ 維的類別型
 此小節我將展示本研究中所提出的利用Encoding策略結合因子分解機與模擬退火應用於模態分波解多工器反向設計的最佳化結果。
 
 首先，我們定義了 Mode Division Demultiplexer 的輸入、輸出通道以及其幾何結構的設計區域，
-如圖~\ref{fig:DEMUX_Structure}所示。
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=1.0\textwidth]{img/DEMUX_Structure.png}
-%\caption{Mode Division Demultiplexer 的輸入、輸出通道以及其幾何結構的設計區域。}
-%\label{fig:DEMUX_Structure}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{img/DEMUX_schematic.png}
+\caption{Mode Division Demultiplexer 的輸入、輸出通道以及其幾何結構的設計區域。}
+\label{fig:DEMUX_schematic}
+\end{figure}
+如圖~\ref{fig:DEMUX_schematic}所示，中間灰色的部分為演算法決定材料分布的設計區域，
+在此模擬中，黑色代表矽(Si)材料，白色代表二氧化矽(SiO$_2$)材料。
+右側分別為輸出的兩個通道，以及用深藍色與淺藍色標示為輸出通道的模態偵測器;
+左側分別為光場輸入通道、利用綠色標示為輸入通道的模態偵測器，以及用紅色標示為光場激發的起點;
+在示意圖的最外圍，以深綠色標示出吸收邊界(PML)，用來吸收模擬光場，避免產生反射效應。
 
 接著，光源設定方面，我是使用了MEEP中的EigenModeSource，利用GaussianSource高斯脈衝作為基礎光源
 ，以及分別設定了\text{eig\_band}以及\text{eig\_parity}參數來對應模態數和模態對稱性，
 指定要輸入到通道中的 TE$_0$ 與 TE$_1$ 模態。
-由於 TE$_0$ 與 TE$_1$ 模態彼此正交，因此於每次 FoM 計算時，分別進行兩次獨立的光學模擬：
+由於 TE$_0$ 與 TE$_1$ 模態彼此正交，因此於每次 FoM 計算時，分別進行兩次獨立的光學模擬:
 第一次在輸入通道激發 TE$_0$ 模態，第二次則激發 TE$_1$ 模態。
 
 本研究之設計目標為將單一輸入通道中的 TE$_0$ 與 TE$_1$ 模態分離並導引至各自對應的輸出通道。
-其中，輸入 TE$_0$ 模態時，應使其能量盡可能傳輸至指定輸出通道；輸入 TE$_1$ 模態時，則應使其能量傳輸至另一指定輸出通道。
-同時，非目標輸出通道中的模態能量應盡可能降低，以抑制模態串擾(crosstalk)。
+其中，輸入 TE$_0$ 模態時，應使其能量盡可能傳輸至輸出通道1；輸入 TE$_1$ 模態時，則應使其能量傳輸至輸出通道2。
+同時，輸出通道1中的 TE$_1$ 模態能量應盡可能降低，以抑制模態串擾(crosstalk)。\\
 因此，本研究定義下列 Figure of Merit(FoM)作為 DEMUX 結構之最佳化目標:
+\begin{align}
+FOM = - \left[ T_{0,1} (1 - T_{0,2}) \times T_{1,2} (1 - T_{1,1}) \right]
+\label{eq:DEMUX_FoM}
+\end{align}
+其中，
+\begin{itemize}
+    \item $T_{0,1}$ 為輸入 TE$_0$ 模態時，其能量傳輸至輸出通道1的穿透率
+    \item $T_{0,2}$ 為輸入 TE$_0$ 模態時，其能量傳輸至輸出通道2的穿透率
+    \item $T_{1,1}$ 為輸入 TE$_1$ 模態時，其能量傳輸至輸出通道1的穿透率
+    \item $T_{1,2}$ 為輸入 TE$_1$ 模態時，其能量傳輸至輸出通道2的穿透率
+\end{itemize}
+首先，$T_{0,1}(1 - T_{0,2})$項與$T_{1,2}(1 - T_{1,1})$項分別代表了各別模態內部的取捨與目標，
+用來提升主要目標穿透率的同時，抑制模態串擾。其次，此公式當設計結果越好，其數值越接近$1$，因此在公式最前面加入了負號，
+目的是為了將原始的極大化問題轉化為極小化問題，以便於接下來的演算法進行收斂與計算。
+
+\subsection{DEMUX design - parameter 1}
+
 
 
 

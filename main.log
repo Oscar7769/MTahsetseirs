@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  9 JUL 2026 22:17
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  10 JUL 2026 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -208,24 +208,24 @@ File: ctex-scheme-plain.def 2021/12/12 v2.5.8 Plain scheme for generic (CTEX)
 File: ctex.cfg 2021/12/12 v2.5.8 Configuration file (CTEX)
 )
 
-Package fontspec Info: Font family 'TW-Kai(0)' created for font 'TW-Kai' with
-(fontspec)             options
+Package fontspec Info: Font family 'TW-Kai.ttf(0)' created for font
+(fontspec)             'TW-Kai.ttf' with options
 (fontspec)             [Script={CJK},Path={./fonts/},AutoFakeBold={4},AutoFakeSlant={0.2}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;embolden=4;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;slant=0.2;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
  (/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
@@ -756,7 +756,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 
 ] (./covers/toc_var.tex (./Sections/0.2.Abstract_chinese.tex
 Overfull \hbox (8.48245pt too wide) in paragraph at lines 39--41
-[]\TU/TW-Kai(0)/m/n/12 數 值 模 擬 的 部 分，|  本 研 究 利 用 有 限 差 分 時 域 法 \TU/TimesNewRoman(0)/m/n/12 (Finite-Difference Time-Domain\TU/TW-Kai(0)/m/n/12 ，| \TU/TimesNewRoman(0)/m/n/12 FDTD)
+[]\TU/TW-Kai.ttf(0)/m/n/12 數 值 模 擬 的 部 分，|  本 研 究 利 用 有 限 差 分 時 域 法 \TU/TimesNewRoman(0)/m/n/12 (Finite-Difference Time-Domain\TU/TW-Kai.ttf(0)/m/n/12 ，| \TU/TimesNewRoman(0)/m/n/12 FDTD)
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -812,7 +812,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 
 Overfull \hbox (49.41751pt too wide) in paragraph at lines 13--13
- [][] \TU/TW-Kai(0)/m/n/12 圖 \TU/TimesNewRoman(0)/m/n/12 10| PML \TU/TW-Kai(0)/m/n/12 導 電 率 函 數 之 離 散 化 處 理 對 數 值 反 射 的 影 響。|  左 圖 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 ) 
+ [][] \TU/TW-Kai.ttf(0)/m/n/12 圖 \TU/TimesNewRoman(0)/m/n/12 10| PML \TU/TW-Kai.ttf(0)/m/n/12 導 電 率 函 數 之 離 散 化 處 理 對 數 值 反 射 的 影 響。|  左 圖 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 ) 
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1044,7 +1044,7 @@ File: img/pml_integrated.png Graphic file (type bmp)
 <img/pml_integrated.png>
 
 Overfull \hbox (42.75401pt too wide) in paragraph at lines 511--522
-\TU/TW-Kai(0)/m/n/12 高 頻 的 數 值 反 射。|  如 圖 \TU/TimesNewRoman(0)/m/n/12 10[] \TU/TW-Kai(0)/m/n/12 左 側 所 示，|  若 未 針 對 邊 界 網 格 進 行 特 殊 處 理 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai(0)/m/n/12 ，|
+\TU/TW-Kai.ttf(0)/m/n/12 高 頻 的 數 值 反 射。|  如 圖 \TU/TimesNewRoman(0)/m/n/12 10[] \TU/TW-Kai.ttf(0)/m/n/12 左 側 所 示，|  若 未 針 對 邊 界 網 格 進 行 特 殊 處 理 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai.ttf(0)/m/n/12 ，|
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1091,7 +1091,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [37]
 Overfull \hbox (13.63089pt too wide) in paragraph at lines 648--649
-[]\TU/TW-Kai(0)/m/n/12 為 了 具 體 說 明 如 何 應 用 公 式[]來 控 制 設 計 區 域 的 最 小 特 徵 尺 寸，|  我 將 會 在 第 \TU/TimesNewRoman(0)/m/n/12 4.2.1[]\TU/TW-Kai(0)/m/n/12 節
+[]\TU/TW-Kai.ttf(0)/m/n/12 為 了 具 體 說 明 如 何 應 用 公 式[]來 控 制 設 計 區 域 的 最 小 特 徵 尺 寸，|  我 將 會 在 第 \TU/TimesNewRoman(0)/m/n/12 4.2.1[]\TU/TW-Kai.ttf(0)/m/n/12 節
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1167,7 +1167,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [49]
 Overfull \hbox (10.7812pt too wide) in paragraph at lines 943--945
-\TU/TW-Kai(0)/m/n/12 其 中，| $\OML/cmm/m/it/12 ^^[[]$ \TU/TW-Kai(0)/m/n/12 為 第 $\OML/cmm/m/it/12 i$ \TU/TW-Kai(0)/m/n/12 個 量 子 位 元 的 \TU/TimesNewRoman(0)/m/n/12 Pauli-Z \TU/TW-Kai(0)/m/n/12 算 符，|  其 測 量 結 果 會 對 應 至 自 旋 狀 態 $\OML/cmm/m/it/12 s[] \OMS/cmsy/m/n/12 2 f^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 +1\OMS/cmsy/m/n/12 g$\TU/TW-Kai(0)/m/n/12 。| 
+\TU/TW-Kai.ttf(0)/m/n/12 其 中，| $\OML/cmm/m/it/12 ^^[[]$ \TU/TW-Kai.ttf(0)/m/n/12 為 第 $\OML/cmm/m/it/12 i$ \TU/TW-Kai.ttf(0)/m/n/12 個 量 子 位 元 的 \TU/TimesNewRoman(0)/m/n/12 Pauli-Z \TU/TW-Kai.ttf(0)/m/n/12 算 符，|  其 測 量 結 果 會 對 應 至 自 旋 狀 態 $\OML/cmm/m/it/12 s[] \OMS/cmsy/m/n/12 2 f^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 +1\OMS/cmsy/m/n/12 g$\TU/TW-Kai.ttf(0)/m/n/12 。| 
  []
 
 )
@@ -1202,7 +1202,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [53]
 Overfull \hbox (2.09715pt too wide) in paragraph at lines 85--89
-\TU/TW-Kai(0)/m/n/12 中 將 進 一 步 介 紹 \TU/TimesNewRoman(0)/m/n/12 Gaussian Upsampling Strategy\TU/TW-Kai(0)/m/n/12 、| \TU/TimesNewRoman(0)/m/n/12 2D Fourier Integral Strategy \TU/TW-Kai(0)/m/n/12 與 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -Variational
+\TU/TW-Kai.ttf(0)/m/n/12 中 將 進 一 步 介 紹 \TU/TimesNewRoman(0)/m/n/12 Gaussian Upsampling Strategy\TU/TW-Kai.ttf(0)/m/n/12 、| \TU/TimesNewRoman(0)/m/n/12 2D Fourier Integral Strategy \TU/TW-Kai.ttf(0)/m/n/12 與 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -Variational
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1246,26 +1246,35 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [60]
-
-LaTeX Warning: Reference `fig:DEMUX_Structure' on page 61 undefined on input line 278.
-
+File: img/DEMUX_schematic.png Graphic file (type bmp)
+<img/DEMUX_schematic.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[61])
+ [61]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [62] (./Sections/5.Conclusion.tex
+ [62]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [63])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [64] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [63
+ [65
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -1280,64 +1289,64 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [64
+ [66
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [65
+ [67
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [66]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [67]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [68]) (./Sections/appendix.tex
+ [68]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [69]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [70]) (./Sections/appendix.tex
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [71]
 Chapter 7.
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[70
+[72
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 71 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 73 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [71] (./main.aux)
+ [73] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16846 strings out of 477728
- 373440 string characters out of 5842238
- 691943 words of memory out of 5000000
- 37054 multiletter control sequences out of 15000+600000
+ 16855 strings out of 477728
+ 375121 string characters out of 5842238
+ 692021 words of memory out of 5000000
+ 37062 multiletter control sequences out of 15000+600000
  486981 words of font info for 139 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,413b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (84 pages).
+Output written on main.pdf (86 pages).

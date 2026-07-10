@@ -48,10 +48,11 @@
 \contentsline {subsection}{\numberline {4.2.2}2D Fourier Integral Strategy}{58}{}%
 \contentsline {subsection}{\numberline {4.2.3}$\beta $-Variational Autoencoder ($\beta $-VAE) Strategy}{60}{}%
 \contentsline {section}{\numberline {4.3}Mode Division Demultiplexer Optimization Results}{61}{}%
-\contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{62}{}%
-\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{62}{}%
-\contentsline {chapter}{\numberline {5}Conclusions}{63}{}%
-\contentsline {chapter}{\numberline {6}Future Work}{64}{}%
-\contentsline {chapter}{References}{65}{}%
-\contentsline {chapter}{\numberline {7}Appendix 附錄}{70}{}%
+\contentsline {subsection}{\numberline {4.3.1}DEMUX design - parameter 1}{63}{}%
+\contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{63}{}%
+\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{64}{}%
+\contentsline {chapter}{\numberline {5}Conclusions}{65}{}%
+\contentsline {chapter}{\numberline {6}Future Work}{66}{}%
+\contentsline {chapter}{References}{67}{}%
+\contentsline {chapter}{\numberline {7}Appendix 附錄}{72}{}%
 \contentsfinish 
