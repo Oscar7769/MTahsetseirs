@@ -282,12 +282,12 @@ Gumbel-Softmax 方法可以將編碼特徵轉換為 $N \times K$ 維的類別型
 \label{fig:DEMUX_schematic}
 \end{figure}
 如圖~\ref{fig:DEMUX_schematic}所示，中間灰色的部分為演算法決定材料分布的設計區域，
-在此模擬中，黑色代表矽(Si)材料，白色代表二氧化矽(SiO$_2$)材料。
+在此模擬中，黑色代表矽(Si)材料，折射率$n_{Si}=3.48$，白色代表二氧化矽(SiO$_2$)材料，折射率$n_{SiO_2}=1.44$。
 右側分別為輸出的兩個通道，以及用深藍色與淺藍色標示為輸出通道的模態偵測器;
 左側分別為光場輸入通道、利用綠色標示為輸入通道的模態偵測器，以及用紅色標示為光場激發的起點;
 在示意圖的最外圍，以深綠色標示出吸收邊界(PML)，用來吸收模擬光場，避免產生反射效應。
 
-接著，光源設定方面，我是使用了MEEP中的EigenModeSource，利用GaussianSource高斯脈衝作為基礎光源
+接著，光源設定方面，我是使用了MEEP中的EigenModeSource，利用GaussianSource高斯脈衝激發波長為$1550 nm$的光源
 ，以及分別設定了\text{eig\_band}以及\text{eig\_parity}參數來對應模態數和模態對稱性，
 指定要輸入到通道中的 TE$_0$ 與 TE$_1$ 模態。
 由於 TE$_0$ 與 TE$_1$ 模態彼此正交，因此於每次 FoM 計算時，分別進行兩次獨立的光學模擬:
@@ -298,7 +298,7 @@ Gumbel-Softmax 方法可以將編碼特徵轉換為 $N \times K$ 維的類別型
 同時，輸出通道1中的 TE$_1$ 模態能量應盡可能降低，以抑制模態串擾(crosstalk)。\\
 因此，本研究定義下列 Figure of Merit(FoM)作為 DEMUX 結構之最佳化目標:
 \begin{align}
-FOM = - \left[ T_{0,1} (1 - T_{0,2}) \times T_{1,2} (1 - T_{1,1}) \right]
+FOM = \left[ T_{0,1} (1 - T_{0,2}) \times T_{1,2} (1 - T_{1,1}) \right]
 \label{eq:DEMUX_FoM}
 \end{align}
 其中，
@@ -309,23 +309,132 @@ FOM = - \left[ T_{0,1} (1 - T_{0,2}) \times T_{1,2} (1 - T_{1,1}) \right]
     \item $T_{1,2}$ 為輸入 TE$_1$ 模態時，其能量傳輸至輸出通道2的穿透率
 \end{itemize}
 首先，$T_{0,1}(1 - T_{0,2})$項與$T_{1,2}(1 - T_{1,1})$項分別代表了各別模態內部的取捨與目標，
-用來提升主要目標穿透率的同時，抑制模態串擾。其次，此公式當設計結果越好，其數值越接近$1$，因此在公式最前面加入了負號，
-目的是為了將原始的極大化問題轉化為極小化問題，以便於接下來的演算法進行收斂與計算。
+用來提升主要目標穿透率的同時，抑制模態串擾。其次，此公式當設計結果越好，其數值越接近$1$。
 
 \subsection{DEMUX design - parameter 1}
+\label{ch:DEMUX_design1}
+最一開始設計模態分波多工器的設計區域為$6.5 \times 6.5\ \mu m^2$，並且採用$8 \times 8$ 的網格進行劃分，在這個階段目的主要用於驗證
+高斯上採樣(Gaussian Upsampling)方法結合FMSA的初步可行性，並且在多模態波導的部分設定寬度為$1.8\mu m$，可支持TE$_0$與TE$_1$的傳輸;
+單模波導寬度設定為$0.5\mu m$，只允許TE$_0$的傳輸。
 
+在訓練參數上，用來訓練因子分解機的初始隨機資料量為$1000$筆，隨後進行$100$次的迭代，並且每次迭代會利用模擬退火隨機採樣$30$個候選解，因此總資料量為$4000$筆。
 
+最終得到品質因數FOM為:
+\begin{align}
+FOM = 0.2196
+\label{eq:DEMUX_FoM_Design1}
+\end{align}
+而最終模擬結果為:(光場分布結果如圖~\ref{fig:DEMUX_design1_TE0mode}與圖~\ref{fig:DEMUX_design1_TE1mode}所示)
+\begin{itemize}
+    \item $T_{0,1}$ 穿透率 : 62.66\% ($-2.03$ dB)
+    \item $T_{1,2}$ 穿透率 : 41.3\% ($-3.839$ dB)
+    \item $T_{0,2}$ 模態串擾 : 3\% ($-15.22$ dB)
+    \item $T_{1,1}$ 模態串擾 : 12.6\% ($-8.99$ dB)
+\end{itemize}
 
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[]{0.8\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/DEMUX/DEMUX-design1/replot_output/Design1_TE0.png}
+         \caption{DEMUX Design 1 TE$_0$ mode DFT Distribution.}
+         \label{fig:DEMUX_design1_TE0mode}
+     \end{subfigure}
+     
+     \begin{subfigure}[]{0.8\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/DEMUX/DEMUX-design1/replot_output/Design1_TE1.png}
+         \caption{DEMUX Design 1 TE$_1$ mode DFT Distribution.}
+         \label{fig:DEMUX_design1_TE1mode}
+     \end{subfigure}
+     \caption{DEMUX Design 1 DFT Field Distribution.}
+     \label{fig:DEMUX_design1_SimulationResult}
+\end{figure}
+
+\subsection{DEMUX design - parameter 2}
+\label{ch:DEMUX_design2}
+接著，為解決光場在輸入與輸出端口容易發散的問題，我嘗試在輸入輸出端口連接設計區域的部分添加填充方塊結構(Padding)，並將其視為固定結構，
+不參與最佳化搜尋，以此來引導光場傳輸到指定的輸出端口。
+其餘的設計結構設定與訓練參數皆與上一個實驗(第~\ref{ch:DEMUX_design1})相同。
+
+最終品質因數FOM提升至:
+\begin{align}
+FOM = 0.2728
+\label{eq:DEMUX_FoM_Design1}
+\end{align}
+而最終模擬結果為:
+\begin{itemize}
+    \item $T_{0,1}$ 穿透率 : 54.63\% ($-2.625$ dB)
+    \item $T_{1,2}$ 穿透率 : 54.73\% ($-2.617$ dB)
+    \item $T_{0,2}$ 模態串擾 : 6.27\% ($-12.02$ dB)
+    \item $T_{1,1}$ 模態串擾 : 2.36\% ($-16.26$ dB)
+\end{itemize}
+由最終光場分布結果(如圖~\ref{fig:DEMUX_design2_TE0mode}與圖~\ref{fig:DEMUX_design2_TE1mode}所示)可以發現，在加入固定填充方塊結構後，
+光場更能有效的被引導至對應的輸出端口，因此提升了品質因數FOM。
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[]{0.8\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/DEMUX/DEMUX-design2/design2_TE0.png}
+         \caption{DEMUX Design 2 TE$_0$ mode DFT Distribution.}
+         \label{fig:DEMUX_design2_TE0mode}
+     \end{subfigure}
+     
+     \begin{subfigure}[]{0.8\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/DEMUX/DEMUX-design2/design2_TE1.png}
+         \caption{DEMUX Design 2 TE$_1$ mode DFT Distribution.}
+         \label{fig:DEMUX_design2_TE1mode}
+     \end{subfigure}
+     \caption{DEMUX Design 2 DFT Field Distribution.}
+     \label{fig:DEMUX_design2_SimulationResult}
+\end{figure}
+
+\subsection{DEMUX design - parameter 3}
+\subsection{DEMUX design - parameter 4}
 
 
 
 \section{Bend Waveguide Optimization Results}
 在彎曲波導的設計中，我們的核心目標是能夠將
 
+\subsection{Gaussian Upsampling Strategy on Bend Waveguide Design}
+
+\subsubsection{Gaussian Upsampling Strategy on Bend Waveguide Design - parameter 1}
+\subsubsection{Gaussian Upsampling Strategy on Bend Waveguide Design - parameter 2}
+\subsubsection{Gaussian Upsampling Strategy on Bend Waveguide Design - parameter 3}
+\subsubsection{Gaussian Upsampling Strategy on Bend Waveguide Design - parameter 4}
+\subsubsection{Gaussian Upsampling Strategy on Bend Waveguide Design - parameter 5}
+
+
+
+\subsection{2D Fourier Integral on Bend Waveguide Design}
+\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 1}
+\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 2}
+\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 3}
+\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 4}
+\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 5}
+
+\subsection{$\beta$-VAE on Bend Waveguide Design}
+\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 1}
+\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 2}
+\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 3}
+\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 4}
 
 
 
 \section{Waveguide Crossing Optimization Results}
-在設計目標是能夠將模態分波解多工器中單一通道輸入的TE$_0$和TE$_1$模態有效的將能量分離至兩個輸出通道，
-並且在輸出的兩個通道中能夠偵測到我們想要的分離出去的TE$_0$模態，而目標模態的能量必須越大越好，模態串擾要越小越好。
+
+\subsection{Gaussian Upsampling Strategy on Waveguide Crossing Design}
+
+\subsubsection{Gaussian Upsampling Strategy on Waveguide Crossing Design - parameter 1}
+\subsubsection{Gaussian Upsampling Strategy on Waveguide Crossing Design - parameter 2}
+\subsubsection{Gaussian Upsampling Strategy on Waveguide Crossing Design - parameter 3}
+\subsubsection{Gaussian Upsampling Strategy on Waveguide Crossing Design - parameter 4}
+\subsubsection{Gaussian Upsampling Strategy on Waveguide Crossing Design - parameter 5}
+
+\subsubsection{Gaussian Upsampling Strategy on Waveguide Crossing Design - parameter 6}
+\subsubsection{Gaussian Upsampling Strategy on Waveguide Crossing Design - parameter 7}
+
+
 

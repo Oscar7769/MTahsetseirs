@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  10 JUL 2026 18:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  13 JUL 2026 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -625,7 +625,11 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@delta=\dimen313
 \TX@cols=\count367
 \TX@ftn=\toks41
-)) (./main.aux)
+)) (./main.aux
+
+LaTeX Warning: Label `eq:DEMUX_FoM_Design1' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -796,7 +800,12 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [6])
+ [6]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [7])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
@@ -804,7 +813,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [7] (./main.lof
+ [8] (./main.lof
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -819,7 +828,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[8
+[9
 
 ])
 \tf@lof=\write4
@@ -829,7 +838,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [9] (./main.lot)
+ [10] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
@@ -837,7 +846,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [10
+ [11
 
 ]) (./Sections/1.Introduction_Motivation.tex
 Chapter 1.
@@ -1262,19 +1271,54 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [63])
+ [63]
+File: img/DEMUX/DEMUX-design1/replot_output/Design1_TE0.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design1/replot_output/Design1_TE0.png>
+File: img/DEMUX/DEMUX-design1/replot_output/Design1_TE1.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design1/replot_output/Design1_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [64] (./Sections/5.Conclusion.tex
+ [64]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [65]
+File: img/DEMUX/DEMUX-design2/design2_TE0.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design2/design2_TE0.png>
+File: img/DEMUX/DEMUX-design2/design2_TE1.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design2/design2_TE1.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [66]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [67])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [68]
+Overfull \vbox (884.23102pt too high) has occurred while \output is active []
+
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [69] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [65
+ [70
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -1289,64 +1333,67 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [66
+ [71
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [67
+ [72
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [68]
+ [73]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [69]
+ [74]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [70]) (./Sections/appendix.tex
+ [75]) (./Sections/appendix.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [71]
+ [76]
 Chapter 7.
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[72
+[77
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 73 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 78 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [73] (./main.aux)
+ [78] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 16855 strings out of 477728
- 375121 string characters out of 5842238
- 692021 words of memory out of 5000000
- 37062 multiletter control sequences out of 15000+600000
+ 16902 strings out of 477728
+ 377033 string characters out of 5842238
+ 692198 words of memory out of 5000000
+ 37103 multiletter control sequences out of 15000+600000
  486981 words of font info for 139 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,413b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (86 pages).
+Output written on main.pdf (92 pages).
