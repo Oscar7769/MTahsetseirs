@@ -27,8 +27,32 @@
 \contentsline {figure}{\numberline {23}{\ignorespaces Mode Division Demultiplexer 的輸入、輸出通道以及其幾何結構的設計區域。\relax }}{62}{}%
 \contentsline {figure}{\numberline {24}{\ignorespaces DEMUX Design 1 DFT Field Distribution.\relax }}{65}{}%
 \contentsline {figure}{\numberline {25}{\ignorespaces DEMUX Design 2 DFT Field Distribution.\relax }}{67}{}%
+\contentsline {figure}{\numberline {26}{\ignorespaces DEMUX Design 3 DFT Field Distribution.\relax }}{69}{}%
+\contentsline {figure}{\numberline {27}{\ignorespaces DEMUX Design 4 DFT Field Distribution.\relax }}{71}{}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Best FoM vs Iteration\relax }}{72}{}%
+\contentsline {figure}{\numberline {29}{\ignorespaces 彎曲波導的輸入、輸出通道以及其幾何結構的設計區域。\relax }}{73}{}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Gaussian Upsampling策略於彎曲波導 Design 1最佳化過程中的最佳FoM變化。\relax }}{75}{}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Gaussian Upsampling策略於彎曲波導 Design 1最佳化過程中的FoM變化。\relax }}{75}{}%
+\contentsline {figure}{\numberline {32}{\ignorespaces 彎曲波導 Design 1之幾何結構圖。\relax }}{76}{}%
+\contentsline {figure}{\numberline {33}{\ignorespaces 彎曲波導 Design 1之DFT電場強度分布圖。\relax }}{76}{}%
+\contentsline {figure}{\numberline {34}{\ignorespaces 彎曲波導 Design 2最佳化過程中的最佳FoM變化。\relax }}{77}{}%
+\contentsline {figure}{\numberline {35}{\ignorespaces 彎曲波導 Design 2最佳化過程中的FoM變化。\relax }}{78}{}%
+\contentsline {figure}{\numberline {36}{\ignorespaces 彎曲波導 Design 2之DFT電場強度分布圖。\relax }}{78}{}%
+\contentsline {figure}{\numberline {37}{\ignorespaces 彎曲波導 Design 2之幾何結構圖。\relax }}{79}{}%
+\contentsline {figure}{\numberline {38}{\ignorespaces 彎曲波導 Design 3最佳化過程中的最佳FoM變化。\relax }}{80}{}%
+\contentsline {figure}{\numberline {39}{\ignorespaces 彎曲波導 Design 3最佳化過程中的FoM變化。\relax }}{81}{}%
+\contentsline {figure}{\numberline {40}{\ignorespaces 彎曲波導 Design 3之DFT電場強度分布圖。\relax }}{81}{}%
+\contentsline {figure}{\numberline {41}{\ignorespaces 彎曲波導 Design 3之幾何結構圖。\relax }}{82}{}%
+\contentsline {figure}{\numberline {42}{\ignorespaces 彎曲波導 Design 4最佳化過程中的FoM變化。\relax }}{83}{}%
+\contentsline {figure}{\numberline {43}{\ignorespaces 彎曲波導 Design 4最佳化過程中的最佳FoM變化。\relax }}{83}{}%
+\contentsline {figure}{\numberline {44}{\ignorespaces 彎曲波導 Design 4之DFT電場強度分布圖。\relax }}{84}{}%
+\contentsline {figure}{\numberline {45}{\ignorespaces 彎曲波導 Design 4之幾何結構圖。\relax }}{85}{}%
+\contentsline {figure}{\numberline {46}{\ignorespaces 彎曲波導 Design 5最佳化過程中的最佳FoM變化。\relax }}{86}{}%
+\contentsline {figure}{\numberline {47}{\ignorespaces 彎曲波導 Design 5最佳化過程中的FoM變化。\relax }}{86}{}%
+\contentsline {figure}{\numberline {48}{\ignorespaces 彎曲波導 Design 5之DFT電場強度分布圖。\relax }}{87}{}%
+\contentsline {figure}{\numberline {49}{\ignorespaces 彎曲波導 Design 5之幾何結構圖。\relax }}{88}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {26}{\ignorespaces Three simple graphs\relax }}{71}{}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Three simple graphs\relax }}{91}{}%
 \addvspace {10\p@ }
 \contentsfinish 

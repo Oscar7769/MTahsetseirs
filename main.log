@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  13 JUL 2026 16:36
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  15 JUL 2026 18:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -625,11 +625,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@delta=\dimen313
 \TX@cols=\count367
 \TX@ftn=\toks41
-)) (./main.aux
-
-LaTeX Warning: Label `eq:DEMUX_FoM_Design1' multiply defined.
-
-)
+)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -830,7 +826,12 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 [9
 
-])
+]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [10])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
@@ -838,7 +839,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [10] (./main.lot)
+ [11] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
@@ -846,7 +847,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [11
+ [12
 
 ]) (./Sections/1.Introduction_Motivation.tex
 Chapter 1.
@@ -1299,26 +1300,178 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [67])
+ [67]
+File: img/DEMUX/DEMUX-design3/design3_TE0.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design3/design3_TE0.png>
+File: img/DEMUX/DEMUX-design3/design3_TE1.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design3/design3_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [68]
-Overfull \vbox (884.23102pt too high) has occurred while \output is active []
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [69]
+File: img/DEMUX/DEMUX-design4/design4_TE0.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design4/design4_TE0.png>
+File: img/DEMUX/DEMUX-design4/design4_TE1.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design4/design4_TE1.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [70]
+File: img/DEMUX/DEMUX-design4/bestfom_vs_iter.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design4/bestfom_vs_iter.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [71]
+File: img/BEND/BendWaveguide_schematic.png Graphic file (type bmp)
+<img/BEND/BendWaveguide_schematic.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [72]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [73]
+File: img/BEND/BEND-GU-design1/BESTFOM_vs_iter.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design1/BESTFOM_vs_iter.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [74]
+File: img/BEND/BEND-GU-design1/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design1/transmission_trajectory.png>
+File: img/BEND/BEND-GU-design1/eval_TE0_structure_binary.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design1/eval_TE0_structure_binary.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [75]
+File: img/BEND/BEND-GU-design1/eval_TE0_field.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design1/eval_TE0_field.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [76]
+File: img/BEND/BEND-GU-design2/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design2/fom_evolution.png>
+File: img/BEND/BEND-GU-design2/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design2/transmission_trajectory.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [77]
+File: img/BEND/BEND-GU-design2/eval_TE0_field.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design2/eval_TE0_field.png>
+File: img/BEND/BEND-GU-design2/eval_TE0_structure_binary.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design2/eval_TE0_structure_binary.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [78]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [79]
+File: img/BEND/BEND-GU-design3/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design3/fom_evolution.png>
+File: img/BEND/BEND-GU-design3/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design3/transmission_trajectory.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [80]
+File: img/BEND/BEND-GU-design3/eval_TE0_field.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design3/eval_TE0_field.png>
+File: img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [81]
+File: img/BEND/BEND-GU-design4/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design4/transmission_trajectory.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [82]
+File: img/BEND/BEND-GU-design4/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design4/fom_evolution.png>
+File: img/BEND/BEND-GU-design4/eval_TE0_field.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design4/eval_TE0_field.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [83]
+File: img/BEND/BEND-GU-design4/eval_TE0_structure_binary.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design4/eval_TE0_structure_binary.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [84]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [85]
+File: img/BEND/BEND-GU-design5/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design5/fom_evolution.png>
+File: img/BEND/BEND-GU-design5/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design5/transmission_trajectory.png>
+File: img/BEND/BEND-GU-design5/eval_TE0_field.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design5/eval_TE0_field.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [86]
+File: img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png Graphic file (type bmp)
+<img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [87])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [88]
+Overfull \vbox (439.92633pt too high) has occurred while \output is active []
 
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [69] (./Sections/5.Conclusion.tex
+ [89] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [70
+ [90
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
@@ -1333,67 +1486,67 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [71
+ [91
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [72
+ [92
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [73]
+ [93]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [74]
+ [94]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [75]) (./Sections/appendix.tex
+ [95]) (./Sections/appendix.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [76]
+ [96]
 Chapter 7.
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[77
+[97
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 78 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 98 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [78] (./main.aux)
+ [98] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 16902 strings out of 477728
- 377033 string characters out of 5842238
- 692198 words of memory out of 5000000
- 37103 multiletter control sequences out of 15000+600000
+ 17147 strings out of 477728
+ 387958 string characters out of 5842238
+ 692634 words of memory out of 5000000
+ 37329 multiletter control sequences out of 15000+600000
  486981 words of font info for 139 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,413b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (92 pages).
+Output written on main.pdf (113 pages).
