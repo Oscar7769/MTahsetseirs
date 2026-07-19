@@ -21,14 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{meep_docs}
-{Meep Development Team}, ``Meep documentation,''
-  \url{https://meep.readthedocs.io/}, 2026, accessed: 2026-06-29.
-
-\bibitem{hao2008fdtd}
-Y.~Hao, \emph{{FDTD} Modeling of Metamaterials: Theory and Applications}.\hskip
-  1em plus 0.5em minus 0.4em\relax Artech House, 2008.
-
 \bibitem{cox1999_maximizing}
 S.~J. Cox and D.~C. Dobson, ``Maximizing band gaps in two-dimensional photonic
   crystals,'' \emph{SIAM Journal on Applied Mathematics}, vol.~59, no.~6, pp.
@@ -197,6 +189,14 @@ A.~F. Oskooi, D.~Roundy, M.~Ibanescu, P.~A. Bermel, J.~D. Joannopoulos, and
   simulations by the fdtd method,'' \emph{Computer Physics Communications},
   vol. 181, no.~3, pp. 687--702, 2010.
 
+\bibitem{meep_docs}
+{Meep Development Team}, ``Meep documentation,''
+  \url{https://meep.readthedocs.io/}, 2026, accessed: 2026-06-29.
+
+\bibitem{hao2008fdtd}
+Y.~Hao, \emph{{FDTD} Modeling of Metamaterials: Theory and Applications}.\hskip
+  1em plus 0.5em minus 0.4em\relax Artech House, 2008.
+
 \bibitem{Wilson_2021}
 \BIBentryALTinterwordspacing
 B.~A. Wilson, Z.~A. Kudyshev, A.~V. Kildishev, S.~Kais, V.~M. Shalaev, and
@@ -209,5 +209,13 @@ B.~A. Wilson, Z.~A. Kudyshev, A.~V. Kildishev, S.~Kais, V.~M. Shalaev, and
 \bibitem{dwave_ocean_sdk}
 {D-Wave Systems}, ``Ocean sdk documentation,''
   \url{https://docs.ocean.dwavesys.com/}, 2026, accessed: 2026-07-05.
+
+\bibitem{li2020ultracompact}
+\BIBentryALTinterwordspacing
+Z.~Li, G.~Li, J.~Huang \emph{et~al.}, ``Ultra-compact high efficiency and low
+  crosstalk optical interconnection structures based on inverse designed
+  nanophotonic elements,'' \emph{Scientific Reports}, vol.~10, p. 11993, jul
+  2020. [Online]. Available: \url{https://doi.org/10.1038/s41598-020-68936-w}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

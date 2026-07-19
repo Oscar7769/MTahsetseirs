@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  16 JUL 2026 07:06
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  19 JUL 2026 16:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -208,24 +208,24 @@ File: ctex-scheme-plain.def 2021/12/12 v2.5.8 Plain scheme for generic (CTEX)
 File: ctex.cfg 2021/12/12 v2.5.8 Configuration file (CTEX)
 )
 
-Package fontspec Info: Font family 'TW-Kai.ttf(0)' created for font
-(fontspec)             'TW-Kai.ttf' with options
+Package fontspec Info: Font family 'TW-Kai(0)' created for font 'TW-Kai' with
+(fontspec)             options
 (fontspec)             [Script={CJK},Path={./fonts/},AutoFakeBold={4},AutoFakeSlant={0.2}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;slant=0.2;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai.ttf]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
  (/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
@@ -756,7 +756,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 
 ] (./covers/toc_var.tex (./Sections/0.2.Abstract_chinese.tex
 Overfull \hbox (8.48245pt too wide) in paragraph at lines 39--41
-[]\TU/TW-Kai.ttf(0)/m/n/12 數 值 模 擬 的 部 分，|  本 研 究 利 用 有 限 差 分 時 域 法 \TU/TimesNewRoman(0)/m/n/12 (Finite-Difference Time-Domain\TU/TW-Kai.ttf(0)/m/n/12 ，| \TU/TimesNewRoman(0)/m/n/12 FDTD)
+[]\TU/TW-Kai(0)/m/n/12 數 值 模 擬 的 部 分，|  本 研 究 利 用 有 限 差 分 時 域 法 \TU/TimesNewRoman(0)/m/n/12 (Finite-Difference Time-Domain\TU/TW-Kai(0)/m/n/12 ，| \TU/TimesNewRoman(0)/m/n/12 FDTD)
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -817,7 +817,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 
 Overfull \hbox (49.41751pt too wide) in paragraph at lines 13--13
- [][] \TU/TW-Kai.ttf(0)/m/n/12 圖 \TU/TimesNewRoman(0)/m/n/12 10| PML \TU/TW-Kai.ttf(0)/m/n/12 導 電 率 函 數 之 離 散 化 處 理 對 數 值 反 射 的 影 響。|  左 圖 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 ) 
+ [][] \TU/TW-Kai(0)/m/n/12 圖 \TU/TimesNewRoman(0)/m/n/12 10| PML \TU/TW-Kai(0)/m/n/12 導 電 率 函 數 之 離 散 化 處 理 對 數 值 反 射 的 影 響。|  左 圖 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 ) 
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -836,7 +836,17 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [11])
+ [11]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [12]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [13])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
@@ -844,7 +854,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [12] (./main.lot)
+ [14] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
@@ -852,7 +862,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [13
+ [15
 
 ]) (./Sections/1.Introduction_Motivation.tex
 Chapter 1.
@@ -1059,7 +1069,7 @@ File: img/pml_integrated.png Graphic file (type bmp)
 <img/pml_integrated.png>
 
 Overfull \hbox (42.75401pt too wide) in paragraph at lines 511--522
-\TU/TW-Kai.ttf(0)/m/n/12 高 頻 的 數 值 反 射。|  如 圖 \TU/TimesNewRoman(0)/m/n/12 10[] \TU/TW-Kai.ttf(0)/m/n/12 左 側 所 示，|  若 未 針 對 邊 界 網 格 進 行 特 殊 處 理 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai.ttf(0)/m/n/12 ，|
+\TU/TW-Kai(0)/m/n/12 高 頻 的 數 值 反 射。|  如 圖 \TU/TimesNewRoman(0)/m/n/12 10[] \TU/TW-Kai(0)/m/n/12 左 側 所 示，|  若 未 針 對 邊 界 網 格 進 行 特 殊 處 理 \TU/TimesNewRoman(0)/m/n/12 (\TU/lmtt/m/n/12 is_integrated=False\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai(0)/m/n/12 ，|
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1106,7 +1116,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [37]
 Overfull \hbox (13.63089pt too wide) in paragraph at lines 648--649
-[]\TU/TW-Kai.ttf(0)/m/n/12 為 了 具 體 說 明 如 何 應 用 公 式[]來 控 制 設 計 區 域 的 最 小 特 徵 尺 寸，|  我 將 會 在 第 \TU/TimesNewRoman(0)/m/n/12 4.2.1[]\TU/TW-Kai.ttf(0)/m/n/12 節
+[]\TU/TW-Kai(0)/m/n/12 為 了 具 體 說 明 如 何 應 用 公 式[]來 控 制 設 計 區 域 的 最 小 特 徵 尺 寸，|  我 將 會 在 第 \TU/TimesNewRoman(0)/m/n/12 4.2.1[]\TU/TW-Kai(0)/m/n/12 節
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1182,7 +1192,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [49]
 Overfull \hbox (10.7812pt too wide) in paragraph at lines 943--945
-\TU/TW-Kai.ttf(0)/m/n/12 其 中，| $\OML/cmm/m/it/12 ^^[[]$ \TU/TW-Kai.ttf(0)/m/n/12 為 第 $\OML/cmm/m/it/12 i$ \TU/TW-Kai.ttf(0)/m/n/12 個 量 子 位 元 的 \TU/TimesNewRoman(0)/m/n/12 Pauli-Z \TU/TW-Kai.ttf(0)/m/n/12 算 符，|  其 測 量 結 果 會 對 應 至 自 旋 狀 態 $\OML/cmm/m/it/12 s[] \OMS/cmsy/m/n/12 2 f^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 +1\OMS/cmsy/m/n/12 g$\TU/TW-Kai.ttf(0)/m/n/12 。| 
+\TU/TW-Kai(0)/m/n/12 其 中，| $\OML/cmm/m/it/12 ^^[[]$ \TU/TW-Kai(0)/m/n/12 為 第 $\OML/cmm/m/it/12 i$ \TU/TW-Kai(0)/m/n/12 個 量 子 位 元 的 \TU/TimesNewRoman(0)/m/n/12 Pauli-Z \TU/TW-Kai(0)/m/n/12 算 符，|  其 測 量 結 果 會 對 應 至 自 旋 狀 態 $\OML/cmm/m/it/12 s[] \OMS/cmsy/m/n/12 2 f^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 +1\OMS/cmsy/m/n/12 g$\TU/TW-Kai(0)/m/n/12 。| 
  []
 
 )
@@ -1217,7 +1227,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [53]
 Overfull \hbox (2.09715pt too wide) in paragraph at lines 85--89
-\TU/TW-Kai.ttf(0)/m/n/12 中 將 進 一 步 介 紹 \TU/TimesNewRoman(0)/m/n/12 Gaussian Upsampling Strategy\TU/TW-Kai.ttf(0)/m/n/12 、| \TU/TimesNewRoman(0)/m/n/12 2D Fourier Integral Strategy \TU/TW-Kai.ttf(0)/m/n/12 與 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -Variational
+\TU/TW-Kai(0)/m/n/12 中 將 進 一 步 介 紹 \TU/TimesNewRoman(0)/m/n/12 Gaussian Upsampling Strategy\TU/TW-Kai(0)/m/n/12 、| \TU/TimesNewRoman(0)/m/n/12 2D Fourier Integral Strategy \TU/TW-Kai(0)/m/n/12 與 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -Variational
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1287,15 +1297,19 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [64]
+File: img/DEMUX/DEMUX-design2/design2_TE0.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design2/design2_TE0.png>
+File: img/DEMUX/DEMUX-design2/design2_TE1.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design2/design2_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [65]
-File: img/DEMUX/DEMUX-design2/design2_TE0.png Graphic file (type bmp)
-<img/DEMUX/DEMUX-design2/design2_TE0.png>
-File: img/DEMUX/DEMUX-design2/design2_TE1.png Graphic file (type bmp)
-<img/DEMUX/DEMUX-design2/design2_TE1.png>
+File: img/DEMUX/DEMUX-design3/design3_TE0.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design3/design3_TE0.png>
+File: img/DEMUX/DEMUX-design3/design3_TE1.png Graphic file (type bmp)
+<img/DEMUX/DEMUX-design3/design3_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1306,55 +1320,36 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [67]
-File: img/DEMUX/DEMUX-design3/design3_TE0.png Graphic file (type bmp)
-<img/DEMUX/DEMUX-design3/design3_TE0.png>
-File: img/DEMUX/DEMUX-design3/design3_TE1.png Graphic file (type bmp)
-<img/DEMUX/DEMUX-design3/design3_TE1.png>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [68]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [69]
 File: img/DEMUX/DEMUX-design4/design4_TE0.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design4/design4_TE0.png>
 File: img/DEMUX/DEMUX-design4/design4_TE1.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design4/design4_TE1.png>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [70]
 File: img/DEMUX/DEMUX-design4/bestfom_vs_iter.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design4/bestfom_vs_iter.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [71]
+ [68]
 File: img/BEND/BendWaveguide_schematic.png Graphic file (type bmp)
 <img/BEND/BendWaveguide_schematic.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [72]
+ [69]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [73]
+ [70]
 File: img/BEND/BEND-GU-design1/BESTFOM_vs_iter.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design1/BESTFOM_vs_iter.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [74]
+ [71]
 File: img/BEND/BEND-GU-design1/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design1/transmission_trajectory.png>
 File: img/BEND/BEND-GU-design1/eval_TE0_structure_binary.png Graphic file (type bmp)
@@ -1363,14 +1358,14 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [75]
+ [72]
 File: img/BEND/BEND-GU-design1/eval_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design1/eval_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [76]
+ [73]
 File: img/BEND/BEND-GU-design2/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design2/fom_evolution.png>
 File: img/BEND/BEND-GU-design2/transmission_trajectory.png Graphic file (type bmp)
@@ -1379,7 +1374,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [77]
+ [74]
 File: img/BEND/BEND-GU-design2/eval_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design2/eval_TE0_field.png>
 File: img/BEND/BEND-GU-design2/eval_TE0_structure_binary.png Graphic file (type bmp)
@@ -1388,12 +1383,12 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [78]
+ [75]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [79]
+ [76]
 File: img/BEND/BEND-GU-design3/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design3/fom_evolution.png>
 File: img/BEND/BEND-GU-design3/transmission_trajectory.png Graphic file (type bmp)
@@ -1402,7 +1397,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [80]
+ [77]
 File: img/BEND/BEND-GU-design3/eval_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design3/eval_TE0_field.png>
 File: img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png Graphic file (type bmp)
@@ -1411,14 +1406,14 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [81]
+ [78]
 File: img/BEND/BEND-GU-design4/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design4/transmission_trajectory.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [82]
+ [79]
 File: img/BEND/BEND-GU-design4/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design4/fom_evolution.png>
 File: img/BEND/BEND-GU-design4/eval_TE0_field.png Graphic file (type bmp)
@@ -1427,21 +1422,21 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [83]
+ [80]
 File: img/BEND/BEND-GU-design4/eval_TE0_structure_binary.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design4/eval_TE0_structure_binary.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [84]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [85]
+ [81]
 File: img/BEND/BEND-GU-design5/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design5/fom_evolution.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [82]
 File: img/BEND/BEND-GU-design5/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design5/transmission_trajectory.png>
 File: img/BEND/BEND-GU-design5/eval_TE0_field.png Graphic file (type bmp)
@@ -1450,126 +1445,106 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [86]
+ [83]
 File: img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [87]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [88]
+ [84]
 File: img/BEND/BEND-2F-design1/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/fom_evolution.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [85]
 File: img/BEND/BEND-2F-design1/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/transmission_trajectory.png>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [89]
 File: img/BEND/BEND-2F-design1/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/final_analysis_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [90]
+ [86]
 File: img/BEND/BEND-2F-design1/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [91]
+ [87]
 File: img/BEND/BEND-2F-design2/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/fom_evolution.png>
 
 Overfull \hbox (47.57813pt too wide) in paragraph at lines 824--832
-[]\TU/TW-Kai.ttf(0)/m/n/12 接 著，|  觀 察 最 佳 化 過 程 中 的 最 佳 \TU/TimesNewRoman(0)/m/n/12 FoM \TU/TW-Kai.ttf(0)/m/n/12 變 化 如 圖 \TU/TimesNewRoman(0)/m/n/12 54[]\TU/TW-Kai.ttf(0)/m/n/12 與 圖 \TU/TimesNewRoman(0)/m/n/12 55[]\TU/TW-Kai.ttf(0)/m/n/12 所 示，|  相 較 於 \TU/TimesNewRoman(0)/m/n/12 Design 1(\TU/TW-Kai.ttf(0)/m/n/12 第 \TU/TimesNewRoman(0)/m/n/12 4.4.2.1[]\TU/TW-Kai.ttf(0)/m/n/12 節\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai.ttf(0)/m/n/12 ，|
+[]\TU/TW-Kai(0)/m/n/12 接 著，|  觀 察 最 佳 化 過 程 中 的 最 佳 \TU/TimesNewRoman(0)/m/n/12 FoM \TU/TW-Kai(0)/m/n/12 變 化 如 圖 \TU/TimesNewRoman(0)/m/n/12 54[]\TU/TW-Kai(0)/m/n/12 與 圖 \TU/TimesNewRoman(0)/m/n/12 55[]\TU/TW-Kai(0)/m/n/12 所 示，|  相 較 於 \TU/TimesNewRoman(0)/m/n/12 Design 1(\TU/TW-Kai(0)/m/n/12 第 \TU/TimesNewRoman(0)/m/n/12 4.4.2.1[]\TU/TW-Kai(0)/m/n/12 節\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai(0)/m/n/12 ，|
  []
 
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-[92]
 File: img/BEND/BEND-2F-design2/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/transmission_trajectory.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+[88]
 File: img/BEND/BEND-2F-design2/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/final_analysis_TE0_field.png>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [93]
 File: img/BEND/BEND-2F-design2/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [94]
+ [89]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [95]
+ [90]
 File: img/BEND/BEND-2F-design3/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/fom_evolution.png>
 File: img/BEND/BEND-2F-design3/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/transmission_trajectory.png>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [96]
 File: img/BEND/BEND-2F-design3/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/final_analysis_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [97]
+ [91]
 File: img/BEND/BEND-2F-design3/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [98]
+ [92]
 File: img/BEND/BEND-2F-design4/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design4/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [99]
+ [93]
 File: img/BEND/BEND-2F-design4/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design4/transmission_trajectory.png>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [100]
 File: img/BEND/BEND-2F-design4/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design4/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [101]
+ [94]
 File: img/BEND/BEND-2F-design4/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design4/final_analysis_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [102]
+ [95]
 File: img/BEND/BEND-2F-design5/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design5/fom_evolution.png>
 File: img/BEND/BEND-2F-design5/transmission_trajectory.png Graphic file (type bmp)
@@ -1578,112 +1553,331 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [103]
+ [96]
 File: img/BEND/BEND-2F-design5/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design5/final_analysis_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [104]
+ [97]
 File: img/BEND/BEND-2F-design5/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design5/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [105])
+ [98]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [99]
+File: img/BEND/BEND-bVAE-design1/replot_results/best_latent_8x8.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design1/replot_results/best_latent_8x8.png>
+File: img/BEND/BEND-bVAE-design1/replot_results/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design1/replot_results/fom_evolution.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [100]
+File: img/BEND/BEND-bVAE-design1/replot_results/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design1/replot_results/transmission_trajectory.png>
+File: img/BEND/BEND-bVAE-design1/replot_results/final_field.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design1/replot_results/final_field.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [101]
+File: img/BEND/BEND-bVAE-design1/replot_results/binarized_structure.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design1/replot_results/binarized_structure.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [102]
+File: img/BEND/BEND-bVAE-design2/replot_results/best_latent_12x12.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design2/replot_results/best_latent_12x12.png>
+File: img/BEND/BEND-bVAE-design2/replot_results/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design2/replot_results/fom_evolution.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [103]
+File: img/BEND/BEND-bVAE-design2/replot_results/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design2/replot_results/transmission_trajectory.png>
+File: img/BEND/BEND-bVAE-design2/replot_results/final_field.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design2/replot_results/final_field.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [104]
+File: img/BEND/BEND-bVAE-design2/replot_results/binarized_structure.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design2/replot_results/binarized_structure.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [105]
+File: img/BEND/BEND-bVAE-design3/replot_results/best_latent_8x8.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design3/replot_results/best_latent_8x8.png>
+File: img/BEND/BEND-bVAE-design3/replot_results/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design3/replot_results/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [106]
-Overfull \vbox (175.62164pt too high) has occurred while \output is active []
+File: img/BEND/BEND-bVAE-design3/replot_results/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design3/replot_results/transmission_trajectory.png>
+File: img/BEND/BEND-bVAE-design3/replot_results/final_field.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design3/replot_results/final_field.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [107]
+File: img/BEND/BEND-bVAE-design3/replot_results/binarized_structure.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design3/replot_results/binarized_structure.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [108]
+File: img/BEND/BEND-bVAE-design4/replot_results/best_latent_12x12.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design4/replot_results/best_latent_12x12.png>
+File: img/BEND/BEND-bVAE-design4/replot_results/fom_evolution.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design4/replot_results/fom_evolution.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [109]
+File: img/BEND/BEND-bVAE-design4/replot_results/transmission_trajectory.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design4/replot_results/transmission_trajectory.png>
+File: img/BEND/BEND-bVAE-design4/replot_results/final_field.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design4/replot_results/final_field.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [110]
+File: img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png Graphic file (type bmp)
+<img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png>
+File: img/Crossing/Four_fold_symmetry.png Graphic file (type bmp)
+<img/Crossing/Four_fold_symmetry.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [111]
+File: img/Crossing/Crossing_Scheme.png Graphic file (type bmp)
+<img/Crossing/Crossing_Scheme.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [112]
+File: img/Crossing/Crossing-GU-Design1/replot_best_config_10x10.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design1/replot_best_config_10x10.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [113]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [114]
+File: img/Crossing/Crossing-GU-Design1/replot_Optimized_Final_Structure.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design1/replot_Optimized_Final_Structure.png>
+File: img/Crossing/Crossing-GU-Design1/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design1/replot_Smoothed_Binary_Structure.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [115]
+File: img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE0.png>
+File: img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE1.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [116]
+File: img/Crossing/Crossing-GU-Design2/plot/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design2/plot/replot_Smoothed_Binary_Structure.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [117]
+File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE0.png>
+File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE1.png>
+File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE2.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE2.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [118]
+File: img/Crossing/Crossing-GU-Design3/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design3/replot_Smoothed_Binary_Structure.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [119]
+File: img/Crossing/Crossing-GU-Design5/replot_fom_evolution.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design5/replot_fom_evolution.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [120]
+File: img/Crossing/Crossing-GU-Design5/replot_fom_trajectory.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design5/replot_fom_trajectory.png>
+File: img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE0.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE0.png>
+File: img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE1.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE1.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [121]
+File: img/Crossing/Crossing-GU-Design5/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design5/replot_Smoothed_Binary_Structure.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [122]
+File: img/Crossing/Crossing-GU-Design5/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design5/replot_Optimized_Final_Structure_TE0.png>
+File: img/Crossing/Crossing-GU-Design4/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design4/replot_Optimized_Final_Structure_TE1.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [123]
 
+LaTeX Warning: Reference `fig:Crossing_design5_Bestfom_vs_iteration' on page 124 undefined on input line 1525.
+
+
+LaTeX Warning: Reference `fig:Crossing_design5_Opt_Trajactory' on page 124 undefined on input line 1525.
+
+File: img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE0.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE0.png>
+File: img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE1.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [107] (./Sections/5.Conclusion.tex
+[124]
+File: img/Crossing/Crossing-GU-Design7/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design7/replot_Smoothed_Binary_Structure.png>
+File: img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE0.png>
+File: img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE1.png>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [125])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [126] (./Sections/5.Conclusion.tex
 Chapter 5.
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [108
+ [127
 
 ] (./Sections/6.Future_Work.tex
 Chapter 6.
-File: img/fig1.png Graphic file (type bmp)
-<img/fig1.png>
-File: img/fig2.png Graphic file (type bmp)
-<img/fig2.png>
-File: img/fig3.png Graphic file (type bmp)
-<img/fig3.png>
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [109
+ [128
 
 ] (./main.bbl
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [110
+ [129
 
 ]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [111]
+ [130]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [112]
+ [131]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [113]) (./Sections/appendix.tex
+ [132]) (./Sections/appendix.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [114]
+ [133]
 Chapter 7.
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[115
+[134
 
 ]
 
-LaTeX Warning: Reference `fig:excel2latex' on page 116 undefined on input line 29.
+LaTeX Warning: Reference `fig:excel2latex' on page 135 undefined on input line 29.
 
 )
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [116] (./main.aux)
+ [135] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 17324 strings out of 477728
- 396841 string characters out of 5842238
- 692989 words of memory out of 5000000
- 37499 multiletter control sequences out of 15000+600000
+ 17746 strings out of 477728
+ 421859 string characters out of 5842238
+ 693942 words of memory out of 5000000
+ 37895 multiletter control sequences out of 15000+600000
  486981 words of font info for 139 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,413b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (132 pages).
+Output written on main.pdf (153 pages).
