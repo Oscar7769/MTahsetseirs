@@ -9,8 +9,8 @@
 \contentsline {chapter}{中文摘要}{i}{}%
 \contentsline {chapter}{英文摘要}{iii}{}%
 \contentsline {chapter}{目錄}{v}{}%
-\contentsline {chapter}{圖目錄\vspace {0em}}{vi}{}%
-\contentsline {chapter}{表目錄\vspace {0em}}{vii}{}%
+\contentsline {chapter}{圖目錄\vspace {0em}}{ix}{}%
+\contentsline {chapter}{表目錄\vspace {0em}}{xv}{}%
 \contentsline {chapter}{\numberline {1}Introduction and Motivation}{1}{}%
 \contentsline {chapter}{\numberline {2}Related Work}{4}{}%
 \contentsline {section}{\numberline {2.1}Early Works on Inverse Design of Photonic Devices}{4}{}%

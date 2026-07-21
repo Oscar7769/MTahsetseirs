@@ -65,6 +65,7 @@ Related Work 的部分，我主要會分三個部分說明，
 \cite{rendle2010_factorization}\textbf{西元2010年}Rendle提出「因子分解機(Factorization Machines, FM)」，其數學表達式可直接映射為 QUBO 模型的二次多項式，將高維組合問題轉換為 QUBO 形式，使直接利用退火硬體加速最佳化成為可能。
 \cite{shen2015_integrated_pbs}\textbf{西元2015年}Shen與Menon等人提出「直接二元搜尋法(Direct Binary Search, DBS)」，無需量子計算設備即可利用二元像素化結構實現高效的光學元件設計。
 \cite{kitai2020_fmqa}\textbf{西元2020年}Kitai與Tamura等東京大學團隊結合因子分解機與 D-Wave 量子退火硬體，提出 FMQA 架構，於超穎材料設計中突破了傳統物理直覺的限制。
+\cite{Wilson_2021}\textbf{西元2021年}Wilson等人提出結合二元變分自編碼器與因子分解機的機器學習框架，將連續設計空間映射至低維二元潛在空間，並轉換為QUBO問題，利用量子退火與模擬退火進行反向設計。
 \cite{inoue2022_fmqa_pcsel}\textbf{西元2022年}Inoue與Noda等京都大學團隊將 FMQA 應用於 PCSEL 設計，驗證了該架構處理複雜非均勻結構與高維離散參數的有效性。
 \cite{zhu2024_machine_learning}\textbf{西元2024年}Zhu與Li等人的綜述確立了「代理模型結合退火(Surrogate Model + Annealing)」混合架構在複雜物理反向設計中的可靠性與高效性。
 \cite{hu2025_optical_filter}\textbf{西元2025年}Hu與Wu等人成功將 FMQA 架構應用於薄膜濾波器與類條碼超穎結構等實務設計上，不僅解決了光學長程干涉與二次耦合限制的衝突，更驗證了該架構在微納光學元件上的強大逆向設計能力。
@@ -83,6 +84,8 @@ Related Work 的部分，我主要會分三個部分說明，
 
 2020 & Kitai/University of Tokyo team pioneered FMQA, creating a closed-loop ``ML + D-Wave QA'' framework for metamaterial discovery.\cite{kitai2020_fmqa} \\[1.5em]
 
+2021 & Wilson et al. proposed a machine learning framework that combines a Binary VAE and a Factorization Machine to transform continuous inverse design problems into QUBO formulations, which are optimized using quantum annealing and simulated annealing.\cite{Wilson_2021} \\[1.5em]
+
 2022 & Inoue/Kyoto University team applied FMQA to PCSELs, breaking trade-offs in output power and divergence angles.\cite{inoue2022_fmqa_pcsel} \\[1.5em]
 
 2024 & Zhu/Chemical Reviews published a comprehensive review endorsing the ``surrogate model + annealing'' paradigm for inverse design.\cite{zhu2024_machine_learning} \\[1.5em]
@@ -100,7 +103,8 @@ Related Work 的部分，我主要會分三個部分說明，
 
 \section{Low-dimensional Encoding-Based Methods}
 
-為了解決組合最佳化演算法在高解析度網格下量子位元（Qubits）不足的問題，並降低離散像素結構造成的製程鋸齒與光學散射損耗，本研究引入潛在空間降維及空間頻率平滑化機制。為奠定此編碼架構的理論基礎，以下整理相關技術的發展脈絡。\
+為提升二維光學結構的優化效率與幾何表示能力，並且改善離散像素化設計所造成的階梯效應與光學散射損耗，本研究探討低維度編碼、潛在空間降維以及空間頻率平滑化等結構表示方法，
+並將其結合 FMSA 反向設計架構。以下整理相關技術之發展脈絡。\
 
 \cite{lazarov2011_filters}\textbf{西元2011年}Lazarov與Sigmund為消除拓撲優化中的棋盤格效應（checkerboard effect），引入基於 Helmholtz 偏微分方程式的濾波算子，透過隱式求解達到低通濾波效果。
 \cite{odena2016_deconvolution}\textbf{西元2016年}Odena 等人指出，神經網路使用反卷積（deconvolution）放大幾何訊號時，常因網格不均勻重疊產生棋盤格邊界偽影，而研究證實，改用「插值放大搭配標準卷積（resize-convolution）」能有效消除網格瑕疵並還原平滑邊界。

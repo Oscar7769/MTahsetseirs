@@ -1,5 +1,8 @@
 git add .
 
-git commit -m "Method & Result寫完"
+git commit -m "conclusion & future work寫完"
 
 git push
+
+\newcommand{\chineseTitle}{結合編碼增強因子分解機與量子退火之矽光子反向設計}
+\newcommand{\englishTitle}{Inverse Design of Silicon Photonic Structures\\Using Encoding-Enhanced Factorization Machines and Quantum Annealing}
