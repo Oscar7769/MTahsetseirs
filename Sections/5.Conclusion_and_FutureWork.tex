@@ -1,0 +1,44 @@
+\chapter{Conclusions and Future Work}
+\label{ch:conclusion_futurework}
+
+\section{Conclusion}
+\label{ch:conclusion}
+在此研究中針對矽光子元件設計，過去存在依賴傳統設計經驗、流程耗時且最佳化效率有限等問題，建立一套結合 Factorization Machine(FM)與 Simulated Annealing(SA)的矽光子結構反向設計架構。
+並且引入 Gaussian Upsampling、2D Fourier Integral 與 $\beta$-Variational Autoencoder（$\beta$-VAE）三種編碼(結構表示)方法，
+分別應用於波導彎曲(Bend Waveguide)、交叉波導(Waveguide Crossing)及模態分波解多工器(Mode-Division Demultiplexer)等光學結構的最佳化設計。
+透過不同編碼方法於各種光學結構的設計結果分析，此研究不只驗證其應用於光學結構反向設計的可行性，也建立了不同編碼方法的適用範圍與限制，
+並且討論設計變數維度與自由度、模型學習能力以及資料量對優化結果之影響，提供後續對於光學元件設計提供額外的選擇。
+
+在各項設計成果中，交叉波導具有最顯著的設計結果。透過重新定義品質因數(FoM)及結合四重對稱幾何約束，不但成功設計出可以支援三種模態(TE$_0$,TE$_1$,TE$_2$)傳輸之交叉波導，
+同時，在縮小元件尺寸的情況下，其傳輸效率與串擾抑制表現皆優於 Nature Communications 文獻中所提出之設計，驗證了此研究建立反向設計架構的可行性。
+
+另一方面，在彎曲波導的優化過程中，Gaussian Upsampling 與 2D Fourier Integral 策略都展現了良好的結構表示能力。
+其中，Gaussian Upsampling 最高可以達到 95\% 穿透率，而 2D Fourier Integral 更進一步提升至約 99\%，
+結果顯示適當的編碼方式可以在設計變數限制的同時，有效的提升光場傳輸效率。
+
+此外，本研究也分析了不同編碼方法應用於不同光學結構中的限制。
+在 模態分波解多工器 設計中，傳統伴隨式最佳化(Adjoint Method)通常會產生部分次波長微小孔洞(Sub-wavelength Holes)產生模態散射與耦合，
+以實現模式分波；然而，Gaussian Upsampling 所產生的結構較偏向連續且平滑之幾何形貌，較難在設計大尺寸結構的同時，也產生局部細微細小孔洞，因此限制了 模態分波多工器的優化表現。
+
+另一方面，在$\beta$-VAE 策略應用於彎曲波導的實驗中，由於退火演算法在求解QUBO問題時，需要在二元的潛在空間(Latent Space)中進行採樣，
+使$\beta$-VAE的解碼器(Decoder)無法充分延續VAE中連續潛在表示之特性；當潛在空間的維度增加時，FM模型所建立的 QUBO 問題也會隨之增加，
+而模擬退火固定採樣數與資料量會因為樣本不足而導致FM模型無法充分有效學習，進而影響優化結果。
+
+\section{Future Work}
+\label{ch:futurework}
+
+基於此研究之設計方法與成果，未來可以朝以下幾個方向持續發展。
+
+首先，生成式模型於光學元件反向設計仍然具有相當大的設計潛力。雖然本研究中$\beta$-VAE未能展現優化的優勢，
+但生成式模型具備學習高維非線性結構特徵及建立潛在空間表示的能力仍然適合作為高維設計空間的方法。
+未來可進一步探討更適合代理模型與模擬退火等最佳化演算法之潛在空間表示方式，改善離散二元編碼對生成模型之限制，提升光學元件設計的優化能力。
+
+其次，研究結果顯示，不同的編碼方式各具有其優勢。Gaussian Upsampling 適合描述具有平滑邊界之連續幾何結構，因此於波導彎曲及交叉波導設計中具有良好表現；
+2D Fourier Integral 則能提供較高之結構自由度，能夠設計出較破碎或有許多孔洞的結構。
+因此，未來可進一步發展混合編碼方法(Hybrid Encoding)，結合不同編碼方式之優點，例如以 Gaussian Upsampling 描述整體幾何輪廓，
+再搭配2D Fourier Integral或其他局部編碼方法產生細微結構，使其同時具備全域幾何控制能力與局部細節的調整能力，
+能夠進一步應用於各類型非線性光學元件之反向設計。
+
+最後，此研究主要針對二維矽光子元件結構進行光學模擬驗證，未來可將所提出之反向設計框架應用於更多光子積體電路(Photonic Integrated Circuits, PICs)元件，
+例如模式轉換器(Mode Converter)、偏振分光器(Polarization Beam Splitter)及波長分波器等更複雜光學元件。
+同時也可以進一步考慮三維結構、製程誤差及結構容忍度等實際製造因素，並結合實體製作與量測驗證，以此來提升本研究成果的實際應用價值。
