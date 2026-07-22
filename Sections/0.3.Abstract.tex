@@ -28,36 +28,25 @@
 
 \normalsize 
   
-In previous studies, researchers commonly used gradient-based adjoint methods (Adjoint Method) for the design of photonic structures.
-However, this method easily falls into local optima, making it difficult to explore globally optimal solutions.
-Therefore, this study aims to combine machine learning and quantum annealing techniques, and introduce encoding methods to search for globally optimal structures, providing a new approach for photonic structure design.
-This study integrates Factorization Machines (FM) and Quantum Annealing (QA) to construct an FMQA framework and applies it to the inverse design of two-dimensional silicon photonic waveguide structures.
+In previous studies, the Adjoint Method, a gradient-based optimization approach, 
+has been widely adopted for the inverse design of photonic structures. 
+However, this method is prone to converging to local optima. To address this limitation, 
+this study employs a Factorization Machine (FM) combined with Simulated Annealing (SA) to establish an FMSA optimization framework for the inverse design of two-dimensional silicon photonic structures, aiming to explore globally optimal device configurations.
 
-However, due to the limited number of qubits in current quantum annealing hardware, 
-this study proposes multi-encoding methods to enhance the representational capability of
- design parameters and the resolution of the design space. This approach also mitigates 
- discretization-induced quantization errors and the staircase effect, 
- ensuring high consistency between numerical models and real physical behavior. 
- In terms of spatial and feature encoding, three encoding strategies are employed: 
- Gaussian Upsampling, two-dimensional Fourier integral, and beta-Variational Autoencoder ($\beta$-VAE).
+Since photonic devices generally involve high-dimensional design spaces, 
+directly optimizing binary pixelated structures significantly increases the complexity of surrogate model construction and the optimization process.
+Therefore, different encoding schemes are introduced as structural representations to reduce the complexity of the design space while improving structural representation capability and optimization efficiency.
 
-For numerical simulations, the finite-difference time-domain (FDTD) method is used to analyze the 
-propagation behavior of transverse electric (TE) multimodes in two-dimensional waveguide components. 
-The figure of merit (FoM) is set as the optimization objective to constrain transmission loss 
-and improve transmission efficiency and mode purity.
+Three encoding strategies are investigated in this work, including Gaussian Upsampling, 2D Fourier Integral, and the $\beta$-Variational Autoencoder ($\beta$-VAE).
 
-This study designs and analyzes two key silicon photonic components: 
-a 90-degree Bend Waveguide and a Compact Waveguide Crossing. In the bend waveguide design, 
-the primary objective is to reduce transmission loss and improve transmission efficiency. 
-In the compact waveguide crossing, structural symmetry is exploited to reduce the number of 
-required qubits, effectively suppress mode conversion and crosstalk while maintaining 
-high transmission efficiency. Through the proposed FMQA framework and customized objective function, 
-this study successfully derives high-performance optimized waveguide structures with support 
-for multimode transmission, demonstrating new possibilities and directions for 
-future silicon photonic integrated circuit design.
+For electromagnetic simulations, the open-source MEEP package based on the Finite-Difference Time-Domain (FDTD) method is employed to analyze the propagation characteristics of transverse-electric (TE) modes in silicon photonic devices. Furthermore, the Figure of Merit (FoM) is customized according to different design objectives to accommodate various optimization tasks.
+
+Three representative silicon photonic components are designed and analyzed in this study, including the bend waveguide, waveguide crossing, and mode-division demultiplexer (DEMUX). For the bend waveguide, the primary objective is to maximize transmission efficiency. For the waveguide crossing, structural symmetry is exploited to reduce the dimensionality of the design variables, thereby suppressing mode conversion and crosstalk while maintaining high transmission efficiency. For the mode-division demultiplexer, the design objective is to separate different guided modes with high mode purity and transmission efficiency at the output ports.
+
+By integrating the FMSA framework with customized FoMs, high-performance silicon photonic devices are successfully designed. In addition, the applicability of Gaussian Upsampling, 2D Fourier Integral, and $\beta$-VAE as structural representation methods for different photonic devices is systematically investigated. The proposed framework and the corresponding observations provide useful references for future inverse design of silicon photonic devices and Photonic Integrated Circuits (PICs).
 
 
 \vspace{1cm}
 
 % 5-7 Keywords (English) 
-\textbf{Keywords: Factorization Machine, Silicon Photonics, Waveguide, Inverse Design, Quantum Annealing, Machine Learning} 
+\textbf{Keywords: Factorization Machine, Silicon Photonics, Waveguide, Inverse Design, Simulated Annealing, Machine Learning} 

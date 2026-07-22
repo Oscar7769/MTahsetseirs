@@ -10,7 +10,7 @@
 \contentsline {chapter}{英文摘要}{iii}{}%
 \contentsline {chapter}{目錄}{v}{}%
 \contentsline {chapter}{圖目錄\vspace {0em}}{ix}{}%
-\contentsline {chapter}{表目錄\vspace {0em}}{xv}{}%
+\contentsline {chapter}{表目錄\vspace {0em}}{xiv}{}%
 \contentsline {chapter}{\numberline {1}Introduction and Motivation}{1}{}%
 \contentsline {chapter}{\numberline {2}Related Work}{4}{}%
 \contentsline {section}{\numberline {2.1}Early Works on Inverse Design of Photonic Devices}{4}{}%
@@ -28,58 +28,53 @@
 \contentsline {subsubsection}{\numberline {3.1.3.2}Leapfrog Scheme and Courant Condition}{27}{}%
 \contentsline {subsubsection}{\numberline {3.1.3.3}Subpixel Smoothing}{29}{}%
 \contentsline {subsubsection}{\numberline {3.1.3.4}Perfectly Matched Layer(PML)}{30}{}%
-\contentsline {subsubsection}{\numberline {3.1.3.5}Discrete Fourier Transform (DFT) and Mode Expansion}{32}{}%
-\contentsline {section}{\numberline {3.2}Structured Encoding and Dimensionality Reduction}{34}{}%
-\contentsline {subsection}{\numberline {3.2.1}Spatial Smoothing via Gaussian Upsampling}{34}{}%
-\contentsline {subsection}{\numberline {3.2.2}2D Fourier-Based Representation via Basis Selection}{38}{}%
-\contentsline {subsection}{\numberline {3.2.3}$\beta $-Variational Autoencoder for Latent Space Representation}{41}{}%
-\contentsline {section}{\numberline {3.3}Factorization Machines and Annealing Optimization}{45}{}%
-\contentsline {subsection}{\numberline {3.3.1}Factorization Machine-based Surrogate Model Theory}{45}{}%
-\contentsline {subsection}{\numberline {3.3.2}Combinatorial Optimization and QUBO Transformation}{47}{}%
-\contentsline {subsection}{\numberline {3.3.3}Quantum and Simulated Annealing Mechanisms}{48}{}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}Simulated Annealing Mechanism}{48}{}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}Quantum Annealing Mechanism}{49}{}%
-\contentsline {chapter}{\numberline {4}Method and Results}{51}{}%
-\contentsline {section}{\numberline {4.1}Factorization Machine with Annealing Optimization Framework}{51}{}%
-\contentsline {section}{\numberline {4.2}Encoding Strategies for Factorization Machine with Annealing Optimization}{54}{}%
-\contentsline {subsection}{\numberline {4.2.1}Gaussian Upsampling Strategy}{55}{}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Flowchart}{55}{}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}Fabrication Constraints}{56}{}%
-\contentsline {subsection}{\numberline {4.2.2}2D Fourier Integral Strategy}{58}{}%
-\contentsline {subsection}{\numberline {4.2.3}$\beta $-Variational Autoencoder ($\beta $-VAE) Strategy}{60}{}%
-\contentsline {section}{\numberline {4.3}Mode Division Demultiplexer Optimization Results}{61}{}%
-\contentsline {subsection}{\numberline {4.3.1}DEMUX design - parameter 1}{63}{}%
-\contentsline {subsection}{\numberline {4.3.2}DEMUX design - parameter 2}{65}{}%
-\contentsline {subsection}{\numberline {4.3.3}DEMUX design - parameter 3}{66}{}%
-\contentsline {subsection}{\numberline {4.3.4}DEMUX design - parameter 4}{67}{}%
-\contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{69}{}%
-\contentsline {subsection}{\numberline {4.4.1}Gaussian Upsampling Strategy on Bend Waveguide Design}{71}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Gaussian Upsampling on Bend Waveguide Design - parameter 1}{71}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.2}Gaussian Upsampling on Bend Waveguide Design - parameter 2}{74}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.3}Gaussian Upsampling on Bend Waveguide Design - parameter 3}{76}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.4}Gaussian Upsampling on Bend Waveguide Design - parameter 4}{79}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.5}Gaussian Upsampling on Bend Waveguide Design - parameter 5}{82}{}%
-\contentsline {subsection}{\numberline {4.4.2}2D Fourier Integral on Bend Waveguide Design}{85}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}2D Fourier Integral on Bend Waveguide Design - parameter 1}{85}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}2D Fourier Integral on Bend Waveguide Design - parameter 2}{88}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.3}2D Fourier Integral on Bend Waveguide Design - parameter 3}{90}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.4}2D Fourier Integral on Bend Waveguide Design - parameter 4}{93}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.5}2D Fourier Integral on Bend Waveguide Design - parameter 5}{96}{}%
-\contentsline {subsection}{\numberline {4.4.3}$\beta $-VAE on Bend Waveguide Design}{99}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}$\beta $-VAE on Bend Waveguide Design - parameter 1}{99}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}$\beta $-VAE on Bend Waveguide Design - parameter 2}{103}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.3}$\beta $-VAE on Bend Waveguide Design - parameter 3}{105}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.4}$\beta $-VAE on Bend Waveguide Design - parameter 4}{108}{}%
-\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{111}{}%
-\contentsline {subsection}{\numberline {4.5.1}Gaussian Upsampling on Waveguide Crossing Design}{113}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.1}Gaussian Upsampling on Waveguide Crossing Design - parameter 1}{113}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.2}Gaussian Upsampling on Waveguide Crossing Design - parameter2}{116}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.3}Gaussian Upsampling on Waveguide Crossing Design - parameter 3}{117}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.4}Gaussian Upsampling on Waveguide Crossing Design - parameter 4}{120}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.5}Gaussian Upsampling on Waveguide Crossing Design - parameter 5}{124}{}%
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{127}{}%
-\contentsline {section}{\numberline {5.1}Conclusion}{127}{}%
-\contentsline {section}{\numberline {5.2}Future Work}{128}{}%
-\contentsline {chapter}{References}{130}{}%
-\contentsline {chapter}{\numberline {6}Appendix 附錄}{135}{}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}Discrete Fourier Transform (DFT) and Mode Expansion}{31}{}%
+\contentsline {section}{\numberline {3.2}Structured Encoding and Dimensionality Reduction}{33}{}%
+\contentsline {subsection}{\numberline {3.2.1}Spatial Smoothing via Gaussian Upsampling}{33}{}%
+\contentsline {subsection}{\numberline {3.2.2}2D Fourier-Based Representation via Basis Selection}{37}{}%
+\contentsline {subsection}{\numberline {3.2.3}$\beta $-Variational Autoencoder for Latent Space Representation}{40}{}%
+\contentsline {section}{\numberline {3.3}Factorization Machines and Annealing Optimization}{43}{}%
+\contentsline {subsection}{\numberline {3.3.1}Factorization Machine-based Surrogate Model Theory}{43}{}%
+\contentsline {subsection}{\numberline {3.3.2}Combinatorial Optimization and QUBO Transformation}{45}{}%
+\contentsline {subsection}{\numberline {3.3.3}Simulated Annealing Mechanisms}{46}{}%
+\contentsline {chapter}{\numberline {4}Method and Results}{48}{}%
+\contentsline {section}{\numberline {4.1}Factorization Machine with Annealing Optimization Framework}{48}{}%
+\contentsline {section}{\numberline {4.2}Encoding Strategies for Factorization Machine with Annealing Optimization}{51}{}%
+\contentsline {subsection}{\numberline {4.2.1}Gaussian Upsampling Strategy}{52}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Flowchart}{52}{}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Fabrication Constraints}{53}{}%
+\contentsline {subsection}{\numberline {4.2.2}2D Fourier Integral Strategy}{55}{}%
+\contentsline {subsection}{\numberline {4.2.3}$\beta $-Variational Autoencoder ($\beta $-VAE) Strategy}{57}{}%
+\contentsline {section}{\numberline {4.3}Mode Division Demultiplexer Optimization Results}{59}{}%
+\contentsline {subsection}{\numberline {4.3.1}DEMUX design - parameter 1}{61}{}%
+\contentsline {subsection}{\numberline {4.3.2}DEMUX design - parameter 2}{62}{}%
+\contentsline {subsection}{\numberline {4.3.3}DEMUX design - parameter 3}{63}{}%
+\contentsline {subsection}{\numberline {4.3.4}DEMUX design - parameter 4}{64}{}%
+\contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{66}{}%
+\contentsline {subsection}{\numberline {4.4.1}Gaussian Upsampling Strategy on Bend Waveguide Design}{68}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Gaussian Upsampling on Bend Waveguide Design - parameter 1}{68}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Gaussian Upsampling on Bend Waveguide Design - parameter 2}{71}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Gaussian Upsampling on Bend Waveguide Design - parameter 3}{74}{}%
+\contentsline {subsection}{\numberline {4.4.2}2D Fourier Integral on Bend Waveguide Design}{77}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}2D Fourier Integral on Bend Waveguide Design - parameter 1}{77}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}2D Fourier Integral on Bend Waveguide Design - parameter 2}{80}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}2D Fourier Integral on Bend Waveguide Design - parameter 3}{82}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}2D Fourier Integral on Bend Waveguide Design - parameter 4}{85}{}%
+\contentsline {subsection}{\numberline {4.4.3}$\beta $-VAE on Bend Waveguide Design}{88}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}$\beta $-VAE on Bend Waveguide Design - parameter 1}{88}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}$\beta $-VAE on Bend Waveguide Design - parameter 2}{92}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}$\beta $-VAE on Bend Waveguide Design - parameter 3}{94}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}$\beta $-VAE on Bend Waveguide Design - parameter 4}{97}{}%
+\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{100}{}%
+\contentsline {subsection}{\numberline {4.5.1}Gaussian Upsampling on Waveguide Crossing Design}{102}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}Gaussian Upsampling on Waveguide Crossing Design - parameter 1}{102}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}Gaussian Upsampling on Waveguide Crossing Design - parameter 2}{105}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.3}Gaussian Upsampling on Waveguide Crossing Design - parameter 3}{106}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.4}Gaussian Upsampling on Waveguide Crossing Design - parameter 4}{109}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.5}Gaussian Upsampling on Waveguide Crossing Design - parameter 5}{113}{}%
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{116}{}%
+\contentsline {section}{\numberline {5.1}Conclusion}{116}{}%
+\contentsline {section}{\numberline {5.2}Future Work}{117}{}%
+\contentsline {chapter}{References}{119}{}%
+\contentsline {chapter}{\numberline {6}Appendix 附錄}{124}{}%
 \contentsfinish 

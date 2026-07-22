@@ -83,9 +83,9 @@ D_{t+1}=D_t\cup{(x^{*},y_{\mathrm{new}})}.
 導致因子分解機模型訓練、QUBO 矩陣建構與模擬退火求解的計算成本也會大幅上升。
 
 如第~\ref{ch:Encoding_Strategies_Theory} 節中所述，此篇論文已說明各編碼策略的相關理論基礎。
-接著，在本小節中將進一步介紹 Gaussian Upsampling Strategy、2D Fourier Integral Strategy 與
- $\beta$-Variational Autoencoder ($\beta$-VAE) Strategy 這三種編碼策略的具體實作方法以及
-其於 因子分解機 結合模擬退火架構中的運作流程。
+接著，本節將說明各編碼策略於因子分解機結合模擬退火(FMSA)架構中的具體實作方式與最佳化流程。
+由於不同矽光子元件對幾何特徵、設計自由度及最佳化目標具有不同需求，因此本研究並非將所有編碼策略套用於每一種元件，
+而是依據各方法之特性選擇具有代表性的應用案例進行驗證，以分析不同結構表示方法於各類矽光子元件中的適用性與限制。
 
 \subsection{Gaussian Upsampling Strategy}
 \label{ch:Gaussian_Upsampling_Strategy}
@@ -518,9 +518,9 @@ FoM = T = \frac{E_{\mathrm{output}}}{E_{\mathrm{input}}}
 假設最小線寬為$150nm$，我們可以透過公式\eqref{eq:sigma_pix_min}推導出高斯濾波器的標準差為0.222，為了避免過小的標準差降低幾何特徵的約束能力，
 因此標準差取1。結構的部分，由於輸出輸入波導只需要允許TE$_0$模態，因此波導寬度設定為$0.5 \mu m$。
 
-最終品質因數FOM為:
+最終品質因數FoM為:
 \begin{align}
-FOM = 0.8277
+FoM = 0.8277
 \label{eq:BEND_FoM_Design1}
 \end{align}
 使用較少的資料量進行優化，初步獲得 82.77\% 的穿透率。
@@ -559,202 +559,106 @@ FOM = 0.8277
 
 \subsubsection{Gaussian Upsampling on Bend Waveguide Design - parameter 2}
 \label{ch:GU_BEND_Design2}
-接著，我將網格劃分增加為$10 \times 10$，也就是模擬退火將在$2^{100}$個可能的結構中進行搜尋，並且將初始隨機資料量增加為1000筆，
-迭代次數增加為100次，每次迭代增加30筆候選解，因此總共會有4000筆資料數。
+接著，將網格劃分設定進一步增加為$12 \times 12$，提供演算法更高的結構設計自由度。
+此實驗初始隨機資料量為 1000 筆，並進行 100 次迭代，每次迭代新增 30 筆候選解，因此最終總資料量為 4000 筆。
 
-在MEEP光源設定、結構參數設定以及Gaussian Upsampling中的標準差與高斯核設定皆與前一個實驗(第~\ref{ch:GU_BEND_Design1}節)相同。
+此外，MEEP 模擬中的光源設定、結構參數，以及 Gaussian Upsampling 所使用的高斯標準差與高斯核大小，
+皆與彎曲波導第一個實驗(第~\ref{ch:GU_BEND_Design1}節)保持一致，以確保不同設計網格間的比較僅反映設計變數維度增加所帶來的影響。
 
-最終品質因數FOM提升為:
+品質因數FoM提升為:
 \begin{align}
-FOM = 0.9524
+FoM = 0.9555
 \label{eq:BEND_FoM_Design2}
 \end{align}
-在增加網格劃分以及總資料量後，彎曲波導的穿透率提升至95.24\%。
-透過圖~\ref{fig:BEND_design2_Bestfom_vs_iteration}中可以發現，雖然演算法在第40次迭代就停止了搜尋，
-但在圖~\ref{fig:BEND_design2_Opt_Trajactory}中可以觀察到最佳化過程中的整體趨勢仍然持續上升。
+最終的穿透率提升至$95.55\%$，整體而言，這也是Gaussian Upsampling方法應用於彎曲波導設計的效能顛峰。
+
+由圖~\ref{fig:BEND_design2_Bestfom_vs_iteration}可觀察到，FoM 隨著迭代次數增加而穩定提升，
+而在圖~\ref{fig:BEND_design2_Opt_Trajactory}中，候選解呈現較為分散的分布，顯示演算法在後期仍持續探索不同的解空間，而尚未完全收斂至特定區域。
+此現象可能與設計變數增加至 $12 \times 12$ 後，使搜尋空間更加龐大且複雜有關。
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design2/fom_evolution.png}
+\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design3/fom_evolution.png}
 \caption{彎曲波導 Design 2最佳化過程中的最佳FoM變化。}
 \label{fig:BEND_design2_Bestfom_vs_iteration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design2/transmission_trajectory.png}
+\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design3/transmission_trajectory.png}
 \caption{彎曲波導 Design 2最佳化過程中的FoM變化。}
 \label{fig:BEND_design2_Opt_Trajactory}
 \end{figure}
-
-圖~\ref{fig:BEND_DFT_design2}呈現出了優化後90度彎曲波導的電場強度($\vert{}E_z\vert{}^2$)分布。
-觀察光場分布可發現，光波在通過彎曲段的不規則結構時，模態雖然會產生暫時性的畸變，但在進入直線輸出波導後，
-光場能夠重新收斂並完成模態耦合，最終於輸出端仍然能夠維持完整且對稱的模態分布。
+圖~\ref{fig:BEND_DFT_design2}及圖~\ref{fig:BEND_structure_design2}呈現出了優化後90度彎曲波導的電場強度($\vert{}E_z\vert{}^2$)分布以及幾何結構圖。
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{img/BEND/BEND-GU-design2/eval_TE0_field.png}
+\includegraphics[width=0.7\textwidth]{img/BEND/BEND-GU-design3/eval_TE0_field.png}
 \caption{彎曲波導 Design 2之DFT電場強度分布圖。}
 \label{fig:BEND_DFT_design2}
 \end{figure}
-從圖~\ref{fig:BEND_structure_design2}中可以發現，此現象可以歸咎於演算法在輸入與輸出波導交界處所演化出的絕熱結構(Adiabatic Structures)。
-透過適當的幾何漸變設計，絕熱過渡區域可以提供平滑的模態轉換，降低因為幾何突變所產生的反射與散射損耗，
-使光場能夠有效傳輸至輸出端，進而維持高穿透率及良好的模態品質。
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{img/BEND/BEND-GU-design2/eval_TE0_structure_binary.png}
+\includegraphics[width=0.6\textwidth]{img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png}
 \caption{彎曲波導 Design 2之幾何結構圖。}
 \label{fig:BEND_structure_design2}
 \end{figure}
 
 \subsubsection{Gaussian Upsampling on Bend Waveguide Design - parameter 3}
 \label{ch:GU_BEND_Design3}
-接著，我將網格劃分設定進一步增加為$12 \times 12$，提供演算法更高的結構設計自由度。
-為了公平比較不同設計網格的最佳化效果，此實驗維持與前一個實驗(第~\ref{ch:GU_BEND_Design2}節)相同的資料設定，
-初始隨機資料量為 1000 筆，並進行 100 次迭代，每次迭代新增 30 筆候選解，因此最終總資料量為 4000 筆。
-
-此外，MEEP 模擬中的光源設定、結構參數，以及 Gaussian Upsampling 所使用的高斯標準差與高斯核大小，
-皆與彎曲波導第一個實驗(第~\ref{ch:GU_BEND_Design1}節)保持一致，以確保不同設計網格間的比較僅反映設計變數維度增加所帶來的影響。
-
-品質因數FOM提升為:
-\begin{align}
-FOM = 0.9555
-\label{eq:BEND_FoM_Design3}
-\end{align}
-最終的穿透率提升至$95.55\%$，與前一個實驗(第~\ref{ch:GU_BEND_Design2}節)相比，
-增加了$0.31\%$。整體而言，這也是Gaussian Upsampling方法應用於彎曲波導設計的效能顛峰。
-
-雖然由圖~\ref{fig:BEND_design3_Bestfom_vs_iteration}可觀察到，FoM 隨著迭代次數增加而穩定提升，
-但由圖~\ref{fig:BEND_design3_Opt_Trajactory}可發現與圖~\ref{fig:BEND_design2_Opt_Trajactory}有所不同。
-相較於Design2的圖~\ref{fig:BEND_design2_Opt_Trajactory}在最佳化後期出現大量候選解集中於相近 FoM 區間的現象，
-圖~\ref{fig:BEND_design3_Opt_Trajactory}的候選解則呈現較為分散的分布，顯示演算法在後期仍持續探索不同的解空間，而尚未完全收斂至特定區域。
-此現象可能與設計變數增加至 $12 \times 12$ 後，使搜尋空間更加龐大且複雜有關，因此在相同資料量下，代理模型較難快速聚焦於較佳解。
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design3/fom_evolution.png}
-\caption{彎曲波導 Design 3最佳化過程中的最佳FoM變化。}
-\label{fig:BEND_design3_Bestfom_vs_iteration}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design3/transmission_trajectory.png}
-\caption{彎曲波導 Design 3最佳化過程中的FoM變化。}
-\label{fig:BEND_design3_Opt_Trajactory}
-\end{figure}
-圖~\ref{fig:BEND_DFT_design3}及圖~\ref{fig:BEND_structure_design3}呈現出了優化後90度彎曲波導的電場強度($\vert{}E_z\vert{}^2$)分布以及幾何結構圖。
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{img/BEND/BEND-GU-design3/eval_TE0_field.png}
-\caption{彎曲波導 Design 3之DFT電場強度分布圖。}
-\label{fig:BEND_DFT_design3}
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\textwidth]{img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png}
-\caption{彎曲波導 Design 3之幾何結構圖。}
-\label{fig:BEND_structure_design3}
-\end{figure}
-
-\subsubsection{Gaussian Upsampling on Bend Waveguide Design - parameter 4}
-接著，將設計網格由 $12 \times 12$ 提升至 $16 \times 16$，以進一步增加設計變數的維度，探討提升設計變數維度後對彎曲波導最佳化結果的影響。
-除了設計網格外，其餘 MEEP 模擬參數、Gaussian Upsampling 參數及最佳化設定皆與前一實驗相同，以確保比較結果僅反映設計自由度增加所帶來的影響。
-
-此實驗的最佳品質因數FoM為:
-\begin{align}
-FOM = 0.9429
-\label{eq:BEND_FoM_Design4}
-\end{align}
-雖然仍維持超過94\%的穿透率，但與$12 \times 12$的設計相比略為下降，顯示持續增加設計自由度並未帶來更佳的最佳化結果。
-
-由圖~\ref{fig:BEND_design4_Opt_Trajactory}可以觀察到，初始樣本主要集中於低FoM區域，而隨著迭代進行，候選解逐漸向高FoM區域移動，
-表示代理模型還是能夠有效引導搜尋方向。然而，相較於較低維度之設計，16×16設計的候選解分布仍然是較為分散，
-可能是由於設計變數增加使搜尋空間擴大，因此或許在固定資料量下需要更多探索才能達到穩定收斂。
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design4/transmission_trajectory.png}
-\caption{彎曲波導 Design 4最佳化過程中的FoM變化。}
-\label{fig:BEND_design4_Opt_Trajactory}
-\end{figure}
-
-由圖~\ref{fig:BEND_design4_Bestfom_vs_iteration}可觀察到，$16 \times 16$設計之最佳FoM隨迭代次數增加呈現階梯式提升趨勢，
-代表演算法能持續更新歷史最佳候選解。初始階段由於仍處於設計空間探索階段，因此FoM提升較為緩慢，大約在第50次迭代之後，
-最佳FoM快速提升並突破0.9，最終達到0.9429。
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design4/fom_evolution.png}
-\caption{彎曲波導 Design 4最佳化過程中的最佳FoM變化。}
-\label{fig:BEND_design4_Bestfom_vs_iteration}
-\end{figure}
-
-圖~\ref{fig:BEND_DFT_design4}及圖~\ref{fig:BEND_structure_design4}呈現出了優化後90度彎曲波導的電場強度($\vert{}E_z\vert{}^2$)分布以及幾何結構圖。
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{img/BEND/BEND-GU-design4/eval_TE0_field.png}
-\caption{彎曲波導 Design 4之DFT電場強度分布圖。}
-\label{fig:BEND_DFT_design4}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\textwidth]{img/BEND/BEND-GU-design4/eval_TE0_structure_binary.png}
-\caption{彎曲波導 Design 4之幾何結構圖。}
-\label{fig:BEND_structure_design4}
-\end{figure}
-
-\subsubsection{Gaussian Upsampling on Bend Waveguide Design - parameter 5}
 最後，將設計網格進一步提升至 $20 \times 20$，為本研究中最高的維度，來評估在固定最佳化流程與資料量下，
 持續增加設計自由度是否仍然能夠有效提升彎曲波導的最佳化表現。由於本實驗僅調整設計網格劃分設定，其餘模擬與最佳化設定皆維持與前述實驗一致，
 以作為不同網格劃分之比較依據。
 
 此實驗的最佳品質因數FoM為:
 \begin{align}
-FOM = 0.8281
-\label{eq:BEND_FoM_Design5}
+FoM = 0.8281
+\label{eq:BEND_FoM_Design3}
 \end{align}
-最終穿透率下降至82.81\%，較前兩組設計(\eqref{eq:BEND_FoM_Design3}與\eqref{eq:BEND_FoM_Design4})有更加的明顯下降，
+最終穿透率下降至82.81\%，較前一組 $12 \times 12$ 的設計(\eqref{eq:BEND_FoM_Design2})有明顯的下降，
 表示持續增加設計的自由度並不能夠提升彎曲波導的傳輸效率。
 
-由圖~\ref{fig:BEND_design5_Bestfom_vs_iteration}與圖~\ref{fig:BEND_design5_Opt_Trajactory}可觀察20×20設計之最佳化過程。
+由圖~\ref{fig:BEND_design3_Bestfom_vs_iteration}與圖~\ref{fig:BEND_design3_Opt_Trajactory}可觀察20×20設計之最佳化過程。
 雖然候選解的最高FoM值依然隨著迭代次數增加而提升，但整體改善幅度相較於前面的設計明顯降低。
 最佳FoM於初期提升至約0.72後，經過長時間搜尋才於後期進一步提升，最終收斂至0.8281。
 
-此結果顯示，持續增加設計網格無法帶來更佳的傳輸效率，反而使最佳化過程需要更長的搜尋時間才能獲得有限改善。
-由於$20 \times 20$設計具有較高的結構自由度，額外增加的設計變數並未有效轉換為性能提升，表示在本研究的資料量與最佳化架構下，過高的設計維度可能降低搜尋效率。
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design5/fom_evolution.png}
-\caption{彎曲波導 Design 5最佳化過程中的最佳FoM變化。}
-\label{fig:BEND_design5_Bestfom_vs_iteration}
+\caption{彎曲波導 Design 3最佳化過程中的最佳FoM變化。}
+\label{fig:BEND_design3_Bestfom_vs_iteration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{img/BEND/BEND-GU-design5/transmission_trajectory.png}
-\caption{彎曲波導 Design 5最佳化過程中的FoM變化。}
-\label{fig:BEND_design5_Opt_Trajactory}
+\caption{彎曲波導 Design 3最佳化過程中的FoM變化。}
+\label{fig:BEND_design3_Opt_Trajactory}
 \end{figure}
+此結果顯示，持續增加設計網格無法帶來更佳的傳輸效率，反而使最佳化過程需要更長的搜尋時間才能獲得有限改善。
+由於$20 \times 20$設計具有較高的結構自由度，額外增加的設計變數並未有效轉換為性能提升，表示在本研究的資料量與最佳化架構下，過高的設計維度可能降低搜尋效率。
 
-圖~\ref{fig:BEND_DFT_design5}呈現$20 \times 20$設計並模擬的電場強度($|E_z|^2$)分布。由圖中可觀察到，
+圖~\ref{fig:BEND_DFT_design3}呈現$20 \times 20$設計並模擬的電場強度($|E_z|^2$)分布。由圖中可觀察到，
 光波仍然能夠沿著彎曲波導傳輸至輸出端，並沒有出現明顯的漏光現象，但相較於前面的設計，在輸出端的模態分布有些微的不完整，
 造成整體穿透率無法進一步提升。
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-GU-design5/eval_TE0_field.png}
-\caption{彎曲波導 Design 5之DFT電場強度分布圖。}
-\label{fig:BEND_DFT_design5}
+\caption{彎曲波導 Design 3之DFT電場強度分布圖。}
+\label{fig:BEND_DFT_design3}
 \end{figure}
-由圖~\ref{fig:BEND_structure_design5}可以觀察到，較高維度的設計網格能夠使結構具有更高的自由度，
+由圖~\ref{fig:BEND_structure_design3}可以觀察到，較高維度的設計網格能夠使結構具有更高的自由度，
 並產生較多局部化的結構以及非連續區域，但這些額外的幾何結構變化並不能夠帶來更好的光場傳輸效率，
-進而導致最終穿透率反而低於$12 \times 12$與$16 \times 16$的設計。
+進而導致最終穿透率反而低於$12 \times 12$的設計。
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png}
-\caption{彎曲波導 Design 5之幾何結構圖。}
-\label{fig:BEND_structure_design5}
+\caption{彎曲波導 Design 3之幾何結構圖。}
+\label{fig:BEND_structure_design3}
 \end{figure}
 
 \subsection{2D Fourier Integral on Bend Waveguide Design}
 本節將會採用二維傅立葉積分(2D Fourier Integral)策略作為彎曲波導的結構編碼與平滑化設計方法，探討其於彎曲波導反向設計的最佳化潛力。
 
-為了探討不同頻域設計自由度對於此最佳化策略結果的影響，本研究分別採用 $8\times8$、$10\times10$、$12\times12$、$16\times16$ 與 $20\times20$ 之頻譜空間變數進行實驗。
+為了探討不同頻域設計自由度對於此最佳化策略結果的影響，本研究分別採用 $8\times8$、$10\times10$、$12\times12$ 與 $20\times20$ 之頻譜空間變數進行實驗。
 除了頻譜空間變數外，其餘 MEEP 模擬參數與最佳化流程皆維持一致，以確保不同設計維度間之比較具有一致性。
 
 \subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 1}
@@ -903,80 +807,33 @@ FOM = 0.9350
 
 \subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 4}
 \label{ch:2F_BEND_Design4}
-為進一步探討高維度頻譜空間變數對最佳化結果之影響，本實驗將頻譜空間變數提升至 $16\times16$。
-除設計維度外，其餘 MEEP 模擬參數、光源設定及最佳化流程皆與 Design 1 (第~\ref{ch:2F_BEND_Design1}節)相同，以分析增加設計自由度後對彎曲波導最佳化效能之影響。
-
-最終FoM降為:
-\begin{align}
-FOM = 0.4683
-\label{eq:BEND_2DF_design4_FOM}
-\end{align}
-當頻譜空間變數增加至 $16\times16$ 時，最終穿透率大幅下降到46.83\%。
-從圖~\ref{fig:BEND_2F_design4_Bestfom_vs_iteration}可以觀察到，最佳FoM仍然隨著迭代次數增加而穩定提升，但整體只呈現小幅度成長，
-並沒有出現像是 Design 2 (第~\ref{ch:2F_BEND_Design2}節)那樣明顯的突破。
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design4/fom_evolution.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4最佳化過程中的最佳FoM變化。}
-\label{fig:BEND_2F_design4_Bestfom_vs_iteration}
-\end{figure}
-此外，從圖~\ref{fig:BEND_2F_design4_Opt_Trajactory}可以觀察到，大約在第40至85次的迭代中，大部分候選解都集中於低FoM區域，
-高FoM候選解相對稀少，由於此研究項目的各設計參數皆使用相同的初始資料量(1000筆)與相同之迭代次數(100次)，
-當頻譜空間變數增加後，每一筆資料對設計空間之涵蓋能力相對降低，因此可能需要更多訓練資料或更長的迭代次數，才能夠更充分地搜尋高維度設計空間並獲得較佳的結果。
-\begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{img/BEND/BEND-2F-design4/transmission_trajectory.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4最佳化過程中的FoM變化。}
-\label{fig:BEND_2F_design4_Opt_Trajactory}
-\end{figure}
-
-由圖~\ref{fig:BEND_2F_DFT_design4}可觀察到，
-相較於 Design 3(第~\ref{ch:2F_BEND_Design3}節)，增加至 $16\times16$ 頻譜空間變數後，最佳化結構呈現更多細小且破碎的局部幾何特徵，
-使彎曲區域的結構連續性大幅降低。從電場分布(圖~\ref{fig:BEND_2F_structure_design4})也可以觀察到光場因為破碎的幾何結構而產生較明顯的能量洩漏，
-導致進入輸出波導之光場強度下降，最終使穿透率大幅降至46.83\%。
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\textwidth]{img/BEND/BEND-2F-design4/Smoothed_Binary_Structure.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4之幾何結構圖。}
-\label{fig:BEND_2F_structure_design4}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design4/final_analysis_TE0_field.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4之DFT電場強度分布圖。}
-\label{fig:BEND_2F_DFT_design4}
-\end{figure}
-
-\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 5}
-\label{ch:2F_BEND_Design5}
 最後，將頻譜空間變數進一步提升至 $20\times20$，以評估更高設計自由度下二維傅立葉積分方法之最佳化能力。
 其餘 MEEP 模擬參數、光源設定及最佳化流程皆維持與前述實驗一致，以探討高維度頻譜空間變數對最佳化結果之影響
 
 最終FoM降為:
 \begin{align}
 FOM = 0.3167
-\label{eq:BEND_2DF_design5_FOM}
+\label{eq:BEND_2DF_design4_FOM}
 \end{align}
 當頻譜空間變數提升至 $20\times20$ 時，最終穿透率進一步下降為31.67\%。
-從圖~\ref{fig:BEND_2F_design5_Bestfom_vs_iteration}可以觀察到，最佳FoM於第2次迭代後趨於平坦，後續迭代無法有效找到更好的候選結構。
-從圖~\ref{fig:BEND_2F_design5_Opt_Trajactory}中也可以發現，大部分候選解的FoM都是集中在接近零的低分區域，高FoM候選解極為稀少，
+從圖~\ref{fig:BEND_2F_design4_Bestfom_vs_iteration}可以觀察到，最佳FoM於第2次迭代後趨於平坦，後續迭代無法有效找到更好的候選結構。
+從圖~\ref{fig:BEND_2F_design4_Opt_Trajactory}中也可以發現，大部分候選解的FoM都是集中在接近零的低分區域，高FoM候選解極為稀少，
 這表示在此高維度設計空間下，固定資料量與迭代次數已經不足以有效探索可能的高效能結構。
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design5/fom_evolution.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 5最佳化過程中的最佳FoM變化。}
-\label{fig:BEND_2F_design5_Bestfom_vs_iteration}
+\caption{二維傅立葉積分策略應用於彎曲波導 Design 4最佳化過程中的最佳FoM變化。}
+\label{fig:BEND_2F_design4_Bestfom_vs_iteration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{img/BEND/BEND-2F-design5/transmission_trajectory.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 5最佳化過程中的FoM變化。}
-\label{fig:BEND_2F_design5_Opt_Trajactory}
+\caption{二維傅立葉積分策略應用於彎曲波導 Design 4最佳化過程中的FoM變化。}
+\label{fig:BEND_2F_design4_Opt_Trajactory}
 \end{figure}
 
-從圖~\ref{fig:BEND_2F_DFT_design5}與圖~\ref{fig:BEND_2F_structure_design5}中可以觀察到，當頻譜空間變數提升至 $20\times20$ 時，
+從圖~\ref{fig:BEND_2F_DFT_design4}與圖~\ref{fig:BEND_2F_structure_design4}中可以觀察到，當頻譜空間變數提升至 $20\times20$ 時，
 最佳化結構雖然產生了更多細節，但整體幾何結構變得更加破碎且缺乏連續性，導致電場完全無法有效在結構中傳播，
 最終穿透率大幅下降至31.67\%。
 
@@ -985,15 +842,15 @@ FOM = 0.3167
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design5/final_analysis_TE0_field.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 5之DFT電場強度分布圖。}
-\label{fig:BEND_2F_DFT_design5}
+\caption{二維傅立葉積分策略應用於彎曲波導 Design 4之DFT電場強度分布圖。}
+\label{fig:BEND_2F_DFT_design4}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BEND/BEND-2F-design5/Smoothed_Binary_Structure.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 5之幾何結構圖。}
-\label{fig:BEND_2F_structure_design5}
+\caption{二維傅立葉積分策略應用於彎曲波導 Design 4之幾何結構圖。}
+\label{fig:BEND_2F_structure_design4}
 \end{figure}
 
 \subsection{$\beta$-VAE on Bend Waveguide Design}
@@ -1256,7 +1113,7 @@ FOM = 0.9096
 \subsection{Gaussian Upsampling on Waveguide Crossing Design}
 \subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter 1}
 \label{ch:Crossing_GU_Design1}
-首先，參考 Nature Communications 文獻\cite{li2020ultracompact}所提出的緊湊型(Compact)交叉波導結構，
+首先，參考西元2018年發表於 \textit{Photonics Research} 的\textit{Ultracompact dual-mode waveguide crossing based on subwavelength multimode-interference couplers}\cite{Chang:18}所提出的緊湊型(Compact)交叉波導結構，
 本研究建立單模態(TE$_0$)交叉波導最佳化設計，來驗證 Gaussian Upsampling 策略應用在交叉波導設計的可行性。
 
 由於交叉波導的對稱性，在此設計中演算法只需要決定15個設計變數，即可透過對稱性產生100個完整的二元設計變數(如圖~\ref{fig:Crossing_Design1_Best_comfig}所示)。
@@ -1301,7 +1158,7 @@ FoM = 0.9620
 \label{fig:Crossing_Design1_Structure}
 \end{figure}
 
-\subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter2}
+\subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter 2}
 \label{ch:Crossing_GU_Design2}
 在完成單模態交叉波導設計後，此研究進一步嘗試設計雙模態交叉波導，並同時考慮TE$_0$與TE$_1$模態的穿透率與串擾，因此將品質因數定義為:
 \begin{align}
@@ -1522,10 +1379,8 @@ Mode & Wavelength ($\mu$m) & Transmission (\%) & Loss (dB)\\
 最後，為了比較此方法是否能夠超越文獻中的優化結果，本研究在維持雙模態及多波長最佳化的條件下採用文獻中的設計區域大小，
 將 $5.0\times5.0~\mu$m 縮小至 $2.4\times2.4~\mu$m，同時增加為120個可控制設計變數，可生成900個完整四重對稱的設計變數。
 
-從圖~\ref{fig:Crossing_design5_Bestfom_vs_iteration}與圖~\ref{fig:Crossing_design5_Opt_Trajactory}可觀察到，
-最佳 FoM 在優化過程中依然呈現持續下降的趨勢，相較於 Design 4(第\ref{ch:Crossing_GU_Design4}節)，
-下降幅度較為平緩，大約於第 65 次迭代後才收斂至最佳解。推測是因為將可控制設計變數由 55 個增加至 120 個，
-使搜尋空間之維度也同時提升，增加了 FM 模型以及模擬退火搜尋最佳解的難度。
+相較於 Design 4 (第~\ref{ch:Crossing_GU_Design4}節)，此實驗之 FoM 在優化過程中呈現持續下降並趨於穩定的趨勢，大約於第 65 次迭代後收斂至最佳解。
+推測是因為將可控制設計變數由 55 個增加至 120 個，使搜尋空間之維度同時提升，增加了 FM 模型以及模擬退火搜尋最佳解的難度。
 
 最終FoM為:
 \begin{align}

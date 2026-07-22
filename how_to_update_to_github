@@ -1,6 +1,6 @@
 git add .
 
-git commit -m "conclusion & future work寫完"
+git commit -m "小修改一下前三章"
 
 git push
 
