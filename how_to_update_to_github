@@ -1,6 +1,6 @@
 git add .
 
-git commit -m "修修改改"
+git commit -m "修改緒論、Conclusion、Futurework還有Result"
 
 git push
 
