@@ -35,7 +35,7 @@
 因此本研究進一步導入不同的編碼方式作為結構表示方法，來降低設計空間複雜度，同時提升結構表示能力與最佳化效率。
 
 本研究具體採用了三種編碼策略，包括高斯上採樣(Gaussian Upsampling)、
-二維傅立葉積分(2D Fourier Integral)以及變分自編碼器($\beta$-Variational Autoencoder,$\beta$-VAE)。
+基於二維傅立葉編碼(2D Fourier Basis Encoding)以及變分自編碼器($\beta$-Variational Autoencoder,$\beta$-VAE)。
 
 光學模擬的部分，本研究利用基於有限差分時域法(Finite-Difference Time-Domain, FDTD)的開源套件MEEP，
 針對橫電(TE)模態在矽光元件中的傳輸行為進行模擬與分析，
@@ -47,7 +47,7 @@
 模態分波解多工器則以實現不同模態光場之分離為設計目標，提升各輸出通道之模態純度與傳輸效率。
 
 透過 FM 模型結合模擬退火(FMSA)架構及適度調整FoM，成功設計出高效能矽光子元件，
-並比較 Gaussian Upsampling、2D Fourier Integral 與 $\beta$-VAE 三種編碼策略於不同光學元件之適用性，
+並比較 Gaussian Upsampling、2D Fourier Basis Encoding 與 $\beta$-VAE 三種編碼策略於不同光學元件之適用性，
 可作為未來矽光子反向設計與光子積體電路(Photonic Integrated Circuits, PICs)設計之參考。
 \vspace{1cm}
 

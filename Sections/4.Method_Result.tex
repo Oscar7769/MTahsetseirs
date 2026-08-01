@@ -187,12 +187,12 @@ Grid size & Target MFS & $\sigma_{\text{pix}}$ & $W$ \\ \hline
 另一方面，由於過小的 Gaussian 標準差會使濾波器的平滑效果有限，並可能會降低對部分幾何特徵的約束能力，
 因此當$\sigma_{\text{pix}} < 1$時，應該將$\sigma_{\text{pix}}$調整為$1$。
 
-\subsection{2D Fourier Integral Strategy}
-接著，我將會說明2D Fourier Integral這套編碼策略的運作流程，如圖~\ref{fig:2D_fourier_flowchart}所示。
+\subsection{2D Fourier Basis Encoding Strategy}
+接著，我將會說明2D Fourier Basis Encoding這套編碼策略的運作流程，如圖~\ref{fig:2D_fourier_flowchart}所示。
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{img/2D_fourier_flowchart.png}
-\caption{2D Fourier Integral編碼策略之整體流程圖。}
+\caption{2D Fourier Basis Encoding編碼策略之整體流程圖。}
 \label{fig:2D_fourier_flowchart}
 \end{figure}
 
@@ -655,13 +655,13 @@ FoM = 0.8281
 \label{fig:BEND_structure_design3}
 \end{figure}
 
-\subsection{2D Fourier Integral on Bend Waveguide Design}
-本節將會採用二維傅立葉積分(2D Fourier Integral)策略作為彎曲波導的結構編碼與平滑化設計方法，探討其於彎曲波導反向設計的最佳化潛力。
+\subsection{2D Fourier Basis Encoding on Bend Waveguide Design}
+本節將會採用基於二維傅立葉編碼(2D Fourier Basis Encoding)策略作為彎曲波導的結構編碼與平滑化設計方法，探討其於彎曲波導反向設計的最佳化潛力。
 
 為了探討不同頻域設計自由度對於此最佳化策略結果的影響，本研究分別採用 $8\times8$、$10\times10$、$12\times12$ 與 $20\times20$ 之頻譜空間變數進行實驗。
 除了頻譜空間變數外，其餘 MEEP 模擬參數與最佳化流程皆維持一致，以確保不同設計維度間之比較具有一致性。
 
-\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 1}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 1}
 \label{ch:2F_BEND_Design1}
 首先，採用 $8 \times 8$ 之頻譜空間變數進行實驗，在模擬設定方面，MEEP 設計區域大小設為 $4.0 \times 4.0~\mu$m，
 空間解析度(Resolution)設為 40 pixels/$\mu$m，輸入與輸出波導長度皆為 $1.0~\mu$m，波導寬度為 $0.5~\mu$m。
@@ -683,37 +683,37 @@ FOM = 0.9501
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design1/fom_evolution.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 1最佳化過程中的最佳FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 1最佳化過程中的最佳FoM變化。}
 \label{fig:BEND_2F_design1_Bestfom_vs_iteration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{img/BEND/BEND-2F-design1/transmission_trajectory.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 1最佳化過程中的FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 1最佳化過程中的FoM變化。}
 \label{fig:BEND_2F_design1_Opt_Trajactory}
 \end{figure}
 
-圖~\ref{fig:BEND_2F_DFT_design1}呈現二維傅立葉積分策略應用於彎曲波導 Design 1之電場強度（$|E_z|^2$）分布，
-圖~\ref{fig:BEND_2F_structure_design1}呈現二維傅立葉積分策略應用於彎曲波導 Design 1之幾何結構圖。
+圖~\ref{fig:BEND_2F_DFT_design1}呈現基於二維傅立葉編碼策略應用於彎曲波導 Design 1之電場強度（$|E_z|^2$）分布，
+圖~\ref{fig:BEND_2F_structure_design1}呈現基於二維傅立葉編碼策略應用於彎曲波導 Design 1之幾何結構圖。
 由這兩張圖可以發現，最佳化後的結構在彎曲區域形成向內側偏移的幾何特徵，這個結果與傳統低損耗彎曲波導常見之設計趨勢一致，
 有助於改善光場在彎曲處的傳輸特性，並且光波在通過彎曲區域後仍然能夠順利耦合至輸出波導，沒有出現明顯的漏光或反射現象，
-顯示二維傅立葉積分策略所設計出的結構能夠具有良好的導光能力。
+顯示基於二維傅立葉編碼策略所設計出的結構能夠具有良好的導光能力。
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design1/final_analysis_TE0_field.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 1之DFT電場強度分布圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 1之DFT電場強度分布圖。}
 \label{fig:BEND_2F_DFT_design1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BEND/BEND-2F-design1/Smoothed_Binary_Structure.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 1之幾何結構圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 1之幾何結構圖。}
 \label{fig:BEND_2F_structure_design1}
 \end{figure}
 
-\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 2}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 2}
 \label{ch:2F_BEND_Design2}
 接著，將頻譜空間變數由 $8\times8$ 提升至 $10\times10$，以探討適度增加設計自由度是否能進一步提升彎曲波導之最佳化效能。
 除頻譜空間變數維度外，其餘 MEEP 模擬參數、光源設定及最佳化流程皆與 Design 1 (第~\ref{ch:2F_BEND_Design1}節)相同，以確保不同設計維度間具有一致之比較基準。
@@ -731,14 +731,14 @@ FOM = 0.9930
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design2/fom_evolution.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 2最佳化過程中的最佳FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 2最佳化過程中的最佳FoM變化。}
 \label{fig:BEND_2F_design2_Bestfom_vs_iteration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{img/BEND/BEND-2F-design2/transmission_trajectory.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 2最佳化過程中的FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 2最佳化過程中的FoM變化。}
 \label{fig:BEND_2F_design2_Opt_Trajactory}
 \end{figure}
 圖~\ref{fig:BEND_2F_DFT_design2}顯示光場在彎曲區域仍能維持穩定傳播，
@@ -746,7 +746,7 @@ FOM = 0.9930
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design2/final_analysis_TE0_field.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 2之DFT電場強度分布圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 2之DFT電場強度分布圖。}
 \label{fig:BEND_2F_DFT_design2}
 \end{figure}
 相較於 Design 1(第~\ref{ch:2F_BEND_Design1}節)，圖~\ref{fig:BEND_2F_structure_design2}可以觀察到同樣也有設計出類似內側偏移的結構，
@@ -754,11 +754,11 @@ FOM = 0.9930
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BEND/BEND-2F-design2/Smoothed_Binary_Structure.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 2之幾何結構圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 2之幾何結構圖。}
 \label{fig:BEND_2F_structure_design2}
 \end{figure}
 
-\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 3}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 3}
 \label{ch:2F_BEND_Design3}
 接著，將頻譜空間變數提升至 $12\times12$，進一步增加設計自由度，以評估較高維度之頻譜空間變數對彎曲波導最佳化結果之影響。
 其餘 MEEP 模擬參數、光源設定及最佳化流程皆維持與 Design 1 (第~\ref{ch:2F_BEND_Design1}節)相同，以確保不同設計維度間具有一致之比較基準。
@@ -778,14 +778,14 @@ FOM = 0.9350
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design3/fom_evolution.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 3最佳化過程中的最佳FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 3最佳化過程中的最佳FoM變化。}
 \label{fig:BEND_2F_design3_Bestfom_vs_iteration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{img/BEND/BEND-2F-design3/transmission_trajectory.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 3最佳化過程中的FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 3最佳化過程中的FoM變化。}
 \label{fig:BEND_2F_design3_Opt_Trajactory}
 \end{figure}
 圖~\ref{fig:BEND_2F_DFT_design3}呈現 Design 3 之電場強度分布。由圖中可觀察到，光場仍然可以順利通過彎曲區域並耦合至輸出波導，
@@ -793,7 +793,7 @@ FOM = 0.9350
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design3/final_analysis_TE0_field.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 3之DFT電場強度分布圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 3之DFT電場強度分布圖。}
 \label{fig:BEND_2F_DFT_design3}
 \end{figure}
 從圖~\ref{fig:BEND_2F_structure_design3}可以觀察到，相較於Design 2(第~\ref{ch:2F_BEND_Design2}節)，
@@ -801,13 +801,13 @@ FOM = 0.9350
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BEND/BEND-2F-design3/Smoothed_Binary_Structure.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 3之幾何結構圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 3之幾何結構圖。}
 \label{fig:BEND_2F_structure_design3}
 \end{figure}
 
-\subsubsection{2D Fourier Integral on Bend Waveguide Design - parameter 4}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 4}
 \label{ch:2F_BEND_Design4}
-最後，將頻譜空間變數進一步提升至 $20\times20$，以評估更高設計自由度下二維傅立葉積分方法之最佳化能力。
+最後，將頻譜空間變數進一步提升至 $20\times20$，以評估更高設計自由度下基於二維傅立葉編碼方法之最佳化能力。
 其餘 MEEP 模擬參數、光源設定及最佳化流程皆維持與前述實驗一致，以探討高維度頻譜空間變數對最佳化結果之影響
 
 最終FoM降為:
@@ -822,14 +822,14 @@ FOM = 0.3167
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design5/fom_evolution.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4最佳化過程中的最佳FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 4最佳化過程中的最佳FoM變化。}
 \label{fig:BEND_2F_design4_Bestfom_vs_iteration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\textwidth]{img/BEND/BEND-2F-design5/transmission_trajectory.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4最佳化過程中的FoM變化。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 4最佳化過程中的FoM變化。}
 \label{fig:BEND_2F_design4_Opt_Trajactory}
 \end{figure}
 
@@ -842,20 +842,20 @@ FOM = 0.3167
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-2F-design5/final_analysis_TE0_field.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4之DFT電場強度分布圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 4之DFT電場強度分布圖。}
 \label{fig:BEND_2F_DFT_design4}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BEND/BEND-2F-design5/Smoothed_Binary_Structure.png}
-\caption{二維傅立葉積分策略應用於彎曲波導 Design 4之幾何結構圖。}
+\caption{基於二維傅立葉編碼策略應用於彎曲波導 Design 4之幾何結構圖。}
 \label{fig:BEND_2F_structure_design4}
 \end{figure}
 
 \subsection{$\beta$-VAE on Bend Waveguide Design}
 接著，此研究將使用$\beta$-Variational Autoencoder($\beta$-VAE)策略應用於彎曲波導的反向設計，用來評估生成式模型應用在矽光子元件模擬與最佳化的可行性。
-此方法與前面章節使用的Gaussian Upsampling 與二維傅立葉積分策略不同之處在於，
+此方法與前面章節使用的Gaussian Upsampling 與 2D Fourier Basis Encoding 策略不同之處在於，
 $\beta$-VAE 能夠先透過大量結構資料學習設計特徵，並將原始高維二值結構映射至低維潛在空間(Latent Space)，
 將潛在空間維度當作FM模型的設計參數，再透過模擬退火搜尋潛在空間中的最佳解，最後再利用 Decoder 重建為對應的二值化幾何結構。
 
@@ -908,7 +908,7 @@ FOM = 0.7343
 從圖~\ref{fig:BEND_bVAE_design1_DFT}與圖~\ref{fig:BEND_bVAE_design1_structure}可以觀察到，
 最佳化後光場能夠順利通過90度彎曲區域，並沿著波導傳輸至輸出端，輸出端模態仍維持完整且未出現明顯發散。
 另外，最終設計出的結構具有連續且明顯的波導結構，有部分可能為光場需要的孤島結構，並沒有出現明顯破碎結構。
-但是整體的穿透率還是低於之前 Gaussian Upsampling 與二維傅立葉積分方法，表示目前的優化結果仍有改善空間。
+但是整體的穿透率還是低於之前 Gaussian Upsampling 與 2D Fourier Basis Encoding 方法，表示目前的優化結果仍有改善空間。
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BEND/BEND-bVAE-design1/replot_results/final_field.png}
@@ -1460,3 +1460,107 @@ Mode & Wavelength ($\mu$m) & Transmission (\%) & Loss (dB)\\
      \label{fig:Crossing_Design5_SimulationResult}
 \end{figure}
 
+\subsubsection{Comparison with Previous Work}
+\label{ch:Crossing_Comparison}
+
+為進一步評估本研究所設計之交叉波導性能，
+本節將 Design 4 與 Design 5 的最佳化結果
+與過去相關研究進行比較。
+比較項目包含設計方法、設計區域尺寸、支援模態、
+工作波長範圍以及平均插入損耗，
+相關結果整理如表~\ref{tab:crossing_comparison}所示。
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{c|c|c|c|c}
+\hline
+\textbf{Comparison} &
+\textbf{Chang et al., 2018~\cite{Chang:18}} &
+\textbf{Li et al., 2020~\cite{li2020ultracompact}} &
+\textbf{This Work -- Design 4} &
+\textbf{This Work -- Design 5} \\
+\hline
+
+\textbf{Design Method} &
+Direct Binary Search (DBS) &
+Direct Binary Search (DBS) &
+FMSA + Gaussian Upsampling &
+FMSA + Gaussian Upsampling \\
+\hline
+
+\textbf{Design Region} &
+$4.8\times4.8~\mu\mathrm{m}^{2}$ &
+$2.4\times2.4~\mu\mathrm{m}^{2}$ &
+$5.0\times5.0~\mu\mathrm{m}^{2}$ &
+$2.4\times2.4~\mu\mathrm{m}^{2}$ \\
+\hline
+
+\textbf{Modes} &
+TE$_0$, TE$_1$ &
+TE$_0$ &
+TE$_0$, TE$_1$ &
+TE$_0$, TE$_1$ \\
+\hline
+
+\textbf{Wavelength Range} &
+$1.52$--$1.60~\mu\mathrm{m}$ &
+$1.40$--$1.60~\mu\mathrm{m}$ &
+$1.52$--$1.60~\mu\mathrm{m}$ &
+$1.52$--$1.60~\mu\mathrm{m}$ \\
+\hline
+
+\textbf{Average Insertion Loss} &
+$<0.6~\mathrm{dB}$ (2 modes) &
+$0.5~\mathrm{dB}$ &
+$0.151~\mathrm{dB}$ (2 modes) &
+$0.359~\mathrm{dB}$ (2 modes) \\
+\hline
+
+\end{tabular}
+}
+\captionsetup{name=TABLE, font={color=blue, sf, footnotesize}}
+\caption{Comparison of the proposed waveguide crossing designs with previous works.}
+\label{tab:crossing_comparison}
+\end{table}
+
+由表~\ref{tab:crossing_comparison}可知，
+本研究所提出之 Design 4 與 Design 5
+皆採用 FMSA 結合 Gaussian Upsampling 進行最佳化，
+與過去採用 Direct Binary Search (DBS) 之研究具有不同的結構搜尋方式。
+
+其中，Design 4 的設計區域為
+$5.0\times5.0~\mu\mathrm{m}^{2}$，
+可同時支援 TE$_0$ 與 TE$_1$ 兩種模態，
+並於 $1.52$--$1.60~\mu\mathrm{m}$ 波長範圍內
+具有平均插入損耗約 $0.151~\mathrm{dB}$。
+相較於 Chang et al.~\cite{Chang:18} 所提出之雙模態交叉波導，
+Design 4 在相近的操作波長範圍下
+呈現較低的平均插入損耗，
+顯示所提出之結構表示方式與最佳化流程
+能夠有效維持多模態交叉傳輸性能。
+
+另一方面，Design 5 的設計區域為
+$2.4\times2.4~\mu\mathrm{m}^{2}$，
+與 Li et al.~\cite{li2020ultracompact} 所提出之設計區域尺寸相同。
+在此較為緊湊的設計尺寸下，
+Design 5 仍可同時支援 TE$_0$ 與 TE$_1$ 模態，
+且平均插入損耗約為 $0.359~\mathrm{dB}$。
+相較之下，Li et al. 所提出之結構主要針對 TE$_0$ 模態，
+平均插入損耗約為 $0.5~\mathrm{dB}$。
+此結果顯示，
+即使在縮小設計區域後，
+FMSA 結合 Gaussian Upsampling
+仍能維持良好的雙模態傳輸能力。
+
+然而，由於不同研究在設計目標、最佳化條件、
+支援模態數量及工作波長範圍上並不完全一致，
+因此上述比較主要用於呈現各設計在元件尺寸與光學性能上的相對表現，
+而非完全相同條件下的直接性能排名。
+
+整體而言，
+Design 4 顯示所提出方法能夠在多波長條件下維持良好的雙模態傳輸性能，
+而 Design 5 則進一步顯示該方法在縮小設計區域後仍具有良好的傳輸表現。
+上述結果顯示，
+FMSA 結合 Gaussian Upsampling
+具有應用於多模態交叉波導設計之潛力。

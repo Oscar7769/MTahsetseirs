@@ -37,13 +37,13 @@ Since photonic devices generally involve high-dimensional design spaces,
 directly optimizing binary pixelated structures significantly increases the complexity of surrogate model construction and the optimization process.
 Therefore, different encoding schemes are introduced as structural representations to reduce the complexity of the design space while improving structural representation capability and optimization efficiency.
 
-Three encoding strategies are investigated in this work, including Gaussian Upsampling, 2D Fourier Integral, and the $\beta$-Variational Autoencoder ($\beta$-VAE).
+Three encoding strategies are investigated in this work, including Gaussian Upsampling, 2D Fourier Basis Encoding, and the $\beta$-Variational Autoencoder ($\beta$-VAE).
 
 For electromagnetic simulations, the open-source MEEP package based on the Finite-Difference Time-Domain (FDTD) method is employed to analyze the propagation characteristics of transverse-electric (TE) modes in silicon photonic devices. Furthermore, the Figure of Merit (FoM) is customized according to different design objectives to accommodate various optimization tasks.
 
 Three representative silicon photonic components are designed and analyzed in this study, including the bend waveguide, waveguide crossing, and mode-division demultiplexer (DEMUX). For the bend waveguide, the primary objective is to maximize transmission efficiency. For the waveguide crossing, structural symmetry is exploited to reduce the dimensionality of the design variables, thereby suppressing mode conversion and crosstalk while maintaining high transmission efficiency. For the mode-division demultiplexer, the design objective is to separate different guided modes with high mode purity and transmission efficiency at the output ports.
 
-By integrating the FMSA framework with customized FoMs, high-performance silicon photonic devices are successfully designed. In addition, the applicability of Gaussian Upsampling, 2D Fourier Integral, and $\beta$-VAE as structural representation methods for different photonic devices is systematically investigated. The proposed framework and the corresponding observations provide useful references for future inverse design of silicon photonic devices and Photonic Integrated Circuits (PICs).
+By integrating the FMSA framework with customized FoMs, high-performance silicon photonic devices are successfully designed. In addition, the applicability of Gaussian Upsampling, 2D Fourier Basis Encoding, and $\beta$-VAE as structural representation methods for different photonic devices is systematically investigated. The proposed framework and the corresponding observations provide useful references for future inverse design of silicon photonic devices and Photonic Integrated Circuits (PICs).
 
 
 \vspace{1cm}

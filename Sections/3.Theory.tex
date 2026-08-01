@@ -570,9 +570,9 @@ MEEP 採用離散時間傅立葉轉換(Discrete-Time Fourier Transform, DTFT)的
 然而，解析度的提升意味著設計變數將會大幅增加，使得最佳化問題的維度與 QUBO 問題的規模大幅成長，進而提高計算成本。
 
 為了克服高維度結構所帶來的計算瓶頸，本章節將會探討三種不同的編碼(Encoding)方法，
-包括高斯上採樣(Gaussian Upsampling)、二維傅立葉積分(2D Fourier Integral)以及$\beta$-Variational AutoEncoder($\beta$-VAE)。
+包括高斯上採樣(Gaussian Upsampling)、基於二維傅立葉編碼(2D Fourier Basis Encoding)以及$\beta$-Variational AutoEncoder($\beta$-VAE)。
 其中，高斯上採樣利用高斯平滑(Gaussian Smoothing)改善離散二元結構的空間表示，以產生更平滑的結構邊界；
-二維傅立葉積分則透過二元變數$\alpha_{m,n}$來控制各個傅立葉基底的啟用與否，以傅立葉基底的組合形式來建立二維光學結構；
+2D Fourier Basis Encoding則透過二元變數$\alpha_{m,n}$來控制各個傅立葉基底的啟用與否，以傅立葉基底的組合形式來建立二維光學結構；
 最後，$\beta$-VAE 透過訓練生成式模型來學習將高維度的結構資料映射成低維度的潛在空間(latent space)，
 進一步降低最佳化問題的維度並且提升搜尋效率。以下各個小節將會介紹上述三種編碼方法的理論基礎。
 
