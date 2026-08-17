@@ -1,6 +1,6 @@
 git add .
 
-git commit -m "口試投影片初稿"
+git commit -m "最後小改"
 
 git push
 
