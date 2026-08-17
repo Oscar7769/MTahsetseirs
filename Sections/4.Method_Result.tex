@@ -4,8 +4,8 @@
 \section{Factorization Machine with Annealing Optimization Framework}
 本研究採用的最佳化方法為 Factorization Machine with Annealing Optimization。
 這個方法主要是參考 Kitai 等人於 2020 年提出之 \textit{Designing Metamaterials with Quantum Annealing and Factorization Machines}\cite{kitai2020_fmqa}。
-此研究建立了一個結合因子分解機(Factorization Machine)與量子退火(Quantum Annealing)的 FMQA 架構，
-透過 因子分解機 建立目標函數的代理模型，並將其轉換為二元二次最佳化問題，再利用量子退火搜尋候選設計。
+此研究建立了一個結合因數分解機(Factorization Machine)與量子退火(Quantum Annealing)的 FMQA 架構，
+透過 因數分解機 建立目標函數的代理模型，並將其轉換為二元二次最佳化問題，再利用量子退火搜尋候選設計。
 
 然而，本研究並沒有直接使用量子退火作為 QUBO 求解器，而是採用模擬退火(Simulated Annealing, SA)進行候選結構搜尋。
 因此，本研究保留了 FMQA 架構中「FM 代理模型、QUBO 轉換與退火搜尋」的核心流程，並以 SA 取代原始架構中的 QA，
@@ -38,16 +38,16 @@ D_0={(x_i,y_i)}_{i=1}^{N}.
 \end{align}
 此資料集會作為後續模型訓練的基礎。
 
-\noindent \textbf{二、訓練因子分解機代理模型（Training the FM Surrogate Model）}\\
-為了降低直接透過 FDTD 模擬龐大設計空間所需的計算成本，在研究中採用因子分解機(Factorization Machine, FM)作為代理模型。
-將第一步所建立的初始訓練資料集 $D_0$ 中的隨機設計變數$x_i$與對應 FoM $y_i$ 輸入 因子分解機 進行監督式訓練，
+\noindent \textbf{二、訓練因數分解機代理模型（Training the FM Surrogate Model）}\\
+為了降低直接透過 FDTD 模擬龐大設計空間所需的計算成本，在研究中採用因數分解機(Factorization Machine, FM)作為代理模型。
+將第一步所建立的初始訓練資料集 $D_0$ 中的隨機設計變數$x_i$與對應 FoM $y_i$ 輸入 因數分解機 進行監督式訓練，
 使模型學習設計變數中每個矩陣元素與光學性能之間的關係。
 
-訓練完成後，因子分解機 可以得到線性權重 $w_i$ 與二階交互作用參數 $v_i$。
+訓練完成後，因數分解機 可以得到線性權重 $w_i$ 與二階交互作用參數 $v_i$。
 其中，二階項 $v_i$ 用來描述不同結構變數間的交互作用，並作為下一步用來轉換為 QUBO 問題的依據。
 
 \noindent \textbf{三、建構無約束二元二次最佳化問題(Constructing the QUBO Problem)}\\
-根據訓練完成的因子分解機模型參數，可以將預測函數 $\hat{y}$ 轉換為無約束二元二次最佳化(Quadratic Unconstrained Binary Optimization, QUBO)形式。
+根據訓練完成的因數分解機模型參數，可以將預測函數 $\hat{y}$ 轉換為無約束二元二次最佳化(Quadratic Unconstrained Binary Optimization, QUBO)形式。
 經過轉換後，目標能量函數可以表示為：
 \begin{align}
 E(x)=x^{T}Qx+b^{T}x+c,
@@ -68,28 +68,28 @@ E(x)=x^{T}Qx+b^{T}x+c,
 \begin{align}
 D_{t+1}=D_t\cup{(x^{*},y_{\mathrm{new}})}.
 \end{align}
-透過持續迭代並加入高光學性能的結構資料集，可以提升因子分解機模型的預測能力。
+透過持續迭代並加入高光學性能的結構資料集，可以提升因數分解機模型的預測能力。
 
 \noindent \textbf{六、重複迭代至終止條件(Iterative Optimization Process)}\\
 上述的步驟可以構成一個閉環式的最佳化流程。
-在每次資料集$D_t$更新後，重新訓練 因子分解機 模型，並重複執行 QUBO 建構、SA 搜尋與 FDTD 模擬驗證。
-隨著迭代的進行，資料集$D_t$會慢慢增加 良好 FoM 的資料，使因子分解機 模型能夠更有效的在設計空間中引導搜尋方向。
+在每次資料集$D_t$更新後，重新訓練 因數分解機 模型，並重複執行 QUBO 建構、SA 搜尋與 FDTD 模擬驗證。
+隨著迭代的進行，資料集$D_t$會慢慢增加 良好 FoM 的資料，使因數分解機 模型能夠更有效的在設計空間中引導搜尋方向。
 當達到程式預設的最大迭代次數(例如100次)時，將會停止整個最佳化的流程。
 
 \section{Encoding Strategies for Factorization Machine with Annealing Optimization}
-在因子分解機結合模擬退火的架構中，結構表示方式會直接影響因子分解機作為代理模型的訓練效率、QUBO 問題的維度，
+在因數分解機結合模擬退火的架構中，結構表示方式會直接影響因數分解機作為代理模型的訓練效率、QUBO 問題的維度，
 以及模擬退火的搜尋範圍。若直接將設計區域中每一個像素作為獨立設計變數，雖然可保留光學結構的完整資訊，
 但隨著設計區域解析度的提高，設計變數數量將會大幅增加，
-導致因子分解機模型訓練、QUBO 矩陣建構與模擬退火求解的計算成本也會大幅上升。
+導致因數分解機模型訓練、QUBO 矩陣建構與模擬退火求解的計算成本也會大幅上升。
 
 如第~\ref{ch:Encoding_Strategies_Theory} 節中所述，此篇論文已說明各編碼策略的相關理論基礎。
-接著，本節將說明各編碼策略於因子分解機結合模擬退火(FMSA)架構中的具體實作方式與最佳化流程。
+接著，本節將說明各編碼策略於因數分解機結合模擬退火(FMSA)架構中的具體實作方式與最佳化流程。
 由於不同矽光子元件對幾何特徵、設計自由度及最佳化目標具有不同需求，因此本研究並非將所有編碼策略套用於每一種元件，
 而是依據各方法之特性選擇具有代表性的應用案例進行驗證，以分析不同結構表示方法於各類矽光子元件中的適用性與限制。
 
 \subsection{Gaussian Upsampling Strategy}
 \label{ch:Gaussian_Upsampling_Strategy}
-在前一節說明的 因子分解機 結合模擬退火架構中，設計變數的表示方式會直接影響搜尋空間大小與最佳化的效率。
+在前一節說明的 因數分解機 結合模擬退火架構中，設計變數的表示方式會直接影響搜尋空間大小與最佳化的效率。
 因此，本小節將介紹利用 Gaussian Upsampling Strategy 作為二維光學結構的編碼方法，此編碼策略以低維二元矩陣作為設計變數，
 並透過 Gaussian convolution、Tanh projection 與 MaterialGrid mapping 等步驟將其轉換為高解析度的物理結構，
 使最佳化過程能於較低維度的搜尋空間中進行，並同時維持結構邊界的平滑性與製程可行性。
@@ -119,7 +119,7 @@ Gaussian Upsampling Strategy 的整體流程如圖 \ref{fig:Gaussian_Upsampling_
 也就是正式把二維光學結構與材料分布建構出來。最後透過 MEEP(FDTD) 進行電磁模擬，
 就可以得到每組低維二元設計變數$x_i$所對應的光學性能與品質因子$y_i$(Figure of Merit, FoM)。
 
-在後續最佳化迭代過程中，因子分解機(FM)模型與模擬退火演算法皆於低維二元設計空間中進行搜尋。
+在後續最佳化迭代過程中，因數分解機(FM)模型與模擬退火演算法皆於低維二元設計空間中進行搜尋。
 每當模擬退火採樣出新的候選解$x^*$時，這些候選解就會再次透過相同的 Gaussian Upsampling 流程轉換為高解析度結構，
 並輸入 MEEP 進行驗證。透過此機制，Gaussian Upsampling 在最佳化流程中扮演低維設計變數與實際物理結構之間的轉換橋樑。
 
@@ -262,17 +262,17 @@ Gumbel-Softmax 方法可以將編碼特徵轉換為 $N \times K$ 維的類別型
 
 完成 $\beta$-VAE 的預訓練後，固定 Encoder 與 Decoder 的模型權重，並且
 取一部分經過Decoder處理的資料集$\boldsymbol{x}^*$以及其潛在空間$\boldsymbol{x}$用來計算他們的FoM $y$，
-當作是我們初始因子分解機的訓練資料。
+當作是我們初始因數分解機的訓練資料。
 
-接著，我們會將這些資料利用因子分解機建立QUBO Matrix，並利用模擬退火採樣器挑選出指定數量的潛在空間較佳解$\boldsymbol{x}_{new}$。
+接著，我們會將這些資料利用因數分解機建立QUBO Matrix，並利用模擬退火採樣器挑選出指定數量的潛在空間較佳解$\boldsymbol{x}_{new}$。
 再透過我們訓練好的$\beta$-VAE Decoder重建出高解析度的二維結構$\boldsymbol{x}_{new}^*$作為候選結構，
 將得到的候選結構$\boldsymbol{x}_{new}^*$餵給MEEP模擬以驗證其光學性能並計算FoM $y_{new}$。
 
 最後，我們將這一次迭代所得的潛在空間解$\boldsymbol{x}_{new}$與其FoM $y_{new}$，
-加入到因子分解機的訓練資料集中，以進行下一次的迭代優化，重複此過程直到達到了最大的迭代次數。
+加入到因數分解機的訓練資料集中，以進行下一次的迭代優化，重複此過程直到達到了最大的迭代次數。
 
 \section{Mode Division Demultiplexer Optimization Results}
-此小節我將展示本研究中所提出的利用Encoding策略結合因子分解機與模擬退火應用於模態分波解多工器反向設計的最佳化結果。
+此小節我將展示本研究中所提出的利用Encoding策略結合因數分解機與模擬退火應用於模態分波解多工器反向設計的最佳化結果。
 
 首先，我們定義了 Mode Division Demultiplexer 的輸入、輸出通道以及其幾何結構的設計區域，
 \begin{figure}[H]
@@ -311,13 +311,13 @@ FOM = \left[ T_{0,1} (1 - T_{0,2}) \times T_{1,2} (1 - T_{1,1}) \right]
 首先，$T_{0,1}(1 - T_{0,2})$項與$T_{1,2}(1 - T_{1,1})$項分別代表了各別模態內部的取捨與目標，
 用來提升主要目標穿透率的同時，抑制模態串擾。其次，此公式當設計結果越好，其數值越接近$1$。
 
-\subsection{DEMUX design - parameter 1}
+\subsection{DEMUX - Design 1}
 \label{ch:DEMUX_design1}
 最一開始設計模態分波多工器的設計區域為$6.5 \times 6.5\ \mu m^2$，並且採用$8 \times 8$ 的網格進行劃分，在這個階段目的主要用於驗證
 高斯上採樣(Gaussian Upsampling)方法結合FMSA的初步可行性，並且在多模態波導的部分設定寬度為$1.8\mu m$，可支持TE$_0$與TE$_1$的傳輸;
 單模波導寬度設定為$0.5\mu m$，只允許TE$_0$的傳輸。
 
-在訓練參數上，用來訓練因子分解機的初始隨機資料量為$1000$筆，隨後進行$100$次的迭代，並且每次迭代會利用模擬退火隨機採樣$30$個候選解，因此總資料量為$4000$筆。
+在訓練參數上，用來訓練因數分解機的初始隨機資料量為$1000$筆，隨後進行$100$次的迭代，並且每次迭代會利用模擬退火隨機採樣$30$個候選解，因此總資料量為$4000$筆。
 
 最終得到品質因數FOM為:
 \begin{align}
@@ -351,7 +351,7 @@ FOM = 0.2196
      \label{fig:DEMUX_design1_SimulationResult}
 \end{figure}
 
-\subsection{DEMUX design - parameter 2}
+\subsection{DEMUX - Design 2}
 \label{ch:DEMUX_design2}
 接著，為解決光場在輸入與輸出端口容易發散的問題，我嘗試在輸入輸出端口連接設計區域的部分添加填充方塊結構(Padding)，並將其視為固定結構，
 不參與最佳化搜尋，以此來引導光場傳輸到指定的輸出端口。
@@ -390,7 +390,7 @@ FOM = 0.2728
      \label{fig:DEMUX_design2_SimulationResult}
 \end{figure}
 
-\subsection{DEMUX design - parameter 3}
+\subsection{DEMUX - Design 3}
 為了減少光場在非線性轉換過程中的傳播時間與距離，我們將設計區域縮小為$4.0 \times 4.0 \mu m^2$，並且將網格劃分設定為$10 \times 10$，來增加設計變數的維度，
 使其對於結構設計有更多的自由度，並且將多模態波導寬度設定為$1.0\mu m$。其餘的結構設定與訓練參數皆與上一個實驗(第~\ref{ch:DEMUX_design2}節)相同。
 
@@ -432,7 +432,7 @@ FOM = 0.2177
      \label{fig:DEMUX_design3_SimulationResult}
 \end{figure}
 
-\subsection{DEMUX design - parameter 4}
+\subsection{DEMUX - Design 4}
 接著，我們在設計區域相同($4.0 \times 4.0 \mu m^2$)的情況下，將網格劃分設定提高為$16 \times 16$，透過增加設計變數的維度，來提供演算法更高的設計自由度。
 其餘的設計結構設定與訓練參數皆與前面的實驗(第~\ref{ch:DEMUX_design2}節)相同。
 
@@ -481,7 +481,7 @@ FOM = 0.1247
 \end{figure}
 
 \section{Bend Waveguide Optimization Results}
-此小節我將展示本研究中所提出的三種Encoding策略結合因子分解機與模擬退火應用於彎曲波導(Bend Waveguide)反向設計的最佳化結果。
+此小節我將展示本研究中所提出的三種Encoding策略結合因數分解機與模擬退火應用於彎曲波導(Bend Waveguide)反向設計的最佳化結果。
 
 首先，我們定義了彎曲波導的輸入、輸出通道以及其幾何結構的設計區域。
 \begin{figure}[H]
@@ -510,7 +510,7 @@ FoM = T = \frac{E_{\mathrm{output}}}{E_{\mathrm{input}}}
 
 \subsection{Gaussian Upsampling Strategy on Bend Waveguide Design}
 
-\subsubsection{Gaussian Upsampling on Bend Waveguide Design - parameter 1}
+\subsubsection{Gaussian Upsampling on Bend Waveguide - Design 1}
 \label{ch:GU_BEND_Design1}
 首先，在設計彎曲波導一開始的實驗中，我們嘗試使用較少的初始訓練資料量，共200筆，以及設定30次的迭代次數，並在每次迭代後增加60筆的訓練資料，總資料量為2000筆。
 
@@ -557,7 +557,7 @@ FoM = 0.8277
 \label{fig:BEND_DFT_design1}
 \end{figure}
 
-\subsubsection{Gaussian Upsampling on Bend Waveguide Design - parameter 2}
+\subsubsection{Gaussian Upsampling on Bend Waveguide - Design 2}
 \label{ch:GU_BEND_Design2}
 接著，將網格劃分設定進一步增加為$12 \times 12$，提供演算法更高的結構設計自由度。
 此實驗初始隨機資料量為 1000 筆，並進行 100 次迭代，每次迭代新增 30 筆候選解，因此最終總資料量為 4000 筆。
@@ -602,7 +602,7 @@ FoM = 0.9555
 \label{fig:BEND_structure_design2}
 \end{figure}
 
-\subsubsection{Gaussian Upsampling on Bend Waveguide Design - parameter 3}
+\subsubsection{Gaussian Upsampling on Bend Waveguide - Design 3}
 \label{ch:GU_BEND_Design3}
 最後，將設計網格進一步提升至 $20 \times 20$，為本研究中最高的維度，來評估在固定最佳化流程與資料量下，
 持續增加設計自由度是否仍然能夠有效提升彎曲波導的最佳化表現。由於本實驗僅調整設計網格劃分設定，其餘模擬與最佳化設定皆維持與前述實驗一致，
@@ -661,7 +661,7 @@ FoM = 0.8281
 為了探討不同頻域設計自由度對於此最佳化策略結果的影響，本研究分別採用 $8\times8$、$10\times10$、$12\times12$ 與 $20\times20$ 之頻譜空間變數進行實驗。
 除了頻譜空間變數外，其餘 MEEP 模擬參數與最佳化流程皆維持一致，以確保不同設計維度間之比較具有一致性。
 
-\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 1}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide - Design 1}
 \label{ch:2F_BEND_Design1}
 首先，採用 $8 \times 8$ 之頻譜空間變數進行實驗，在模擬設定方面，MEEP 設計區域大小設為 $4.0 \times 4.0~\mu$m，
 空間解析度(Resolution)設為 40 pixels/$\mu$m，輸入與輸出波導長度皆為 $1.0~\mu$m，波導寬度為 $0.5~\mu$m。
@@ -713,7 +713,7 @@ FOM = 0.9501
 \label{fig:BEND_2F_structure_design1}
 \end{figure}
 
-\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 2}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide - Design 2}
 \label{ch:2F_BEND_Design2}
 接著，將頻譜空間變數由 $8\times8$ 提升至 $10\times10$，以探討適度增加設計自由度是否能進一步提升彎曲波導之最佳化效能。
 除頻譜空間變數維度外，其餘 MEEP 模擬參數、光源設定及最佳化流程皆與 Design 1 (第~\ref{ch:2F_BEND_Design1}節)相同，以確保不同設計維度間具有一致之比較基準。
@@ -758,7 +758,7 @@ FOM = 0.9930
 \label{fig:BEND_2F_structure_design2}
 \end{figure}
 
-\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 3}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide - Design 3}
 \label{ch:2F_BEND_Design3}
 接著，將頻譜空間變數提升至 $12\times12$，進一步增加設計自由度，以評估較高維度之頻譜空間變數對彎曲波導最佳化結果之影響。
 其餘 MEEP 模擬參數、光源設定及最佳化流程皆維持與 Design 1 (第~\ref{ch:2F_BEND_Design1}節)相同，以確保不同設計維度間具有一致之比較基準。
@@ -805,7 +805,7 @@ FOM = 0.9350
 \label{fig:BEND_2F_structure_design3}
 \end{figure}
 
-\subsubsection{2D Fourier Basis Encoding on Bend Waveguide Design - parameter 4}
+\subsubsection{2D Fourier Basis Encoding on Bend Waveguide - Design 4}
 \label{ch:2F_BEND_Design4}
 最後，將頻譜空間變數進一步提升至 $20\times20$，以評估更高設計自由度下基於二維傅立葉編碼方法之最佳化能力。
 其餘 MEEP 模擬參數、光源設定及最佳化流程皆維持與前述實驗一致，以探討高維度頻譜空間變數對最佳化結果之影響
@@ -863,7 +863,7 @@ $\beta$-VAE 能夠先透過大量結構資料學習設計特徵，並將原始�
 此外，由於潛在空間可能需要更多資料學習才能有效捕捉設計特徵，因此在相同潛在空間維度的參數下進一步增加初始資料量跟迭代次數，
 來分析資料量對於潛在空間最佳化的影響。
 
-\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 1}
+\subsubsection{$\beta$-VAE on Bend Waveguide - Design 1}
 \label{ch:BEND_bVAE_design1}
 首先，將潛在空間維度設定為 $8\times8$，當作FM模型的設計參數。
 $\beta$-VAE 模型使用10000筆結構資料進行預先訓練，以此來學習彎曲波導幾何特徵與潛在空間的連結；
@@ -923,7 +923,7 @@ FOM = 0.7343
 \label{fig:BEND_bVAE_design1_structure}
 \end{figure}
 
-\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 2}
+\subsubsection{$\beta$-VAE on Bend Waveguide - Design 2}
 \label{ch:BEND_bVAE_design2}
 接著，將潛在空間維度增加至 $12\times12$，以此來探討增加潛在空間維度是否能夠擷取更多結構特徵，進而提升彎曲波導的最佳化效能。
 除了潛在空間維度外，其餘 $\beta$-VAE 訓練資料量、MEEP 模擬參數、初始資料量及最佳化流程皆與 Design 1 (第\ref{ch:BEND_bVAE_design1}節)相同，
@@ -975,7 +975,7 @@ FM 模型尚未完整建立高維設計空間的預測能力，因此最佳化�
 \label{fig:BEND_bVAE_design2_structure}
 \end{figure}
 
-\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 3}
+\subsubsection{$\beta$-VAE on Bend Waveguide - Design 3}
 \label{ch:BEND_bVAE_design3}
 由於 Design 1 (第\ref{ch:BEND_bVAE_design1}節)與 Design 2 (第\ref{ch:BEND_bVAE_design2}節)皆採用相同的初始設定與模擬設定，
 因此接下來將潛在空間維度固定為 $8\times8$，並將初始資料量增加至2000筆，同時將最佳化迭代次數提高至200次，總資料量為8000筆，
@@ -1026,7 +1026,7 @@ FOM = 0.7451
 \label{fig:BEND_bVAE_design3_structure}
 \end{figure}
 
-\subsubsection{$\beta$-VAE on Bend Waveguide Design - parameter 4}
+\subsubsection{$\beta$-VAE on Bend Waveguide - Design 4}
 最後，將潛在空間維度設定為 $12\times12$，並同時採用2000筆初始資料及200次迭代，來探討在增加資料量後，
 較高維度的潛在空間是否能夠充分學習到更多結構特徵或細節，並改善彎曲波導的最佳化結果。
 除上述參數外，其餘 MEEP 模擬設定與 $\beta$-VAE 訓練設定皆與前述實驗相同。
@@ -1111,7 +1111,7 @@ FOM = 0.9096
 依據不同實驗設計需求，會使用不同的FoM，並調整入射模態數以及計算的工作波長點，其餘模擬參數皆維持一致。
 
 \subsection{Gaussian Upsampling on Waveguide Crossing Design}
-\subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter 1}
+\subsubsection{Gaussian Upsampling on Waveguide Crossing - Design 1}
 \label{ch:Crossing_GU_Design1}
 首先，參考西元2018年發表於 \textit{Photonics Research} 的\textit{Ultracompact dual-mode waveguide crossing based on subwavelength multimode-interference couplers}\cite{Chang:18}所提出的緊湊型(Compact)交叉波導結構，
 本研究建立單模態(TE$_0$)交叉波導最佳化設計，來驗證 Gaussian Upsampling 策略應用在交叉波導設計的可行性。
@@ -1158,7 +1158,7 @@ FoM = 0.9620
 \label{fig:Crossing_Design1_Structure}
 \end{figure}
 
-\subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter 2}
+\subsubsection{Gaussian Upsampling on Waveguide Crossing - Design 2}
 \label{ch:Crossing_GU_Design2}
 在完成單模態交叉波導設計後，此研究進一步嘗試設計雙模態交叉波導，並同時考慮TE$_0$與TE$_1$模態的穿透率與串擾，因此將品質因數定義為:
 \begin{align}
@@ -1212,7 +1212,7 @@ $C_{\text{crosstalk}}^{(m)}$為耦合至上下方波導的串擾，當結果越�
 \label{fig:Crossing_Design2_Structure}
 \end{figure}
 
-\subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter 3}
+\subsubsection{Gaussian Upsampling on Waveguide Crossing - Design 3}
 \label{ch:Crossing_GU_Design3}
 接著，本研究將交叉波導增加至三模態(TE$_0$、TE$_1$、TE$_2$)，以實驗 Gaussian Upsampling 策略應用於設計高模態數交叉波導的能力。
 
@@ -1269,7 +1269,7 @@ $C_{\text{crosstalk}}^{(m)}$為耦合至上下方波導的串擾，當結果越�
 \label{fig:Crossing_Design3_Structure}
 \end{figure}
 
-\subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter 4}
+\subsubsection{Gaussian Upsampling on Waveguide Crossing - Design 4}
 \label{ch:Crossing_GU_Design4}
 前述實驗皆以單一工作波長進行最佳化，而接下來我將參考同一篇Nature Communications文獻\cite{li2020ultracompact}中的品質因數來考慮操作頻寬。
 因此，本實驗將優化 $1520~\mathrm{nm}$、$1560~\mathrm{nm}$ 及 $1600~\mathrm{nm}$ 三個波長下的TE$_0$與TE$_1$模態，FoM公式如下:
@@ -1374,7 +1374,7 @@ Mode & Wavelength ($\mu$m) & Transmission (\%) & Loss (dB)\\
      \label{fig:Crossing_Design4_SimulationResult}
 \end{figure}
 
-\subsubsection{Gaussian Upsampling on Waveguide Crossing Design - parameter 5}
+\subsubsection{Gaussian Upsampling on Waveguide Crossing - Design 5}
 \label{ch:Crossing_GU_Design5}
 最後，為了比較此方法是否能夠超越文獻中的優化結果，本研究在維持雙模態及多波長最佳化的條件下採用文獻中的設計區域大小，
 將 $5.0\times5.0~\mu$m 縮小至 $2.4\times2.4~\mu$m，同時增加為120個可控制設計變數，可生成900個完整四重對稱的設計變數。

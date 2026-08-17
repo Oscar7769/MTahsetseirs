@@ -728,7 +728,7 @@ F(x, y) = \sum_{m=1}^{M} \sum_{n=1}^{N} \alpha_{m,n} \cdot \sin(m \pi x) \cdot \
 本研究中另外參考了DeepMind團隊在2017年發布的研究\cite{higgins2017_betavae}以及普渡大學在2021年發布的研究\cite{Wilson_2021}，
 採用了第三種的編碼策略:引入$\beta$變分自編碼器(beta-Variational Autoencoder $\beta$-VAE) 作為低維潛在空間(Latent Space)表示的模型，
 此方法可將原始高維結構資料映射至低維潛在向量，
-並透過因子分解機與退火演算法去尋找怎麼樣的低維潛在空間能夠透過解碼器有效地描述出我們想要的光學結構。
+並透過因數分解機與退火演算法去尋找怎麼樣的低維潛在空間能夠透過解碼器有效地描述出我們想要的光學結構。
 本節將說明 $\beta$-VAE 的基本理論；其實際模型架構、訓練流程與最佳化方法，則於第四章中進一步介紹。
 
 變分自編碼器(Variational Autoencoder, VAE)為一種生成式模型，其目的在於學習資料之潛在機率分布，
@@ -807,12 +807,12 @@ $\beta$-VAE 則是保留著傳統 VAE 的基礎，透過在目標函數下界(Ev
 當 $\beta > 1$ 時，KL 散度項的權重提高，使近似後驗分布受到更強的先驗約束。這個約束可以降低不同潛在維度之間的相關性，使得潛在空間較為傾向於解耦特性。
 
 在解耦後的潛在空間中，潛在向量$\mathbf{z}$的每一個獨立維度(獨立變數)對應到了光學結構中的幾何特徵，例如材料分布、幾何結構等等，但並不是絕對，
-因此本研究在後續透過因子分解機建立潛在向量與光學性能之間的近似關係，並結合退火演算法於潛在空間中搜尋，以設計出符合我們預期的光學結構。
+因此本研究在後續透過因數分解機建立潛在向量與光學性能之間的近似關係，並結合退火演算法於潛在空間中搜尋，以設計出符合我們預期的光學結構。
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 分隔線 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Factorization Machines and Annealing Optimization}
-在這個章節中，我會說明如何利用因子分解機(Factorization Machine, FM)建立多元非線性映射之代理模型(Surrogate Model)，
+在這個章節中，我會說明如何利用因數分解機(Factorization Machine, FM)建立多元非線性映射之代理模型(Surrogate Model)，
 並推導如何將目標函數精確地映射為二次無約束離散優化問題(Quadratic Unconstrained Binary Optimization, QUBO)的形式，
 最後，我們會探討如何透過模擬退火(Simulated Annealing, SA)來求解QUBO問題，進行最佳組合搜尋的基礎理論。
 
@@ -823,7 +823,7 @@ $\beta$-VAE 則是保留著傳統 VAE 的基礎，透過在目標函數下界(Ev
 傳統多項式回歸模型(如Support Vector Machine, SVM)在處理高維度的特徵組合時，其二階交互項的參數皆為完全獨立。
 若要要求在此架構下的特徵組合 $x_i$ 與 $x_j$同時有足夠的非零觀測值，在稀疏的資料集下會無法估算參數(即 $w_{i,j}=0$)，進而導致模型的泛化能力大幅下降。
 
-因此，Steffen Rendle 提出了具有二階項的因子分解機(Second-order Factorization Machine)，其數學表示式定義如下:
+因此，Steffen Rendle 提出了具有二階項的因數分解機(Second-order Factorization Machine)，其數學表示式定義如下:
 \begin{align}
 \hat{y}(\mathbf{x}) = w_0 + \sum_{i=1}^{n} w_i x_i + \sum_{i=1}^{n} \sum_{j=i+1}^{n} \langle \mathbf{v}_i, \mathbf{v}_j \rangle x_i x_j
 \label{eq:factorization_machine}

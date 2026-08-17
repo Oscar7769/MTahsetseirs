@@ -9,8 +9,8 @@
 \contentsline {chapter}{中文摘要}{i}{}%
 \contentsline {chapter}{英文摘要}{iii}{}%
 \contentsline {chapter}{目錄}{v}{}%
-\contentsline {chapter}{圖目錄\vspace {0em}}{ix}{}%
-\contentsline {chapter}{表目錄\vspace {0em}}{xiv}{}%
+\contentsline {chapter}{圖目錄\vspace {0em}}{vi}{}%
+\contentsline {chapter}{表目錄\vspace {0em}}{vii}{}%
 \contentsline {chapter}{\numberline {1}Introduction and Motivation}{1}{}%
 \contentsline {chapter}{\numberline {2}Related Work}{5}{}%
 \contentsline {section}{\numberline {2.1}Early Works on Inverse Design of Photonic Devices}{5}{}%
@@ -46,36 +46,35 @@
 \contentsline {subsection}{\numberline {4.2.2}2D Fourier Basis Encoding Strategy}{56}{}%
 \contentsline {subsection}{\numberline {4.2.3}$\beta $-Variational Autoencoder ($\beta $-VAE) Strategy}{58}{}%
 \contentsline {section}{\numberline {4.3}Mode Division Demultiplexer Optimization Results}{60}{}%
-\contentsline {subsection}{\numberline {4.3.1}DEMUX design - parameter 1}{62}{}%
-\contentsline {subsection}{\numberline {4.3.2}DEMUX design - parameter 2}{63}{}%
-\contentsline {subsection}{\numberline {4.3.3}DEMUX design - parameter 3}{64}{}%
-\contentsline {subsection}{\numberline {4.3.4}DEMUX design - parameter 4}{65}{}%
+\contentsline {subsection}{\numberline {4.3.1}DEMUX - Design 1}{62}{}%
+\contentsline {subsection}{\numberline {4.3.2}DEMUX - Design 2}{63}{}%
+\contentsline {subsection}{\numberline {4.3.3}DEMUX - Design 3}{64}{}%
+\contentsline {subsection}{\numberline {4.3.4}DEMUX - Design 4}{65}{}%
 \contentsline {section}{\numberline {4.4}Bend Waveguide Optimization Results}{67}{}%
 \contentsline {subsection}{\numberline {4.4.1}Gaussian Upsampling Strategy on Bend Waveguide Design}{69}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Gaussian Upsampling on Bend Waveguide Design - parameter 1}{69}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.2}Gaussian Upsampling on Bend Waveguide Design - parameter 2}{72}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.3}Gaussian Upsampling on Bend Waveguide Design - parameter 3}{75}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Gaussian Upsampling on Bend Waveguide - Design 1}{69}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Gaussian Upsampling on Bend Waveguide - Design 2}{72}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Gaussian Upsampling on Bend Waveguide - Design 3}{75}{}%
 \contentsline {subsection}{\numberline {4.4.2}2D Fourier Basis Encoding on Bend Waveguide Design}{78}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}2D Fourier Basis Encoding on Bend Waveguide Design - parameter 1}{78}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}2D Fourier Basis Encoding on Bend Waveguide Design - parameter 2}{81}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.3}2D Fourier Basis Encoding on Bend Waveguide Design - parameter 3}{84}{}%
-\contentsline {subsubsection}{\numberline {4.4.2.4}2D Fourier Basis Encoding on Bend Waveguide Design - parameter 4}{87}{}%
-\contentsline {subsection}{\numberline {4.4.3}$\beta $-VAE on Bend Waveguide Design}{90}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}$\beta $-VAE on Bend Waveguide Design - parameter 1}{91}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}$\beta $-VAE on Bend Waveguide Design - parameter 2}{94}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.3}$\beta $-VAE on Bend Waveguide Design - parameter 3}{96}{}%
-\contentsline {subsubsection}{\numberline {4.4.3.4}$\beta $-VAE on Bend Waveguide Design - parameter 4}{99}{}%
-\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{102}{}%
-\contentsline {subsection}{\numberline {4.5.1}Gaussian Upsampling on Waveguide Crossing Design}{104}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.1}Gaussian Upsampling on Waveguide Crossing Design - parameter 1}{104}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.2}Gaussian Upsampling on Waveguide Crossing Design - parameter 2}{107}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.3}Gaussian Upsampling on Waveguide Crossing Design - parameter 3}{108}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.4}Gaussian Upsampling on Waveguide Crossing Design - parameter 4}{111}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.5}Gaussian Upsampling on Waveguide Crossing Design - parameter 5}{115}{}%
-\contentsline {subsubsection}{\numberline {4.5.1.6}Comparison with Previous Work}{117}{}%
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{119}{}%
-\contentsline {section}{\numberline {5.1}Conclusion}{119}{}%
-\contentsline {section}{\numberline {5.2}Future Work}{121}{}%
-\contentsline {chapter}{References}{123}{}%
-\contentsline {chapter}{\numberline {6}Appendix 附錄}{128}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}2D Fourier Basis Encoding on Bend Waveguide - Design 1}{78}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}2D Fourier Basis Encoding on Bend Waveguide - Design 2}{81}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}2D Fourier Basis Encoding on Bend Waveguide - Design 3}{83}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}2D Fourier Basis Encoding on Bend Waveguide - Design 4}{86}{}%
+\contentsline {subsection}{\numberline {4.4.3}$\beta $-VAE on Bend Waveguide Design}{89}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}$\beta $-VAE on Bend Waveguide - Design 1}{89}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}$\beta $-VAE on Bend Waveguide - Design 2}{93}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}$\beta $-VAE on Bend Waveguide - Design 3}{95}{}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}$\beta $-VAE on Bend Waveguide - Design 4}{98}{}%
+\contentsline {section}{\numberline {4.5}Waveguide Crossing Optimization Results}{101}{}%
+\contentsline {subsection}{\numberline {4.5.1}Gaussian Upsampling on Waveguide Crossing Design}{103}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}Gaussian Upsampling on Waveguide Crossing - Design 1}{103}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}Gaussian Upsampling on Waveguide Crossing - Design 2}{106}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.3}Gaussian Upsampling on Waveguide Crossing - Design 3}{107}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.4}Gaussian Upsampling on Waveguide Crossing - Design 4}{110}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.5}Gaussian Upsampling on Waveguide Crossing - Design 5}{113}{}%
+\contentsline {subsubsection}{\numberline {4.5.1.6}Comparison with Previous Work}{116}{}%
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{118}{}%
+\contentsline {section}{\numberline {5.1}Conclusion}{118}{}%
+\contentsline {section}{\numberline {5.2}Future Work}{120}{}%
+\contentsline {chapter}{References}{122}{}%
 \contentsfinish 

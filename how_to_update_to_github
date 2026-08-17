@@ -1,8 +1,8 @@
 git add .
 
-git commit -m "修改緒論、Conclusion、Futurework還有Result"
+git commit -m "口試投影片初稿"
 
 git push
 
-\newcommand{\chineseTitle}{結合編碼增強因子分解機與量子退火之矽光子反向設計}
+\newcommand{\chineseTitle}{結合編碼增強因數分解機與量子退火之矽光子反向設計}
 \newcommand{\englishTitle}{Inverse Design of Silicon Photonic Structures\\Using Encoding-Enhanced Factorization Machines and Quantum Annealing}
