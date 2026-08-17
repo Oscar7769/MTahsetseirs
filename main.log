@@ -1,12 +1,12 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  17 AUG 2026 14:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  17 AUG 2026 18:43
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**/home/oscar3102/Research_Latex/main
+(/home/oscar3102/Research_Latex/main.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21> (./covers/load_env.tex
-(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+L3 programming layer <2022-01-21> (./covers/load_env.tex (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
@@ -23,18 +23,14 @@ File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-)
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count190
@@ -49,16 +45,11 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen145
 \Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks17
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-01-21 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2022-01-12 L3 backend support: XeTeX
-
-(|extractbb --version)
+ (|extractbb --version)
 \c__kernel_sys_dvipdfmx_version_int=\count193
 \l__color_backend_stack_int=\count194
 \g__color_backend_stack_int=\count195
@@ -71,10 +62,8 @@ File: l3backend-xetex.def 2022-01-12 L3 backend support: XeTeX
 Package: xparse 2022-01-12 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
-X
+ (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_script_int=\count266
 \l__fontspec_language_int=\count267
 \l__fontspec_strnum_int=\count268
@@ -89,11 +78,9 @@ X
 \l__fontspec_tmpa_dim=\dimen147
 \l__fontspec_tmpb_dim=\dimen148
 \l__fontspec_tmpc_dim=\dimen149
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 
 Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             New Roman' with options [Ligatures=TeX].
@@ -114,17 +101,13 @@ Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 (fontspec)             Roman/BI/OT:language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-
-(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+ (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2021/12/12 v3.8.8 Typesetting CJK scripts with XeLaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexhook.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2021/12/12 v2.5.8 Document and package hooks (CTEX)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
-)
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2022-01-12 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen150
 \l__xtemplate_tmp_int=\count277
@@ -189,20 +172,15 @@ Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 \g__xeCJK_fam_allocation_int=\count287
 \l__xeCJK_verb_case_int=\count288
 \l__xeCJK_verb_exspace_skip=\skip55
-
-(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+ (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2021/12/12 v3.8.8 Configuration file for xeCJK package
-))
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex.sty
 Package: ctex 2021/12/12 v2.5.8 Chinese adapter in LaTeX (CTEX)
-
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexpatch.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2021/12/12 v2.5.8 Patching commands (CTEX)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
@@ -211,35 +189,28 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 \l__ctex_tmp_dim=\dimen179
 \g__ctex_section_depth_int=\count290
 \g__ctex_font_size_int=\count291
-
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2021/12/12 v2.5.8 Option configuration file (CTEX)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+) (/usr/share/texlive/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
 File: ctex-engine-xetex.def 2021/12/12 v2.5.8 XeLaTeX adapter (CTEX)
 \ccwd=\dimen180
 \l__ctex_ccglue_skip=\skip56
 )
 \l__ctex_ziju_dim=\dimen181
-
-(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2020/05/01 v2.8 Typesetting numbers with Chinese glyphs
 \l__zhnum_scale_int=\count292
-
-(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2020/05/01 v2.8 Chinese numerals with UTF8 encoding
-))
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-plain.def
+)) (/usr/share/texlive/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-plain.def
 File: ctex-scheme-plain.def 2021/12/12 v2.5.8 Plain scheme for generic (CTEX)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex.cfg
+)) (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2021/12/12 v2.5.8 Configuration file (CTEX)
 )
 
 Package fontspec Info: Font family 'TW-Kai(0)' created for font 'TW-Kai' with
 (fontspec)             options
-(fontspec)             [Script={CJK},Path={./fonts/},AutoFakeBold={4},AutoFakeS
-lant={0.2}].
+(fontspec)             [Script={CJK},Path={./fonts/},AutoFakeBold={4},AutoFakeSlant={0.2}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -248,31 +219,24 @@ lant={0.2}].
 (fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embold
-en=4;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;slant=
-0.2;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;slant=0.2;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embold
-en=4;slant=0.2;"
+(fontspec)             <->"[./fonts/TW-Kai]/OT:script=hani;language=dflt;embolden=4;slant=0.2;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-
-(/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
+ (/usr/share/texmf/tex/latex/CJK/CJKnumb.sty
 Package: CJKnumb 2015/04/18 4.8.4
 \CJK@q=\count293
 \CJK@r=\count294
-)
-(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen182
 \captionmargin@=\dimen183
@@ -288,11 +252,9 @@ Package caption Info: Standard document class detected.
 )
 \c@subfigure=\count297
 \c@subtable=\count298
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen189
 \ar@mcellbox=\box53
@@ -301,15 +263,13 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \extratabsurround=\skip57
 \backup@length=\skip58
 \ar@cellbox=\box54
-)
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip59
 \multirow@cntb=\count299
 \multirow@dima=\skip60
 \bigstrutjot=\dimen191
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -320,25 +280,21 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip62
 \thm@headsep=\skip63
 \dth@everypar=\toks24
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip64
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks25
 \ex@=\dimen192
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen193
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
 \inf@bad=\count300
@@ -378,57 +334,44 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 107.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen257
 \Gin@req@width=\dimen258
-)
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen259
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/easylist/easylist.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/easylist/easylist.sty
 Package: easylist 2014/01/11 v.1.4 Numbered items with a single command.
 \el@CounterTotal=\count312
 \el@Scratch=\count313
@@ -449,35 +392,28 @@ Package: easylist 2014/01/11 v.1.4 Numbered items with a single command.
 \el@ControlBox=\box58
 \el@TotalMargin=\dimen261
 \el@LeftMove=\dimen262
-)
-(/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count326
 \cp@tempcnt=\count327
-)
-(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count328
 \float@exts=\toks30
 \float@box=\box59
 \@float@everytoks=\toks31
 \@floatcapt=\box60
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks32
 \c@algorithm=\count329
-)
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
-
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -497,8 +433,7 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 \epsfxsize=\dimen263
 \epsfysize=\dimen264
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks33
 \verbatim@line=\toks34
@@ -508,27 +443,22 @@ Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \c@lemma=\count338
 \c@prop=\count339
 \c@defn=\count340
-
-(/usr/share/texlive/texmf-dist/tex/latex/eqparbox/eqparbox.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/eqparbox/eqparbox.sty
 Package: eqparbox 2017/09/03 v4.1 Create equal-widthed boxes
 \eqp@tempdima=\skip70
 \eqp@tempdimb=\skip71
 \eqp@tabular@box=\box61
 \eqp@list@box=\box62
 \eqp@list@indent=\skip72
-
-(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count341
 \lst@gtempboxa=\box63
 \lst@token=\toks35
@@ -541,26 +471,21 @@ Package chngcntr Info: \counterwithout already defined.
 \lst@newlines=\count345
 \lst@lineno=\count346
 \lst@maxwidth=\dimen268
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count347
 \lst@skipnumbers=\count348
 \lst@framebox=\box64
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-
-(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+ (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2021/12/12 v3.8.8 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count349
 \l__xeCJK_listings_flag_int=\count350
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
-rs
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip73
 \f@nch@O@elh=\skip74
 \f@nch@O@erh=\skip75
@@ -570,11 +495,9 @@ rs
 \f@nch@O@erf=\skip79
 \f@nch@O@olf=\skip80
 \f@nch@O@orf=\skip81
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count351
 \calc@Bcount=\count352
@@ -586,8 +509,7 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count353
 \calc@Cskip=\skip84
-)
-(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \ESO@tempdima=\dimen271
 \ESO@tempdimb=\dimen272
@@ -595,8 +517,7 @@ Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
 \AM@pagewidth=\dimen273
 \AM@pageheight=\dimen274
 \AM@fboxrule=\dimen275
-
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/ppxetex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2022/01/29 v0.5u Pdfpages driver for XeTeX (AM)
 )
 \pdfpages@includegraphics@status=\count354
@@ -606,8 +527,7 @@ File: ppxetex.def 2022/01/29 v0.5u Pdfpages driver for XeTeX (AM)
 \AM@toc@title=\toks37
 \c@AM@survey=\count356
 \AM@templatesizebox=\box66
-)
-(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box67
 \beforetitleunit=\skip85
@@ -618,37 +538,27 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \titlewidth=\dimen278
 \titlewidthlast=\dimen279
 \titlewidthfirst=\dimen280
-)
-(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen281
-)
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count357
-)
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
-
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks39
 \XKV@tempa@toks=\toks40
 )
 \XKV@depth=\count358
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-
-(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box68
 )
@@ -657,8 +567,7 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@urx=\dimen284
 \tc@ury=\dimen285
 Package trimclip Info: Using driver 'tc-xetex.def'.
-
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-xetex.def
 File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
 \adjbox@Width=\dimen286
@@ -669,32 +578,26 @@ File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 \adjbox@pheight=\dimen291
 \adjbox@pdepth=\dimen292
 \adjbox@ptotalheight=\dimen293
-
-(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 \c@checkoddpage=\count359
 LaTeX Info: Redefining \checkoddpage on input line 45.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box69
 \sift@deathcycles=\count360
 \@vwid@loff=\dimen294
 \@vwid@roff=\dimen295
-))
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+)) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \integerpart=\count361
 \decimalpart=\count362
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
 Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
-)
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen296
 \lightrulewidth=\dimen297
@@ -713,8 +616,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count365
 \@lastruleclass=\count366
 \@thisrulewidth=\dimen308
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen309
 \TX@old@table=\dimen310
@@ -723,8 +625,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@delta=\dimen313
 \TX@cols=\count367
 \TX@ftn=\toks41
-))
-No file main.aux.
+)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -743,6 +644,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -787,14 +689,11 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count368
 (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 ))
@@ -830,26 +729,20 @@ package with kernel methods
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-(./covers/front_var.tex
+ (./covers/front_var.tex
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 21.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
 
-])
-(./covers/inside_var.tex
+]) (./covers/inside_var.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [1
@@ -861,8 +754,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [1
 
-]
-(./covers/toc_var.tex (./Sections/0.2.Abstract_chinese.tex
+] (./covers/toc_var.tex (./Sections/0.2.Abstract_chinese.tex
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -874,17 +766,14 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [2]
-(./Sections/0.3.Abstract.tex
+ [2] (./Sections/0.3.Abstract.tex
 Overfull \hbox (16.24962pt too wide) in paragraph at lines 42--43
-[]\TU/TimesNewRoman(0)/m/n/12 For electromagnetic simulations, the open-source 
-MEEP package based on the Finite-Difference
+[]\TU/TimesNewRoman(0)/m/n/12 For electromagnetic simulations, the open-source MEEP package based on the Finite-Difference
  []
 
 
 Overfull \hbox (14.17091pt too wide) in paragraph at lines 42--43
-\TU/TimesNewRoman(0)/m/n/12 Time-Domain (FDTD) method is employed to analyze th
-e propagation characteristics of transverse-
+\TU/TimesNewRoman(0)/m/n/12 Time-Domain (FDTD) method is employed to analyze the propagation characteristics of transverse-
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -893,16 +782,31 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 [3])
 Overfull \hbox (0.36453pt too wide) in paragraph at lines 52--86
-[]\TU/TimesNewRoman(0)/b/n/12 Keywords: Factorization Machine, Silicon Photonic
-s, Waveguide, Inverse Design, Sim-
+[]\TU/TimesNewRoman(0)/b/n/12 Keywords: Factorization Machine, Silicon Photonics, Waveguide, Inverse Design, Sim-
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[4]
-No file main.toc.
+[4] (./main.toc
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [5
+
+]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [6]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [7])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
@@ -910,10 +814,29 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[5
+ [8] (./main.lof
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [9
 
 ]
-No file main.lof.
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [10]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [11]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [12])
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
@@ -921,10 +844,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[6
-
-]
-No file main.lot.
+ [13] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
@@ -932,7 +852,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[7
+ [14
 
 ]) (./Sections/1.Introduction_Motivation.tex
 Chapter 1.
@@ -950,11 +870,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [2]
 Overfull \hbox (10.62209pt too wide) in paragraph at lines 100--105
-\TU/TimesNewRoman(0)/m/n/12 pling, GU)\TU/TW-Kai(0)/m/n/12 、|  二 維 傅 立 葉 編 碼 \T
-U/TimesNewRoman(0)/m/n/12 (2D Fourier Basis Encoding) \TU/TW-Kai(0)/m/n/12 以 及 
-$\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -\TU/TW-Kai(0)/m/n/12 變 分 自 編
- 碼 器 \TU/TimesNewRoman(0)/m/n/12 ($\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/
-n/12 -Variational
+\TU/TimesNewRoman(0)/m/n/12 pling, GU)\TU/TW-Kai(0)/m/n/12 、|  二 維 傅 立 葉 編 碼 \TU/TimesNewRoman(0)/m/n/12 (2D Fourier Basis Encoding) \TU/TW-Kai(0)/m/n/12 以 及 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -\TU/TW-Kai(0)/m/n/12 變 分 自 編 碼 器 \TU/TimesNewRoman(0)/m/n/12 ($\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -Variational
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -968,60 +884,6 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [4] (./Sections/2.Relatedwork.tex
 Chapter 2.
-
-LaTeX Warning: Reference `tab:early_works' on page 5 undefined on input line 4.
-
-
-
-LaTeX Warning: Reference `tab:fmqa_sa' on page 5 undefined on input line 5.
-
-
-LaTeX Warning: Reference `tab:encoding_methods' on page 5 undefined on input li
-ne 6.
-
-
-LaTeX Warning: Citation `cox1999_maximizing' on page 5 undefined on input line 
-13.
-
-
-LaTeX Warning: Citation `borel2004_topology' on page 5 undefined on input line 
-15.
-
-
-LaTeX Warning: Citation `jensen2011_topology' on page 5 undefined on input line
- 16.
-
-
-LaTeX Warning: Citation `lalaukeraly2013_adjoint' on page 5 undefined on input 
-line 18.
-
-
-LaTeX Warning: Citation `piggott2015_inverse_design' on page 5 undefined on inp
-ut line 20.
-
-
-LaTeX Warning: Citation `shen2015_integrated_pbs' on page 5 undefined on input 
-line 20.
-
-
-LaTeX Warning: Citation `frellsen2016_topology_mdm' on page 5 undefined on inpu
-t line 22.
-
-
-LaTeX Warning: Citation `piggott2017_fabrication' on page 5 undefined on input 
-line 23.
-
-
-LaTeX Warning: Citation `molesky2018_inverse' on page 5 undefined on input line
- 25.
-
-
-LaTeX Warning: Citation `hammond2021_photonic' on page 5 undefined on input lin
-e 26.
-
-
-LaTeX Warning: Citation `pao2026_nano' on page 5 undefined on input line 28.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1029,49 +891,6 @@ File: covers/logo2.pdf Graphic file (type pdf)
 [5
 
 ]
-
-LaTeX Warning: Citation `cox1999_maximizing' on page 6 undefined on input line 
-53.
-
-
-LaTeX Warning: Citation `borel2004_topology' on page 6 undefined on input line 
-53.
-
-
-LaTeX Warning: Citation `jensen2011_topology' on page 6 undefined on input line
- 53.
-
-
-LaTeX Warning: Citation `lalaukeraly2013_adjoint' on page 6 undefined on input 
-line 53.
-
-
-LaTeX Warning: Citation `piggott2015_inverse_design' on page 6 undefined on inp
-ut line 53.
-
-
-LaTeX Warning: Citation `shen2015_integrated_pbs' on page 6 undefined on input 
-line 53.
-
-
-LaTeX Warning: Citation `frellsen2016_topology_mdm' on page 6 undefined on inpu
-t line 53.
-
-
-LaTeX Warning: Citation `piggott2017_fabrication' on page 6 undefined on input 
-line 53.
-
-
-LaTeX Warning: Citation `molesky2018_inverse' on page 6 undefined on input line
- 53.
-
-
-LaTeX Warning: Citation `hammond2021_photonic' on page 6 undefined on input lin
-e 53.
-
-
-LaTeX Warning: Citation `pao2026_nano' on page 6 undefined on input line 53.
-
 
 Package xeCJK Warning: Unknown CJK family `\CJKsfdefault' is being ignored.
 (xeCJK)                
@@ -1087,215 +906,31 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [7]
-
-LaTeX Warning: Citation `kirkpatrick1983_simulated_annealing' on page 8 undefin
-ed on input line 63.
-
-
-LaTeX Warning: Citation `kadowaki1998_quantum_annealing' on page 8 undefined on
- input line 64.
-
-
-LaTeX Warning: Citation `rendle2010_factorization' on page 8 undefined on input
- line 65.
-
-
-LaTeX Warning: Citation `shen2015_integrated_pbs' on page 8 undefined on input 
-line 66.
-
-
-LaTeX Warning: Citation `kitai2020_fmqa' on page 8 undefined on input line 67.
-
-
-LaTeX Warning: Citation `Wilson_2021' on page 8 undefined on input line 68.
-
-
-LaTeX Warning: Citation `inoue2022_fmqa_pcsel' on page 8 undefined on input lin
-e 69.
-
-
-LaTeX Warning: Citation `zhu2024_machine_learning' on page 8 undefined on input
- line 70.
-
-
-LaTeX Warning: Citation `hu2025_optical_filter' on page 8 undefined on input li
-ne 71.
-
-
-LaTeX Warning: Citation `chang2026_quantum_compatible' on page 8 undefined on i
-nput line 72.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[8
+ [8
 
 ]
-
-LaTeX Warning: Citation `kirkpatrick1983_simulated_annealing' on page 9 undefin
-ed on input line 97.
-
-
-LaTeX Warning: Citation `kadowaki1998_quantum_annealing' on page 9 undefined on
- input line 97.
-
-
-LaTeX Warning: Citation `rendle2010_factorization' on page 9 undefined on input
- line 97.
-
-
-LaTeX Warning: Citation `piggott2015_inverse_design' on page 9 undefined on inp
-ut line 97.
-
-
-LaTeX Warning: Citation `shen2015_integrated_pbs' on page 9 undefined on input 
-line 97.
-
-
-LaTeX Warning: Citation `kitai2020_fmqa' on page 9 undefined on input line 97.
-
-
-LaTeX Warning: Citation `Wilson_2021' on page 9 undefined on input line 97.
-
-
-LaTeX Warning: Citation `inoue2022_fmqa_pcsel' on page 9 undefined on input lin
-e 97.
-
-
-LaTeX Warning: Citation `zhu2024_machine_learning' on page 9 undefined on input
- line 97.
-
-
-LaTeX Warning: Citation `hu2025_optical_filter' on page 9 undefined on input li
-ne 97.
-
-
-LaTeX Warning: Citation `chang2026_quantum_compatible' on page 9 undefined on i
-nput line 97.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[9]
-
-LaTeX Warning: Citation `lazarov2011_filters' on page 10 undefined on input lin
-e 109.
-
-
-LaTeX Warning: Citation `odena2016_deconvolution' on page 10 undefined on input
- line 110.
-
-
-LaTeX Warning: Citation `shi2016_subpixel_cnn' on page 10 undefined on input li
-ne 111.
-
-
-LaTeX Warning: Citation `higgins2017_betavae' on page 10 undefined on input lin
-e 112.
-
-
-LaTeX Warning: Citation `piggott2017_fabrication' on page 10 undefined on input
- line 113.
-
-
-LaTeX Warning: Citation `burgess2018_understanding_betavae' on page 10 undefine
-d on input line 114.
-
-
-LaTeX Warning: Citation `ma2019_probabilistic' on page 10 undefined on input li
-ne 115.
-
-
-LaTeX Warning: Citation `zhang2019_shift_invariant' on page 10 undefined on inp
-ut line 116.
-
-
-LaTeX Warning: Citation `li2020_fourier_neural_operator' on page 10 undefined o
-n input line 117.
-
-
-LaTeX Warning: Citation `kudyshev2021_machine_learning' on page 10 undefined on
- input line 118.
-
-
-LaTeX Warning: Citation `karras2021_alias_free' on page 10 undefined on input l
-ine 119.
-
+ [9]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[10
+ [10
 
 ]
-
-LaTeX Warning: Citation `lazarov2011_filters' on page 11 undefined on input lin
-e 140.
-
-
-LaTeX Warning: Citation `odena2016_deconvolution' on page 11 undefined on input
- line 140.
-
-
-LaTeX Warning: Citation `shi2016_subpixel_cnn' on page 11 undefined on input li
-ne 140.
-
-
-LaTeX Warning: Citation `higgins2017_betavae' on page 11 undefined on input lin
-e 140.
-
-
-LaTeX Warning: Citation `piggott2017_fabrication' on page 11 undefined on input
- line 140.
-
-
-LaTeX Warning: Citation `burgess2018_understanding_betavae' on page 11 undefine
-d on input line 140.
-
-
-LaTeX Warning: Citation `ma2019_probabilistic' on page 11 undefined on input li
-ne 140.
-
-
-LaTeX Warning: Citation `zhang2019_shift_invariant' on page 11 undefined on inp
-ut line 140.
-
-
-LaTeX Warning: Citation `li2020_fourier_neural_operator' on page 11 undefined o
-n input line 140.
-
-
-LaTeX Warning: Citation `kudyshev2021_machine_learning' on page 11 undefined on
- input line 140.
-
-
-LaTeX Warning: Citation `karras2021_alias_free' on page 11 undefined on input l
-ine 140.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[11]) (./Sections/3.Theory.tex
+ [11]) (./Sections/3.Theory.tex
 Chapter 3.
-
-LaTeX Warning: Citation `yariv2007_photonics' on page 12 undefined on input lin
-e 11.
-
-
-LaTeX Warning: Reference `eq:maxwell1' on page 12 undefined on input line 13.
-
-
-LaTeX Warning: Reference `eq:maxwell2' on page 12 undefined on input line 13.
-
-
-LaTeX Warning: Reference `eq:maxwell1' on page 12 undefined on input line 21.
-
-
-LaTeX Warning: Reference `eq:maxwell2' on page 12 undefined on input line 21.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1304,82 +939,35 @@ File: covers/logo2.pdf Graphic file (type pdf)
 
 
 ]
-
-LaTeX Warning: Reference `eq:freq_maxwell1' on page 13 undefined on input line 
-29.
-
-
-LaTeX Warning: Reference `eq:freq_maxwell2' on page 13 undefined on input line 
-29.
-
-
-LaTeX Warning: Reference `fig:waveguide_schematic' on page 13 undefined on inpu
-t line 38.
-
 File: img/Waveguide schematic diagram.png Graphic file (type bmp)
 <img/Waveguide schematic diagram.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[13]
-
-LaTeX Warning: Reference `eq:Translation symmetry in Z' on page 14 undefined on
- input line 54.
-
-
-LaTeX Warning: Reference `eq:helmholtz' on page 14 undefined on input line 54.
-
-
-LaTeX Warning: Reference `fig:Finite Potential Well' on page 14 undefined on in
-put line 75.
-
-
-LaTeX Warning: Reference `eq:xy 2D Wave Equation' on page 14 undefined on input
- line 81.
-
+ [13]
 File: img/Finite Potential Well.png Graphic file (type bmp)
 <img/Finite Potential Well.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[14]
+ [14]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [15]
-
-LaTeX Warning: Citation `yariv2007_photonics' on page 16 undefined on input lin
-e 116.
-
-
-LaTeX Warning: Reference `eq:xy 2D Wave Equation' on page 16 undefined on input
- line 123.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[16]
+ [16]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [17]
-
-LaTeX Warning: Reference `eq:characteristic_TE' on page 18 undefined on input l
-ine 173.
-
-
-LaTeX Warning: Reference `eq:beta_related_equations' on page 18 undefined on in
-put line 196.
-
-
-LaTeX Warning: Reference `fig:TE_mode_profile' on page 18 undefined on input li
-ne 197.
-
 File: img/TE0_Profile.png Graphic file (type bmp)
 <img/TE0_Profile.png>
 File: img/TE1_Profile.png Graphic file (type bmp)
@@ -1390,204 +978,86 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[18]
+ [18]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [19]
-
-LaTeX Warning: Citation `heiblum1975_curved_waveguides' on page 20 undefined on
- input line 235.
-
-
-LaTeX Warning: Reference `eq:equivalent refractive index of curved waveguide' o
-n page 20 undefined on input line 242.
-
-
-LaTeX Warning: Reference `fig:bend_waveguide' on page 20 undefined on input lin
-e 243.
-
-
-LaTeX Warning: Reference `fig:bend_waveguide' on page 20 undefined on input lin
-e 247.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[20]
-
-LaTeX Warning: Reference `fig:bend_waveguide' on page 21 undefined on input lin
-e 254.
-
-
-LaTeX Warning: Reference `fig:bend_waveguide' on page 21 undefined on input lin
-e 259.
-
+ [20]
 File: img/bend_wavegidue.png Graphic file (type bmp)
 <img/bend_wavegidue.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[21]
-
-LaTeX Warning: Citation `chrostowski2015_silicon_photonics' on page 22 undefine
-d on input line 276.
-
-
-LaTeX Warning: Citation `yariv2007_photonics' on page 22 undefined on input lin
-e 294.
-
+ [21]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[22]
-
-LaTeX Warning: Citation `yariv2007_photonics' on page 23 undefined on input lin
-e 305.
-
+ [22]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[23]
-
-LaTeX Warning: Citation `oskooi2010_meep' on page 24 undefined on input line 33
-5.
-
-
-LaTeX Warning: Citation `meep_docs' on page 24 undefined on input line 335.
-
+ [23]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[24]
-
-LaTeX Warning: Reference `fig:3D_YEE_Lattice' on page 25 undefined on input lin
-e 366.
-
+ [24]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[25]
+ [25]
 File: img/3D_YEE_Lattice.png Graphic file (type bmp)
 <img/3D_YEE_Lattice.png>
-
-
-LaTeX Warning: Citation `meep_docs' on page 26 undefined on input line 380.
-
-
-LaTeX Warning: Citation `meep_docs' on page 26 undefined on input line 380.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[26]
-
-LaTeX Warning: Reference `fig:2D_YEE_Lattice' on page 27 undefined on input lin
-e 406.
-
-
-LaTeX Warning: Reference `eq: H_z' on page 27 undefined on input line 412.
-
+ [26]
 File: img/2D_YEE_Lattice.png Graphic file (type bmp)
 <img/2D_YEE_Lattice.png>
-
-LaTeX Warning: Citation `meep_docs' on page 27 undefined on input line 422.
-
-
-LaTeX Warning: Citation `meep_docs' on page 27 undefined on input line 422.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[27]
-
-LaTeX Warning: Reference `fig:Leapfrog' on page 28 undefined on input line 429.
-
-
+ [27]
 File: img/leapfrog.png Graphic file (type bmp)
 <img/leapfrog.png>
-
-LaTeX Warning: Citation `hao2008fdtd' on page 28 undefined on input line 434.
-
-
-LaTeX Warning: Citation `hao2008fdtd' on page 28 undefined on input line 434.
-
-
-LaTeX Warning: Reference `eq: H_z' on page 28 undefined on input line 438.
-
-
-LaTeX Warning: Reference `eq:yee_lattice_2d' on page 28 undefined on input line
- 445.
-
-
-LaTeX Warning: Reference `eq:leapfrog_time' on page 28 undefined on input line 
-445.
-
-
-LaTeX Warning: Reference `eq: H_z' on page 28 undefined on input line 445.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[28
+ [28
 
 ]
-
-LaTeX Warning: Reference `eq:cfl' on page 29 undefined on input line 464.
-
-
-LaTeX Warning: Reference `fig:subpixel' on page 29 undefined on input line 472.
-
-
 File: img/subpixel.png Graphic file (type bmp)
 <img/subpixel.png>
-
-LaTeX Warning: Citation `meep_docs' on page 29 undefined on input line 478.
-
-
-LaTeX Warning: Citation `meep_docs' on page 29 undefined on input line 478.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[29]
-
-LaTeX Warning: Reference `fig:subpixel' on page 30 undefined on input line 482.
-
-
+ [29]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[30]
-
-LaTeX Warning: Reference `fig:pml_failure' on page 31 undefined on input line 5
-12.
-
+ [30]
 File: img/pml_failure.png Graphic file (type bmp)
 <img/pml_failure.png>
-
-LaTeX Warning: Citation `meep_docs' on page 31 undefined on input line 516.
-
-
-LaTeX Warning: Citation `meep_docs' on page 31 undefined on input line 516.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[31]
+ [31]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1598,104 +1068,54 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [33]
-
-LaTeX Warning: Reference `fig:binary_variation_matrix' on page 34 undefined on 
-input line 589.
-
 File: img/binary_variation_matrix.png Graphic file (type bmp)
 <img/binary_variation_matrix.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[34
+ [34
 
 ]
-
-LaTeX Warning: Reference `eq:Gaussian Convolution Kernel' on page 35 undefined 
-on input line 600.
-
-
-LaTeX Warning: Reference `fig:High_Pixel_Grayscale' on page 35 undefined on inp
-ut line 608.
-
 File: img/High_Pixel_Grayscale.png Graphic file (type bmp)
 <img/High_Pixel_Grayscale.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[35]
-
-LaTeX Warning: Reference `eq:Tanh Projection' on page 36 undefined on input lin
-e 617.
-
+ [35]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[36]
-
-LaTeX Warning: Reference `fig:High Pixel Binary smooth' on page 37 undefined on
- input line 630.
-
+ [36]
 File: img/High_Pixel_Binary_smooth.png Graphic file (type bmp)
 <img/High_Pixel_Binary_smooth.png>
-
-LaTeX Warning: Reference `eq:erf_threshold' on page 37 undefined on input line 
-644.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[37]
-
-LaTeX Warning: Reference `eq:b_min' on page 38 undefined on input line 649.
-
-
-LaTeX Warning: Reference `eq:b_min' on page 38 undefined on input line 653.
-
-
-LaTeX Warning: Reference `ch:Gaussian_Upsampling_Strategy' on page 38 undefined
- on input line 653.
+ [37]
+Overfull \hbox (13.63089pt too wide) in paragraph at lines 653--654
+[]\TU/TW-Kai(0)/m/n/12 為 了 具 體 說 明 如 何 應 用 公 式[]來 控 制 設 計 區 域 的 最 小 特 徵 尺 寸，|  我 將 會 在 第 \TU/TimesNewRoman(0)/m/n/12 4.2.1[]\TU/TW-Kai(0)/m/n/12 節
+ []
 
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 [38]
-
-LaTeX Warning: Reference `fig:binary_alpha' on page 39 undefined on input line 
-675.
-
 File: img/binary_alpha.png Graphic file (type bmp)
 <img/binary_alpha.png>
 File: img/Continuous_variable_field.png Graphic file (type bmp)
 <img/Continuous_variable_field.png>
 File: img/Continuous_variable_field_2d.png Graphic file (type bmp)
 <img/Continuous_variable_field_2d.png>
-
-LaTeX Warning: Reference `eq:2D_fourier_integral' on page 39 undefined on input
- line 702.
-
-
-LaTeX Warning: Reference `fig:Continuous_variable_field' on page 39 undefined o
-n input line 702.
-
-
-LaTeX Warning: Reference `eq:Heaviside_step_function' on page 39 undefined on i
-nput line 703.
-
-
-LaTeX Warning: Reference `fig:binary_design' on page 39 undefined on input line
- 711.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[39]
+ [39]
 File: img/binary_design.png Graphic file (type bmp)
 <img/binary_design.png>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1703,100 +1123,45 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [40]
-
-LaTeX Warning: Citation `higgins2017_betavae' on page 41 undefined on input lin
-e 728.
-
-
-LaTeX Warning: Citation `Wilson_2021' on page 41 undefined on input line 728.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[41]
-
-LaTeX Warning: Reference `fig:vae_architecture' on page 42 undefined on input l
-ine 753.
-
+ [41]
 File: img/vae_architecture.png Graphic file (type bmp)
 <img/vae_architecture.png>
-
-LaTeX Warning: Reference `eq:gumbel_max' on page 42 undefined on input line 771
-.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[42]
-
-LaTeX Warning: Reference `fig:gumbel_softmax_tau' on page 43 undefined on input
- line 779.
-
+ [42]
 File: img/gumbel_softmax_tau.png Graphic file (type bmp)
 <img/gumbel_softmax_tau.png>
-
-LaTeX Warning: Reference `eq:bVAE_target_function' on page 43 undefined on inpu
-t line 800.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[43]
-
-LaTeX Warning: Reference `eq:bVAE_target_function' on page 44 undefined on inpu
-t line 803.
-
-
-LaTeX Warning: Citation `rendle2010_factorization' on page 44 undefined on inpu
-t line 821.
-
+ [43]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[44]
-
-LaTeX Warning: Reference `eq:factorization_machine' on page 45 undefined on inp
-ut line 849.
-
-
-LaTeX Warning: Citation `rendle2010_factorization' on page 45 undefined on inpu
-t line 850.
-
+ [44]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[45]
-
-LaTeX Warning: Reference `eq:fm_linear_time' on page 46 undefined on input line
- 864.
-
+ [45]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[46]
-
-LaTeX Warning: Reference `eq:factorization_machine' on page 47 undefined on inp
-ut line 883.
-
-
-LaTeX Warning: Reference `eq:qubo_standard' on page 47 undefined on input line 
-883.
-
-
-LaTeX Warning: Citation `kirkpatrick1983_simulated_annealing' on page 47 undefi
-ned on input line 899.
-
+ [46]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[47])
+ [47])
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1805,16 +1170,8 @@ File: covers/logo2.pdf Graphic file (type pdf)
 Chapter 4.
 
 Overfull \hbox (22.29872pt too wide) in paragraph at lines 4--4
-|[]\TU/TimesNewRoman(0)/b/n/17.28 Factorization Machine with Annealing Optimiza
-tion Frame-
+|[]\TU/TimesNewRoman(0)/b/n/17.28 Factorization Machine with Annealing Optimization Frame-
  []
-
-
-LaTeX Warning: Citation `kitai2020_fmqa' on page 49 undefined on input line 6.
-
-
-LaTeX Warning: Reference `fig:FMSA_flowchart' on page 49 undefined on input lin
-e 20.
 
 File: img/FMSA_flowchart.png Graphic file (type bmp)
 <img/FMSA_flowchart.png>
@@ -1835,139 +1192,73 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [51]
-
-LaTeX Warning: Reference `ch:Encoding_Strategies_Theory' on page 52 undefined o
-n input line 85.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[52]
-
-LaTeX Warning: Reference `fig:Gaussian_Upsampling_Flowchart' on page 53 undefin
-ed on input line 98.
-
+ [52]
 File: img/GU_flowchart.png Graphic file (type bmp)
 <img/GU_flowchart.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[53]
-
-LaTeX Warning: Reference `ch:GU_theory' on page 54 undefined on input line 135.
-
-
-
-LaTeX Warning: Reference `eq:b_min' on page 54 undefined on input line 135.
-
+ [53]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[54]
+ [54]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [55]
-
-LaTeX Warning: Reference `tab:kernel_parameter' on page 56 undefined on input l
-ine 168.
-
-
-LaTeX Warning: Reference `tab:kernel_parameter' on page 56 undefined on input l
-ine 185.
-
-
-LaTeX Warning: Reference `fig:2D_fourier_flowchart' on page 56 undefined on inp
-ut line 191.
-
 File: img/2D_fourier_flowchart.png Graphic file (type bmp)
 <img/2D_fourier_flowchart.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[56]
-
-LaTeX Warning: Reference `eq:2D_fourier_mode_summation' on page 57 undefined on
- input line 219.
-
+ [56]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[57]
-
-LaTeX Warning: Reference `fig:bVAE_flowchart' on page 58 undefined on input lin
-e 237.
-
+ [57]
 File: img/bVAE_flowchart.png Graphic file (type bmp)
 <img/bVAE_flowchart.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[58]
-
-LaTeX Warning: Reference `ch:bVAE_theory' on page 59 undefined on input line 26
-1.
-
+ [58]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[59]
+ [59]
 File: img/DEMUX_schematic.png Graphic file (type bmp)
 <img/DEMUX_schematic.png>
-
-
-LaTeX Warning: Reference `fig:DEMUX_schematic' on page 60 undefined on input li
-ne 284.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[60]
+ [60]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [61]
-
-LaTeX Warning: Reference `fig:DEMUX_design1_TE0mode' on page 62 undefined on in
-put line 327.
-
-
-LaTeX Warning: Reference `fig:DEMUX_design1_TE1mode' on page 62 undefined on in
-put line 327.
-
-File: img/DEMUX/DEMUX-design1/replot_output/Design1_TE0.png Graphic file (type 
-bmp)
+File: img/DEMUX/DEMUX-design1/replot_output/Design1_TE0.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design1/replot_output/Design1_TE0.png>
-File: img/DEMUX/DEMUX-design1/replot_output/Design1_TE1.png Graphic file (type 
-bmp)
+File: img/DEMUX/DEMUX-design1/replot_output/Design1_TE1.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design1/replot_output/Design1_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[62]
-
-LaTeX Warning: Reference `ch:DEMUX_design1' on page 63 undefined on input line 
-358.
-
-
-LaTeX Warning: Reference `fig:DEMUX_design2_TE0mode' on page 63 undefined on in
-put line 372.
-
-
-LaTeX Warning: Reference `fig:DEMUX_design2_TE1mode' on page 63 undefined on in
-put line 372.
-
+ [62]
 File: img/DEMUX/DEMUX-design2/design2_TE0.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design2/design2_TE0.png>
 File: img/DEMUX/DEMUX-design2/design2_TE1.png Graphic file (type bmp)
@@ -1976,60 +1267,32 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[63]
-
-LaTeX Warning: Reference `ch:DEMUX_design2' on page 64 undefined on input line 
-395.
-
+ [63]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[64]
-
-LaTeX Warning: Reference `fig:DEMUX_design3_TE0mode' on page 65 undefined on in
-put line 409.
-
-
-LaTeX Warning: Reference `fig:DEMUX_design3_TE1mode' on page 65 undefined on in
-put line 409.
-
+ [64]
 File: img/DEMUX/DEMUX-design3/design3_TE0.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design3/design3_TE0.png>
 File: img/DEMUX/DEMUX-design3/design3_TE1.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design3/design3_TE1.png>
-
-LaTeX Warning: Reference `ch:DEMUX_design2' on page 65 undefined on input line 
-437.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[65]
-
-LaTeX Warning: Reference `fig:DEMUX_design4_TE0mode' on page 66 undefined on in
-put line 452.
-
-
-LaTeX Warning: Reference `fig:DEMUX_design4_TE1mode' on page 66 undefined on in
-put line 452.
-
+ [65]
 File: img/DEMUX/DEMUX-design4/design4_TE0.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design4/design4_TE0.png>
 File: img/DEMUX/DEMUX-design4/design4_TE1.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design4/design4_TE1.png>
-
-LaTeX Warning: Reference `fig:DEMUX_design4_bestfom_vs_iter' on page 66 undefin
-ed on input line 474.
-
 File: img/DEMUX/DEMUX-design4/bestfom_vs_iter.png Graphic file (type bmp)
 <img/DEMUX/DEMUX-design4/bestfom_vs_iter.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[66]
+ [66]
 File: img/BEND/BendWaveguide_schematic.png Graphic file (type bmp)
 <img/BEND/BendWaveguide_schematic.png>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -2037,54 +1300,27 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [67]
-
-LaTeX Warning: Reference `fig:BEND_schematic' on page 68 undefined on input lin
-e 493.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[68]
-
-LaTeX Warning: Reference `eq:sigma_pix_min' on page 69 undefined on input line 
-518.
-
-
-LaTeX Warning: Reference `fig:BEND_design1_Bestfom_vs_iteration' on page 69 und
-efined on input line 527.
-
-
-LaTeX Warning: Reference `fig:BEND_design1_Opt_Trajactory' on page 69 undefined
- on input line 527.
-
+ [68]
 File: img/BEND/BEND-GU-design1/BESTFOM_vs_iter.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design1/BESTFOM_vs_iter.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[69]
-File: img/BEND/BEND-GU-design1/transmission_trajectory.png Graphic file (type b
-mp)
+ [69]
+File: img/BEND/BEND-GU-design1/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design1/transmission_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:BEND_structure_design1' on page 70 undefined on i
-nput line 544.
-
-
-LaTeX Warning: Reference `fig:BEND_DFT_design1' on page 70 undefined on input l
-ine 544.
-
-File: img/BEND/BEND-GU-design1/eval_TE0_structure_binary.png Graphic file (type
- bmp)
+File: img/BEND/BEND-GU-design1/eval_TE0_structure_binary.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design1/eval_TE0_structure_binary.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[70]
+ [70]
 File: img/BEND/BEND-GU-design1/eval_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design1/eval_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -2092,294 +1328,138 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [71]
-
-LaTeX Warning: Reference `ch:GU_BEND_Design1' on page 72 undefined on input lin
-e 566.
-
-
-LaTeX Warning: Reference `fig:BEND_design2_Bestfom_vs_iteration' on page 72 und
-efined on input line 575.
-
-
-LaTeX Warning: Reference `fig:BEND_design2_Opt_Trajactory' on page 72 undefined
- on input line 576.
-
 File: img/BEND/BEND-GU-design3/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design3/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[72]
-File: img/BEND/BEND-GU-design3/transmission_trajectory.png Graphic file (type b
-mp)
+ [72]
+File: img/BEND/BEND-GU-design3/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design3/transmission_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:BEND_DFT_design2' on page 73 undefined on input l
-ine 591.
-
-
-LaTeX Warning: Reference `fig:BEND_structure_design2' on page 73 undefined on i
-nput line 591.
-
 File: img/BEND/BEND-GU-design3/eval_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design3/eval_TE0_field.png>
-File: img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png Graphic file (type
- bmp)
+File: img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design3/eval_TE0_structure_binary.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[73]
+ [73]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [74]
-
-LaTeX Warning: Reference `eq:BEND_FoM_Design2' on page 75 undefined on input li
-ne 616.
-
-
-LaTeX Warning: Reference `fig:BEND_design3_Bestfom_vs_iteration' on page 75 und
-efined on input line 619.
-
-
-LaTeX Warning: Reference `fig:BEND_design3_Opt_Trajactory' on page 75 undefined
- on input line 619.
-
 File: img/BEND/BEND-GU-design5/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design5/fom_evolution.png>
-File: img/BEND/BEND-GU-design5/transmission_trajectory.png Graphic file (type b
-mp)
+File: img/BEND/BEND-GU-design5/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design5/transmission_trajectory.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[75]
-
-LaTeX Warning: Reference `fig:BEND_DFT_design3' on page 76 undefined on input l
-ine 639.
-
+ [75]
 File: img/BEND/BEND-GU-design5/eval_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design5/eval_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[76]
-
-LaTeX Warning: Reference `fig:BEND_structure_design3' on page 77 undefined on i
-nput line 648.
-
-File: img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png Graphic file (type
- bmp)
+ [76]
+File: img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png Graphic file (type bmp)
 <img/BEND/BEND-GU-design5/eval_TE0_structure_binary.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[77]
-
-LaTeX Warning: Reference `fig:BEND_2F_design1_Bestfom_vs_iteration' on page 78 
-undefined on input line 680.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_design1_Opt_Trajactory' on page 78 undefi
-ned on input line 681.
-
+ [77]
 File: img/BEND/BEND-2F-design1/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[78]
-File: img/BEND/BEND-2F-design1/transmission_trajectory.png Graphic file (type b
-mp)
+ [78]
+File: img/BEND/BEND-2F-design1/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/transmission_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:BEND_2F_DFT_design1' on page 79 undefined on inpu
-t line 697.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_structure_design1' on page 79 undefined o
-n input line 698.
-
-File: img/BEND/BEND-2F-design1/final_analysis_TE0_field.png Graphic file (type 
-bmp)
+File: img/BEND/BEND-2F-design1/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/final_analysis_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[79]
-File: img/BEND/BEND-2F-design1/Smoothed_Binary_Structure.png Graphic file (type
- bmp)
+ [79]
+File: img/BEND/BEND-2F-design1/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design1/Smoothed_Binary_Structure.png>
-
-
-LaTeX Warning: Reference `ch:2F_BEND_Design1' on page 80 undefined on input lin
-e 719.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[80]
-
-LaTeX Warning: Reference `fig:BEND_2F_design2_Bestfom_vs_iteration' on page 81 
-undefined on input line 728.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_design2_Opt_Trajactory' on page 81 undefi
-ned on input line 728.
-
-
-LaTeX Warning: Reference `ch:2F_BEND_Design1' on page 81 undefined on input lin
-e 729.
-
+ [80]
 File: img/BEND/BEND-2F-design2/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/fom_evolution.png>
 
-Overfull \hbox (26.57813pt too wide) in paragraph at lines 728--736
-[]\TU/TW-Kai(0)/m/n/12 接 著，|  觀 察 最 佳 化 過 程 中 的 最 佳 \TU/TimesNewRoman(0)/m/n/12
- FoM \TU/TW-Kai(0)/m/n/12 變 化 如 圖 []與 圖 []所 示，|  相 較 於 \TU/TimesNewRoman(0)/m/n
-/12 Design 1(\TU/TW-Kai(0)/m/n/12 第 []節\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai(
-0)/m/n/12 ，|
+Overfull \hbox (47.57813pt too wide) in paragraph at lines 728--736
+[]\TU/TW-Kai(0)/m/n/12 接 著，|  觀 察 最 佳 化 過 程 中 的 最 佳 \TU/TimesNewRoman(0)/m/n/12 FoM \TU/TW-Kai(0)/m/n/12 變 化 如 圖 \TU/TimesNewRoman(0)/m/n/12 45[]\TU/TW-Kai(0)/m/n/12 與 圖 \TU/TimesNewRoman(0)/m/n/12 46[]\TU/TW-Kai(0)/m/n/12 所 示，|  相 較 於 \TU/TimesNewRoman(0)/m/n/12 Design 1(\TU/TW-Kai(0)/m/n/12 第 \TU/TimesNewRoman(0)/m/n/12 4.4.2.1[]\TU/TW-Kai(0)/m/n/12 節\TU/TimesNewRoman(0)/m/n/12 )\TU/TW-Kai(0)/m/n/12 ，|
  []
 
-File: img/BEND/BEND-2F-design2/transmission_trajectory.png Graphic file (type b
-mp)
+File: img/BEND/BEND-2F-design2/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/transmission_trajectory.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 [81]
-
-LaTeX Warning: Reference `fig:BEND_2F_DFT_design2' on page 82 undefined on inpu
-t line 744.
-
-File: img/BEND/BEND-2F-design2/final_analysis_TE0_field.png Graphic file (type 
-bmp)
+File: img/BEND/BEND-2F-design2/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/final_analysis_TE0_field.png>
-
-LaTeX Warning: Reference `ch:2F_BEND_Design1' on page 82 undefined on input lin
-e 752.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_structure_design2' on page 82 undefined o
-n input line 752.
-
-File: img/BEND/BEND-2F-design2/Smoothed_Binary_Structure.png Graphic file (type
- bmp)
+File: img/BEND/BEND-2F-design2/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design2/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[82]
-
-LaTeX Warning: Reference `ch:2F_BEND_Design1' on page 83 undefined on input lin
-e 764.
-
-
-LaTeX Warning: Reference `ch:2F_BEND_Design2' on page 83 undefined on input lin
-e 771.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_design3_Bestfom_vs_iteration' on page 83 
-undefined on input line 774.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_design3_Opt_Trajactory' on page 83 undefi
-ned on input line 774.
-
-
-LaTeX Warning: Reference `ch:2F_BEND_Design2' on page 83 undefined on input lin
-e 775.
-
+ [82]
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [83]
 File: img/BEND/BEND-2F-design3/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/fom_evolution.png>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-[83]
-File: img/BEND/BEND-2F-design3/transmission_trajectory.png Graphic file (type b
-mp)
+File: img/BEND/BEND-2F-design3/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/transmission_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:BEND_2F_DFT_design3' on page 84 undefined on inpu
-t line 791.
-
-File: img/BEND/BEND-2F-design3/final_analysis_TE0_field.png Graphic file (type 
-bmp)
+File: img/BEND/BEND-2F-design3/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/final_analysis_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[84]
-
-LaTeX Warning: Reference `fig:BEND_2F_structure_design3' on page 85 undefined o
-n input line 799.
-
-
-LaTeX Warning: Reference `ch:2F_BEND_Design2' on page 85 undefined on input lin
-e 799.
-
-File: img/BEND/BEND-2F-design3/Smoothed_Binary_Structure.png Graphic file (type
- bmp)
+ [84]
+File: img/BEND/BEND-2F-design3/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design3/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[85]
-
-LaTeX Warning: Reference `fig:BEND_2F_design4_Bestfom_vs_iteration' on page 86 
-undefined on input line 819.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_design4_Opt_Trajactory' on page 86 undefi
-ned on input line 820.
-
+ [85]
 File: img/BEND/BEND-2F-design5/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design5/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[86]
-File: img/BEND/BEND-2F-design5/transmission_trajectory.png Graphic file (type b
-mp)
+ [86]
+File: img/BEND/BEND-2F-design5/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design5/transmission_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:BEND_2F_DFT_design4' on page 87 undefined on inpu
-t line 836.
-
-
-LaTeX Warning: Reference `fig:BEND_2F_structure_design4' on page 87 undefined o
-n input line 836.
-
-File: img/BEND/BEND-2F-design5/final_analysis_TE0_field.png Graphic file (type 
-bmp)
+File: img/BEND/BEND-2F-design5/final_analysis_TE0_field.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design5/final_analysis_TE0_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[87]
-File: img/BEND/BEND-2F-design5/Smoothed_Binary_Structure.png Graphic file (type
- bmp)
+ [87]
+File: img/BEND/BEND-2F-design5/Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/BEND/BEND-2F-design5/Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
@@ -2391,516 +1471,229 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [89]
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design1_latent' on page 90 undefined on
- input line 881.
-
-File: img/BEND/BEND-bVAE-design1/replot_results/best_latent_8x8.png Graphic fil
-e (type bmp)
+File: img/BEND/BEND-bVAE-design1/replot_results/best_latent_8x8.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design1/replot_results/best_latent_8x8.png>
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design1_Bestfom_vs_iteration' on page 9
-0 undefined on input line 890.
-
-File: img/BEND/BEND-bVAE-design1/replot_results/fom_evolution.png Graphic file 
-(type bmp)
+File: img/BEND/BEND-bVAE-design1/replot_results/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design1/replot_results/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[90]
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design1_Opt_Trajactory' on page 91 unde
-fined on input line 898.
-
-File: img/BEND/BEND-bVAE-design1/replot_results/transmission_trajectory.png Gra
-phic file (type bmp)
+ [90]
+File: img/BEND/BEND-bVAE-design1/replot_results/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design1/replot_results/transmission_trajectory.png>
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design1_DFT' on page 91 undefined on in
-put line 908.
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design1_structure' on page 91 undefined
- on input line 908.
-
-File: img/BEND/BEND-bVAE-design1/replot_results/final_field.png Graphic file (t
-ype bmp)
+File: img/BEND/BEND-bVAE-design1/replot_results/final_field.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design1/replot_results/final_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[91]
-File: img/BEND/BEND-bVAE-design1/replot_results/binarized_structure.png Graphic
- file (type bmp)
+ [91]
+File: img/BEND/BEND-bVAE-design1/replot_results/binarized_structure.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design1/replot_results/binarized_structure.png>
-
-
-LaTeX Warning: Reference `ch:BEND_bVAE_design1' on page 92 undefined on input l
-ine 929.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[92]
-
-LaTeX Warning: Reference `ch:BEND_bVAE_design1' on page 93 undefined on input l
-ine 937.
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design2_latent' on page 93 undefined on
- input line 937.
-
-File: img/BEND/BEND-bVAE-design2/replot_results/best_latent_12x12.png Graphic f
-ile (type bmp)
+ [92]
+File: img/BEND/BEND-bVAE-design2/replot_results/best_latent_12x12.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design2/replot_results/best_latent_12x12.png>
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design2_Bestfom_vs_iteration' on page 9
-3 undefined on input line 945.
-
-File: img/BEND/BEND-bVAE-design2/replot_results/fom_evolution.png Graphic file 
-(type bmp)
+File: img/BEND/BEND-bVAE-design2/replot_results/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design2/replot_results/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[93]
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design2_Opt_Trajactory' on page 94 unde
-fined on input line 952.
-
-
-LaTeX Warning: Reference `ch:BEND_bVAE_design1' on page 94 undefined on input l
-ine 953.
-
-File: img/BEND/BEND-bVAE-design2/replot_results/transmission_trajectory.png Gra
-phic file (type bmp)
+ [93]
+File: img/BEND/BEND-bVAE-design2/replot_results/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design2/replot_results/transmission_trajectory.png>
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design2_DFT' on page 94 undefined on in
-put line 961.
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design2_structure' on page 94 undefined
- on input line 961.
-
-File: img/BEND/BEND-bVAE-design2/replot_results/final_field.png Graphic file (t
-ype bmp)
+File: img/BEND/BEND-bVAE-design2/replot_results/final_field.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design2/replot_results/final_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[94]
-File: img/BEND/BEND-bVAE-design2/replot_results/binarized_structure.png Graphic
- file (type bmp)
+ [94]
+File: img/BEND/BEND-bVAE-design2/replot_results/binarized_structure.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design2/replot_results/binarized_structure.png>
-
-
-LaTeX Warning: Reference `ch:BEND_bVAE_design1' on page 95 undefined on input l
-ine 980.
-
-
-LaTeX Warning: Reference `ch:BEND_bVAE_design2' on page 95 undefined on input l
-ine 980.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[95]
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design3_latent' on page 96 undefined on
- input line 989.
-
-File: img/BEND/BEND-bVAE-design3/replot_results/best_latent_8x8.png Graphic fil
-e (type bmp)
+ [95]
+File: img/BEND/BEND-bVAE-design3/replot_results/best_latent_8x8.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design3/replot_results/best_latent_8x8.png>
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design3_Bestfom_vs_iteration' on page 9
-6 undefined on input line 998.
-
-
-LaTeX Warning: Reference `ch:BEND_bVAE_design1' on page 96 undefined on input l
-ine 999.
-
-File: img/BEND/BEND-bVAE-design3/replot_results/fom_evolution.png Graphic file 
-(type bmp)
+File: img/BEND/BEND-bVAE-design3/replot_results/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design3/replot_results/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[96]
-File: img/BEND/BEND-bVAE-design3/replot_results/transmission_trajectory.png Gra
-phic file (type bmp)
+ [96]
+File: img/BEND/BEND-bVAE-design3/replot_results/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design3/replot_results/transmission_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design3_DFT' on page 97 undefined on in
-put line 1014.
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design3_structure' on page 97 undefined
- on input line 1014.
-
-File: img/BEND/BEND-bVAE-design3/replot_results/final_field.png Graphic file (t
-ype bmp)
+File: img/BEND/BEND-bVAE-design3/replot_results/final_field.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design3/replot_results/final_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[97]
-File: img/BEND/BEND-bVAE-design3/replot_results/binarized_structure.png Graphic
- file (type bmp)
+ [97]
+File: img/BEND/BEND-bVAE-design3/replot_results/binarized_structure.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design3/replot_results/binarized_structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [98]
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design4_latent' on page 99 undefined on
- input line 1039.
-
-
-LaTeX Warning: Reference `ch:BEND_bVAE_design2' on page 99 undefined on input l
-ine 1039.
-
-File: img/BEND/BEND-bVAE-design4/replot_results/best_latent_12x12.png Graphic f
-ile (type bmp)
+File: img/BEND/BEND-bVAE-design4/replot_results/best_latent_12x12.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design4/replot_results/best_latent_12x12.png>
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design4_Bestfom_vs_iteration' on page 9
-9 undefined on input line 1051.
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design4_Opt_Trajactory' on page 99 unde
-fined on input line 1051.
-
-File: img/BEND/BEND-bVAE-design4/replot_results/fom_evolution.png Graphic file 
-(type bmp)
+File: img/BEND/BEND-bVAE-design4/replot_results/fom_evolution.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design4/replot_results/fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[99]
-File: img/BEND/BEND-bVAE-design4/replot_results/transmission_trajectory.png Gra
-phic file (type bmp)
+ [99]
+File: img/BEND/BEND-bVAE-design4/replot_results/transmission_trajectory.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design4/replot_results/transmission_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design4_DFT' on page 100 undefined on i
-nput line 1067.
-
-
-LaTeX Warning: Reference `fig:BEND_bVAE_design4_structure' on page 100 undefine
-d on input line 1067.
-
-File: img/BEND/BEND-bVAE-design4/replot_results/final_field.png Graphic file (t
-ype bmp)
+File: img/BEND/BEND-bVAE-design4/replot_results/final_field.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design4/replot_results/final_field.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[100]
-File: img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png Graphic
- file (type bmp)
+ [100]
+File: img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png>
-
-
-LaTeX Warning: Reference `fig:Four_fold_symmetry' on page 101 undefined on inpu
-t line 1087.
-
 File: img/Crossing/Four_fold_symmetry.png Graphic file (type bmp)
 <img/Crossing/Four_fold_symmetry.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[101]
+ [101]
 File: img/Crossing/Crossing_Scheme.png Graphic file (type bmp)
 <img/Crossing/Crossing_Scheme.png>
-
-
-LaTeX Warning: Reference `fig:CROSS_schematic' on page 102 undefined on input l
-ine 1103.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[102]
-
-LaTeX Warning: Citation `Chang:18' on page 103 undefined on input line 1116.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design1_Best_comfig' on page 103 undefin
-ed on input line 1119.
-
-File: img/Crossing/Crossing-GU-Design1/replot_best_config_10x10.png Graphic fil
-e (type bmp)
+ [102]
+File: img/Crossing/Crossing-GU-Design1/replot_best_config_10x10.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design1/replot_best_config_10x10.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[103]
+ [103]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [104]
-
-LaTeX Warning: Reference `fig:Crossing_Design1_DFT' on page 105 undefined on in
-put line 1147.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design1_Structure' on page 105 undefined
- on input line 1147.
-
-File: img/Crossing/Crossing-GU-Design1/replot_Optimized_Final_Structure.png Gra
-phic file (type bmp)
+File: img/Crossing/Crossing-GU-Design1/replot_Optimized_Final_Structure.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design1/replot_Optimized_Final_Structure.png>
-File: img/Crossing/Crossing-GU-Design1/replot_Smoothed_Binary_Structure.png Gra
-phic file (type bmp)
+File: img/Crossing/Crossing-GU-Design1/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design1/replot_Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[105]
-
-LaTeX Warning: Reference `fig:Crossing_Design2_DFT_TE0' on page 106 undefined o
-n input line 1187.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design2_DFT_TE1' on page 106 undefined o
-n input line 1187.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design2_Structure' on page 106 undefined
- on input line 1188.
-
-File: img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE
-0.png Graphic file (type bmp)
-<img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE0.png
->
-File: img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE
-1.png Graphic file (type bmp)
-<img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE1.png
->
+ [105]
+File: img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE0.png>
+File: img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
+<img/Crossing/Crossing-GU-Design2/plot/replot_Optimized_Final_Structure_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[106]
-File: img/Crossing/Crossing-GU-Design2/plot/replot_Smoothed_Binary_Structure.pn
-g Graphic file (type bmp)
+ [106]
+File: img/Crossing/Crossing-GU-Design2/plot/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design2/plot/replot_Smoothed_Binary_Structure.png>
-
-
-LaTeX Warning: Reference `ch:Crossing_GU_Design2' on page 107 undefined on inpu
-t line 1220.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[107]
-
-LaTeX Warning: Reference `fig:Crossing_Design3_DFT_TE0' on page 108 undefined o
-n input line 1235.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design3_DFT_TE1' on page 108 undefined o
-n input line 1235.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design3_DFT_TE2' on page 108 undefined o
-n input line 1235.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design3_Structure' on page 108 undefined
- on input line 1236.
-
-File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE0.png
- Graphic file (type bmp)
+ [107]
+File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE0.png>
-File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE1.png
- Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE1.png>
-File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE2.png
- Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE2.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design3/replot_Optimized_Final_Structure_TE2.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[108]
-File: img/Crossing/Crossing-GU-Design3/replot_Smoothed_Binary_Structure.png Gra
-phic file (type bmp)
+ [108]
+File: img/Crossing/Crossing-GU-Design3/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design3/replot_Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [109]
-
-LaTeX Warning: Citation `li2020ultracompact' on page 110 undefined on input lin
-e 1274.
-
-
-LaTeX Warning: Reference `fig:Crossing_design4_Bestfom_vs_iteration' on page 11
-0 undefined on input line 1286.
-
-
-LaTeX Warning: Reference `fig:Crossing_design4_Opt_Trajactory' on page 110 unde
-fined on input line 1286.
-
-File: img/Crossing/Crossing-GU-Design5/replot_fom_evolution.png Graphic file (t
-ype bmp)
+File: img/Crossing/Crossing-GU-Design5/replot_fom_evolution.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design5/replot_fom_evolution.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[110]
-File: img/Crossing/Crossing-GU-Design5/replot_fom_trajectory.png Graphic file (
-type bmp)
+ [110]
+File: img/Crossing/Crossing-GU-Design5/replot_fom_trajectory.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design5/replot_fom_trajectory.png>
-
-
-LaTeX Warning: Reference `fig:Crossing_design4_spectrum_TE0' on page 111 undefi
-ned on input line 1308.
-
-
-LaTeX Warning: Reference `tab:crossing_design4' on page 111 undefined on input 
-line 1308.
-
-File: img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE0
-.png Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE0.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE0.png>
-
-File: img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE1
-.png Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE1.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design5/Spectrum_5.0um_Transmission_Spectrum_TE1.png>
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[111]
-
-LaTeX Warning: Reference `fig:Crossing_Design4_Structure' on page 112 undefined
- on input line 1350.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design4_SimulationResult' on page 112 un
-defined on input line 1350.
-
-File: img/Crossing/Crossing-GU-Design5/replot_Smoothed_Binary_Structure.png Gra
-phic file (type bmp)
+ [111]
+File: img/Crossing/Crossing-GU-Design5/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design5/replot_Smoothed_Binary_Structure.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[112]
-File: img/Crossing/Crossing-GU-Design5/replot_Optimized_Final_Structure_TE0.png
- Graphic file (type bmp)
+ [112]
+File: img/Crossing/Crossing-GU-Design5/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design5/replot_Optimized_Final_Structure_TE0.png>
-File: img/Crossing/Crossing-GU-Design4/replot_Optimized_Final_Structure_TE1.png
- Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design4/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design4/replot_Optimized_Final_Structure_TE1.png>
-
-
-LaTeX Warning: Reference `ch:Crossing_GU_Design4' on page 113 undefined on inpu
-t line 1382.
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[113]
-
-LaTeX Warning: Reference `fig:Crossing_design5_spectrum_TE0' on page 114 undefi
-ned on input line 1391.
-
-
-LaTeX Warning: Reference `tab:crossing_design5' on page 114 undefined on input 
-line 1391.
-
-File: img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE0
-.png Graphic file (type bmp)
+ [113]
+File: img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE0.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE0.png>
-
-File: img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE1
-.png Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE1.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design7/Spectrum_2.4um_Transmission_Spectrum_TE1.png>
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[114]
-
-LaTeX Warning: Reference `fig:Crossing_Design5_Structure' on page 115 undefined
- on input line 1433.
-
-
-LaTeX Warning: Reference `fig:Crossing_Design5_SimulationResult' on page 115 un
-defined on input line 1433.
-
-File: img/Crossing/Crossing-GU-Design7/replot_Smoothed_Binary_Structure.png Gra
-phic file (type bmp)
+ [114]
+File: img/Crossing/Crossing-GU-Design7/replot_Smoothed_Binary_Structure.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design7/replot_Smoothed_Binary_Structure.png>
-File: img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE0.png
- Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE0.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE0.png>
-File: img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE1.png
- Graphic file (type bmp)
+File: img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE1.png Graphic file (type bmp)
 <img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE1.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[115]
-
-LaTeX Warning: Reference `tab:crossing_comparison' on page 116 undefined on inp
-ut line 1471.
-
-
-LaTeX Warning: Citation `Chang:18' on page 116 undefined on input line 1521.
-
-
-LaTeX Warning: Citation `li2020ultracompact' on page 116 undefined on input lin
-e 1521.
-
-
-LaTeX Warning: Reference `tab:crossing_comparison' on page 116 undefined on inp
-ut line 1527.
-
-
-LaTeX Warning: Citation `Chang:18' on page 116 undefined on input line 1537.
-
+ [115]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[116]
-
-LaTeX Warning: Citation `li2020ultracompact' on page 117 undefined on input lin
-e 1545.
-
-)
+ [116])
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -2909,17 +1702,12 @@ File: covers/logo2.pdf Graphic file (type pdf)
 Chapter 5.
 
 Overfull \hbox (4.01929pt too wide) in paragraph at lines 7--16
-\TU/TimesNewRoman(0)/m/n/12 (FM) \TU/TW-Kai(0)/m/n/12 與 \TU/TimesNewRoman(0)/m/
-n/12 Simulated Annealing (SA) \TU/TW-Kai(0)/m/n/12 的 \TU/TimesNewRoman(0)/m/n/1
-2 Factorization Machine with Simulated Annealing (FMSA)
+\TU/TimesNewRoman(0)/m/n/12 (FM) \TU/TW-Kai(0)/m/n/12 與 \TU/TimesNewRoman(0)/m/n/12 Simulated Annealing (SA) \TU/TW-Kai(0)/m/n/12 的 \TU/TimesNewRoman(0)/m/n/12 Factorization Machine with Simulated Annealing (FMSA)
  []
 
 
 Overfull \hbox (14.68114pt too wide) in paragraph at lines 7--16
-\TU/TW-Kai(0)/m/n/12 最 佳 化 架 構，|  並 進 一 步 導 入 \TU/TimesNewRoman(0)/m/n/12 Gauss
-ian Upsampling\TU/TW-Kai(0)/m/n/12 、| \TU/TimesNewRoman(0)/m/n/12 2D Fourier Ba
-sis Encoding \TU/TW-Kai(0)/m/n/12 與 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/
-m/n/12 -Variational
+\TU/TW-Kai(0)/m/n/12 最 佳 化 架 構，|  並 進 一 步 導 入 \TU/TimesNewRoman(0)/m/n/12 Gaussian Upsampling\TU/TW-Kai(0)/m/n/12 、| \TU/TimesNewRoman(0)/m/n/12 2D Fourier Basis Encoding \TU/TW-Kai(0)/m/n/12 與 $\OML/cmm/m/it/12 ^^L$\TU/TimesNewRoman(0)/m/n/12 -Variational
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -2940,9 +1728,7 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [120])
 Overfull \hbox (4.6326pt too wide) in paragraph at lines 149--147
-[]\TU/TW-Kai(0)/m/n/12 最 後，|  本 研 究 目 前 主 要 以 二 維 \TU/TimesNewRoman(0)/m/n/12 F
-DTD \TU/TW-Kai(0)/m/n/12 模 擬 驗 證 所 提 出 之 方 法。|  未 來 可 進 一 步 將 \TU/TimesNewRoman
-(0)/m/n/12 FMSA
+[]\TU/TW-Kai(0)/m/n/12 最 後，|  本 研 究 目 前 主 要 以 二 維 \TU/TimesNewRoman(0)/m/n/12 FDTD \TU/TW-Kai(0)/m/n/12 模 擬 驗 證 所 提 出 之 方 法。|  未 來 可 進 一 步 將 \TU/TimesNewRoman(0)/m/n/12 FMSA
  []
 
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -2976,21 +1762,14 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [126] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [126] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 17568 strings out of 477728
- 414728 string characters out of 5842238
- 685452 words of memory out of 5000000
- 37741 multiletter control sequences out of 15000+600000
+ 17589 strings out of 477728
+ 415062 string characters out of 5842238
+ 691682 words of memory out of 5000000
+ 37753 multiletter control sequences out of 15000+600000
  486957 words of font info for 136 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 78i,16n,80p,736b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,16n,80p,763b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (136 pages).
+Output written on main.pdf (143 pages).
