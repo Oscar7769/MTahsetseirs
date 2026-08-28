@@ -78,7 +78,7 @@
 \contentsline {figure}{\numberline {74}{\ignorespaces $\beta $-VAE策略應用於彎曲波導 Design 4最佳化過程中的FoM變化。\relax }}{100}{}%
 \contentsline {figure}{\numberline {75}{\ignorespaces $\beta $-VAE策略應用於彎曲波導 Design 4之DFT電場強度分布圖。\relax }}{101}{}%
 \contentsline {figure}{\numberline {76}{\ignorespaces $\beta $-VAE策略應用於彎曲波導 Design 4之幾何結構圖。\relax }}{101}{}%
-\contentsline {figure}{\numberline {77}{\ignorespaces 四重對稱設計示意圖。\relax }}{102}{}%
+\contentsline {figure}{\numberline {77}{\ignorespaces 八分之一結構對稱設計示意圖。\relax }}{102}{}%
 \contentsline {figure}{\numberline {78}{\ignorespaces 交叉波導的輸入、輸出通道以及其幾何結構的設計區域。\relax }}{102}{}%
 \contentsline {figure}{\numberline {79}{\ignorespaces Gaussian Upsampling應用於交叉波導 Design 1之最佳完整設計變數分布圖。\relax }}{104}{}%
 \contentsline {figure}{\numberline {80}{\ignorespaces Gaussian Upsampling應用於交叉波導 Design 1之DFT電場強度分布圖。\relax }}{105}{}%

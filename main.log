@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  17 AUG 2026 18:43
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.26)  28 AUG 2026 14:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1566,8 +1566,8 @@ File: covers/logo2.pdf Graphic file (type pdf)
  [100]
 File: img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png Graphic file (type bmp)
 <img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png>
-File: img/Crossing/Four_fold_symmetry.png Graphic file (type bmp)
-<img/Crossing/Four_fold_symmetry.png>
+File: img/Crossing/One_eighth_symmetry.png Graphic file (type bmp)
+<img/Crossing/One_eighth_symmetry.png>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1727,27 +1727,23 @@ File: covers/logo2.pdf Graphic file (type pdf)
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
  [120])
-Overfull \hbox (4.6326pt too wide) in paragraph at lines 149--147
-[]\TU/TW-Kai(0)/m/n/12 最 後，|  本 研 究 目 前 主 要 以 二 維 \TU/TimesNewRoman(0)/m/n/12 FDTD \TU/TW-Kai(0)/m/n/12 模 擬 驗 證 所 提 出 之 方 法。|  未 來 可 進 一 步 將 \TU/TimesNewRoman(0)/m/n/12 FMSA
- []
-
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
-[121] (./main.bbl
+ [121]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [122
+ [122] (./main.bbl
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [123
 
 ]
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
-File: covers/logo2.pdf Graphic file (type pdf)
-<use covers/logo2.pdf>
- [123]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
@@ -1757,19 +1753,24 @@ File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [125])
+ [125]
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
 File: covers/logo2.pdf Graphic file (type pdf)
 <use covers/logo2.pdf>
- [126] (./main.aux) ) 
+ [126])
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+File: covers/logo2.pdf Graphic file (type pdf)
+<use covers/logo2.pdf>
+ [127] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  17589 strings out of 477728
- 415062 string characters out of 5842238
+ 415071 string characters out of 5842238
  691682 words of memory out of 5000000
  37753 multiletter control sequences out of 15000+600000
  486957 words of font info for 136 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  78i,16n,80p,763b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (143 pages).
+Output written on main.pdf (144 pages).

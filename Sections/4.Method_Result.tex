@@ -1083,14 +1083,14 @@ FOM = 0.9096
 \section{Waveguide Crossing Optimization Results}
 此小節我將探討使用Gaussian Upsampling策略應用於交叉波導(Waveguide Crossing)的反向設計。
 
-為了降低設計變數數量同時維持交叉波導的幾何對稱性，本研究在所有交叉波導的設計中皆採用四重對稱(Four-fold symmetry)設計，
-如圖~\ref{fig:Four_fold_symmetry}所示，左邊為可控制的部分設計變數，右邊為透過對稱性產生的整體設計變數，
+為了降低設計變數數量同時維持交叉波導的幾何對稱性，本研究在所有交叉波導的設計中皆採用八分之一結構對稱(one-eighth geometric symmetry)設計，
+如圖~\ref{fig:One_eighth_symmetry}所示，左邊為可控制的部分設計變數，右邊為透過對稱性產生的整體設計變數，
 整體設計變數會再透過Gaussian Upsampling進行平滑與濾波，最終得到可以利用於MEEP模擬的完整結構圖。
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{img/Crossing/Four_fold_symmetry.png}
-\caption{四重對稱設計示意圖。}
-\label{fig:Four_fold_symmetry}
+\includegraphics[width=0.7\textwidth]{img/Crossing/One_eighth_symmetry.png}
+\caption{八分之一結構對稱設計示意圖。}
+\label{fig:One_eighth_symmetry}
 \end{figure}
 
 接著定義交叉波導的輸入、輸出通道以及其幾何結構的設計區域。
@@ -1280,11 +1280,11 @@ $C_{\text{crosstalk}}^{(m)}$為耦合至上下方波導的串擾，當結果越�
 其中，$M$ 表示最佳化所考慮模態數量；$\Lambda$ 表示最佳化所考慮的波長點；$T(m,\lambda)$ 則表示第 $m$ 個模態於波長 $\lambda$ 下之穿透率，
 當結果越好時，數值會越趨近於$0$。
 
-此外，此實驗將可控制的設計變數設定為55個，可生成400個完整四重對稱的設計變數，並將初始資料量增加至1000筆，迭代次數增加至100次，
+此外，此實驗將可控制的設計變數設定為55個，可生成400個完整八分之一結構對稱的設計變數，並將初始資料量增加至1000筆，迭代次數增加至100次，
 以觀察整體FoM優化的趨勢。
 
 由圖~\ref{fig:Crossing_design4_Bestfom_vs_iteration}與圖~\ref{fig:Crossing_design4_Opt_Trajactory}可觀察到，
-FoM在優化初期就可以觀察到明顯的下降趨勢，並且在第20次迭代後收斂至最佳解。推測其原因在於此研究導入四重對稱，使實際需要最佳化的設計變數大幅減少，
+FoM在優化初期就可以觀察到明顯的下降趨勢，並且在第20次迭代後收斂至最佳解。推測其原因在於此研究導入八分之一結構對稱，使實際需要最佳化的設計變數大幅減少，
 進而提升FM模型的學習效率與整體最佳化效能。
 \begin{figure}[H]
 \centering
@@ -1376,8 +1376,9 @@ Mode & Wavelength ($\mu$m) & Transmission (\%) & Loss (dB)\\
 
 \subsubsection{Gaussian Upsampling on Waveguide Crossing - Design 5}
 \label{ch:Crossing_GU_Design5}
-最後，為了比較此方法是否能夠超越文獻中的優化結果，本研究在維持雙模態及多波長最佳化的條件下採用文獻中的設計區域大小，
-將 $5.0\times5.0~\mu$m 縮小至 $2.4\times2.4~\mu$m，同時增加為120個可控制設計變數，可生成900個完整四重對稱的設計變數。
+最後，為進一步探討 FMSA 結合 Gaussian Upsampling 於緊湊型交叉波導設計中的可行性，本研究參考過去文獻中所採用的設計區域大小，
+將 $5.0\times5.0~\mu$m 縮小至 $2.4\times2.4~\mu$m，並維持雙模態與多波長最佳化之設計條件。
+同時，將可控制設計變數增加至 120 個，透過八分之一對稱後形成完整之 900 個設計變數，以提高緊湊設計區域內之結構自由度。
 
 相較於 Design 4 (第~\ref{ch:Crossing_GU_Design4}節)，此實驗之 FoM 在優化過程中呈現持續下降並趨於穩定的趨勢，大約於第 65 次迭代後收斂至最佳解。
 推測是因為將可控制設計變數由 55 個增加至 120 個，使搜尋空間之維度同時提升，增加了 FM 模型以及模擬退火搜尋最佳解的難度。
@@ -1463,12 +1464,13 @@ Mode & Wavelength ($\mu$m) & Transmission (\%) & Loss (dB)\\
 \subsubsection{Comparison with Previous Work}
 \label{ch:Crossing_Comparison}
 
-為進一步評估本研究所設計之交叉波導性能，
-本節將 Design 4 與 Design 5 的最佳化結果
-與過去相關研究進行比較。
-比較項目包含設計方法、設計區域尺寸、支援模態、
-工作波長範圍以及平均插入損耗，
+為了解本研究所設計之交叉波導在既有研究中的性能範圍，本節將 Design 4 與 Design 5 之結果與過去相關工作進行整理。
+比較項目包含設計方法、設計區域尺寸、支援模態、工作波長範圍以及文獻中所報導之插入損耗，
 相關結果整理如表~\ref{tab:crossing_comparison}所示。
+
+需要特別說明的是，不同研究在最佳化方法、目標函數、結構限制、模態數量、操作波長以及模擬設定等條件上皆存在差異，
+因此表~\ref{tab:crossing_comparison}並非作為不同方法之直接性能排名，
+而是用以呈現各設計於不同條件下所能達成之元件尺寸、支援模態與光學性能。
 
 \begin{table}[H]
 \centering
@@ -1520,7 +1522,7 @@ $0.359~\mathrm{dB}$ (2 modes) \\
 \end{tabular}
 }
 \captionsetup{name=TABLE, font={color=blue, sf, footnotesize}}
-\caption{Comparison of the proposed waveguide crossing designs with previous works.}
+\caption{Summary of the proposed waveguide crossing designs and related previous works.}
 \label{tab:crossing_comparison}
 \end{table}
 
@@ -1529,38 +1531,25 @@ $0.359~\mathrm{dB}$ (2 modes) \\
 皆採用 FMSA 結合 Gaussian Upsampling 進行最佳化，
 與過去採用 Direct Binary Search (DBS) 之研究具有不同的結構搜尋方式。
 
-其中，Design 4 的設計區域為
-$5.0\times5.0~\mu\mathrm{m}^{2}$，
+其中，Design 4 的設計區域為 $5.0\times5.0~\mu\mathrm{m}^{2}$，
 可同時支援 TE$_0$ 與 TE$_1$ 兩種模態，
-並於 $1.52$--$1.60~\mu\mathrm{m}$ 波長範圍內
-具有平均插入損耗約 $0.151~\mathrm{dB}$。
-相較於 Chang et al.~\cite{Chang:18} 所提出之雙模態交叉波導，
-Design 4 在相近的操作波長範圍下
-呈現較低的平均插入損耗，
-顯示所提出之結構表示方式與最佳化流程
-能夠有效維持多模態交叉傳輸性能。
+並於 $1.52$--$1.60~\mu\mathrm{m}$ 之三個工作波長下獲得平均插入損耗約 $0.151~\mathrm{dB}$。
+Chang et al.~\cite{Chang:18} 所提出之雙模態交叉波導則具有相近的操作波長範圍，
+並低於 $0.6~\mathrm{dB}$ 之插入損耗。雖然兩者在元件尺寸、支援模態及操作波長上具有部分相似之處，
+但由於所採用之結構、最佳化方法及模擬條件並不完全相同，因此不適合直接依據插入損耗進行性能排名。
+本研究 Design 4 的結果主要顯示，FMSA 結合 Gaussian Upsampling 能夠在約 $5.0\times5.0~\mu\mathrm{m}^{2}$ 的設計區域內，
+實現 TE$_0$ 與 TE$_1$ 雙模態之多波長交叉傳輸。
 
-另一方面，Design 5 的設計區域為
-$2.4\times2.4~\mu\mathrm{m}^{2}$，
-與 Li et al.~\cite{li2020ultracompact} 所提出之設計區域尺寸相同。
-在此較為緊湊的設計尺寸下，
-Design 5 仍可同時支援 TE$_0$ 與 TE$_1$ 模態，
-且平均插入損耗約為 $0.359~\mathrm{dB}$。
-相較之下，Li et al. 所提出之結構主要針對 TE$_0$ 模態，
-平均插入損耗約為 $0.5~\mathrm{dB}$。
-此結果顯示，
-即使在縮小設計區域後，
-FMSA 結合 Gaussian Upsampling
-仍能維持良好的雙模態傳輸能力。
+另一方面，Design 5 將設計區域進一步縮小至 $2.4\times2.4~\mu\mathrm{m}^{2}$，
+與 Li et al.~\cite{li2020ultracompact} 所採用之設計區域尺寸相同。在此設計尺度下，
+本研究仍可同時支援 TE$_0$ 與 TE$_1$ 模態，並於三個目標工作波長下獲得平均插入損耗約 $0.359~\mathrm{dB}$。
+Li et al. 所提出之結構則主要針對 TE$_0$ 模態進行設計，並報導約 $0.5~\mathrm{dB}$ 之插入損耗。
+由於兩項研究在支援模態數量、工作波長範圍及最佳化條件上有所差異，因此上述數值主要作為不同設計條件下之性能參考，
+而非直接比較兩種方法之優劣。Design 5 的結果顯示，即使將設計區域縮小至 $2.4\times2.4~\mu\mathrm{m}^{2}$，
+FMSA 結合 Gaussian Upsampling 仍可實現雙模態、多波長之交叉傳輸，展現其應用於緊湊型多模態交叉波導設計之可行性。
 
-然而，由於不同研究在設計目標、最佳化條件、
-支援模態數量及工作波長範圍上並不完全一致，
-因此上述比較主要用於呈現各設計在元件尺寸與光學性能上的相對表現，
-而非完全相同條件下的直接性能排名。
-
-整體而言，
-Design 4 顯示所提出方法能夠在多波長條件下維持良好的雙模態傳輸性能，
-而 Design 5 則進一步顯示該方法在縮小設計區域後仍具有良好的傳輸表現。
-上述結果顯示，
-FMSA 結合 Gaussian Upsampling
-具有應用於多模態交叉波導設計之潛力。
+綜合上述結果，Design 4 顯示 FMSA 結合 Gaussian Upsampling 能於約 $5.0\times5.0~\mu\mathrm{m}^{2}$ 尺度下實現低損耗之雙模態、多波長交叉傳輸；
+Design 5 則進一步驗證在設計區域縮小至 $2.4\times2.4~\mu\mathrm{m}^{2}$ 後，
+仍可維持雙模態於多個目標工作波長下之良好傳輸效率。
+因此，本節與過去工作的比較主要用以說明本研究方法所能處理之設計條件與可達成之性能範圍，
+而非作為不同最佳化方法之直接優劣判定。
