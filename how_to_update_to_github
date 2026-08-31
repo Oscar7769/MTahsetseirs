@@ -1,6 +1,6 @@
 git add .
 
-git commit -m "修改好FutureWork跟過去文獻比較"
+git commit -m "修改好一些小錯誤"
 
 git push
 

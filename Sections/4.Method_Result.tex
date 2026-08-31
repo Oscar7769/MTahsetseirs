@@ -171,11 +171,11 @@ b_{fab} = 150 nm
 \begin{tabular}{cccc}
 \hline
 Grid size & Target MFS & $\sigma_{\text{pix}}$ & $W$ \\ \hline
-50 nm     & 100 nm     & 1.48                               & 9   \\
-50 nm     & 120 nm     & 1.78                               & 11  \\
-100 nm    & 120 nm     & 0.89                               & 5   \\
-100 nm    & 150 nm     & 1.11                               & 7   \\
-100 nm    & 200 nm     & 1.48                               & 9   \\ \hline
+50 nm     & 100 nm     & 1.48                               & 11   \\
+50 nm     & 120 nm     & 1.78                               & 13  \\
+100 nm    & 120 nm     & 1.00                               & 7   \\
+100 nm    & 150 nm     & 1.11                               & 9   \\
+100 nm    & 200 nm     & 1.48                               & 11   \\ \hline
 \end{tabular}
 
 \captionsetup{name=TABLE, font={color=blue, sf, footnotesize}}
@@ -588,7 +588,7 @@ FoM = 0.9555
 \caption{彎曲波導 Design 2最佳化過程中的FoM變化。}
 \label{fig:BEND_design2_Opt_Trajactory}
 \end{figure}
-圖~\ref{fig:BEND_DFT_design2}及圖~\ref{fig:BEND_structure_design2}呈現出了優化後90度彎曲波導的電場強度($\vert{}E_z\vert{}^2$)分布以及幾何結構圖。
+圖~\ref{fig:BEND_DFT_design2}及圖~\ref{fig:BEND_structure_design2}呈現出了優化後90度彎曲波導的電場強度($|E|^2$)分布以及幾何結構圖。
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{img/BEND/BEND-GU-design3/eval_TE0_field.png}
@@ -636,7 +636,7 @@ FoM = 0.8281
 此結果顯示，持續增加設計網格無法帶來更佳的傳輸效率，反而使最佳化過程需要更長的搜尋時間才能獲得有限改善。
 由於$20 \times 20$設計具有較高的結構自由度，額外增加的設計變數並未有效轉換為性能提升，表示在本研究的資料量與最佳化架構下，過高的設計維度可能降低搜尋效率。
 
-圖~\ref{fig:BEND_DFT_design3}呈現$20 \times 20$設計並模擬的電場強度($|E_z|^2$)分布。由圖中可觀察到，
+圖~\ref{fig:BEND_DFT_design3}呈現$20 \times 20$設計並模擬的電場強度($|E|^2$)分布。由圖中可觀察到，
 光波仍然能夠沿著彎曲波導傳輸至輸出端，並沒有出現明顯的漏光現象，但相較於前面的設計，在輸出端的模態分布有些微的不完整，
 造成整體穿透率無法進一步提升。
 \begin{figure}[H]
@@ -694,7 +694,7 @@ FOM = 0.9501
 \label{fig:BEND_2F_design1_Opt_Trajactory}
 \end{figure}
 
-圖~\ref{fig:BEND_2F_DFT_design1}呈現基於二維傅立葉編碼策略應用於彎曲波導 Design 1之電場強度（$|E_z|^2$）分布，
+圖~\ref{fig:BEND_2F_DFT_design1}呈現基於二維傅立葉編碼策略應用於彎曲波導 Design 1之電場強度($|E|^2$)分布，
 圖~\ref{fig:BEND_2F_structure_design1}呈現基於二維傅立葉編碼策略應用於彎曲波導 Design 1之幾何結構圖。
 由這兩張圖可以發現，最佳化後的結構在彎曲區域形成向內側偏移的幾何特徵，這個結果與傳統低損耗彎曲波導常見之設計趨勢一致，
 有助於改善光場在彎曲處的傳輸特性，並且光波在通過彎曲區域後仍然能夠順利耦合至輸出波導，沒有出現明顯的漏光或反射現象，
@@ -868,7 +868,7 @@ $\beta$-VAE 能夠先透過大量結構資料學習設計特徵，並將原始�
 首先，將潛在空間維度設定為 $8\times8$，當作FM模型的設計參數。
 $\beta$-VAE 模型使用10000筆結構資料進行預先訓練，以此來學習彎曲波導幾何特徵與潛在空間的連結；
 在最佳化階段則是使用1000筆初始隨機資料，並執行100次迭代，每次迭代優先透過模擬退火採樣30筆候選解，
-若模擬退火採樣不足30筆，則其餘候選解會由隨機產生樣本來補足，以維持每次迭代新增30筆資料至訓練資料集，總資料量為8000筆。
+若模擬退火採樣不足30筆，則其餘候選解會由隨機產生樣本來補足，以維持每次迭代新增30筆資料至訓練資料集，總資料量為4000筆。
 
 其餘 MEEP 模擬參數包含設計區域大小為 $4.0\times4.0~\mu\mathrm{m}^2$、解析度40 pixels/$\mu$m、輸入與輸出波導長度皆為1.0 $\mu$m、波導寬度為0.5 $\mu$m。
 光源設定採用 EigenModeSource 搭配 Gaussian Source，激發中心波長為 $1550~\mathrm{nm}$ 之 TE$_0$ 模態作為入射光源。
@@ -1271,7 +1271,7 @@ $C_{\text{crosstalk}}^{(m)}$為耦合至上下方波導的串擾，當結果越�
 
 \subsubsection{Gaussian Upsampling on Waveguide Crossing - Design 4}
 \label{ch:Crossing_GU_Design4}
-前述實驗皆以單一工作波長進行最佳化，而接下來我將參考同一篇Nature Communications文獻\cite{li2020ultracompact}中的品質因數來考慮操作頻寬。
+前述實驗皆以單一工作波長進行最佳化，而接下來我將參考同一篇Scientific Reports文獻\cite{li2020ultracompact}中的品質因數來考慮操作頻寬。
 因此，本實驗將優化 $1520~\mathrm{nm}$、$1560~\mathrm{nm}$ 及 $1600~\mathrm{nm}$ 三個波長下的TE$_0$與TE$_1$模態，FoM公式如下:
 \begin{align}
 \text{FOM} = 1 - \frac{1}{|M| \times |\Lambda|} \sum_{m \in M} \sum_{\lambda \in \Lambda} T(m, \lambda)
