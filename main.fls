@@ -2053,9 +2053,9 @@ INPUT covers/logo2.pdf
 INPUT ./img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png
 INPUT ./img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png
 INPUT img/BEND/BEND-bVAE-design4/replot_results/binarized_structure.png
-INPUT ./img/Crossing/Four_fold_symmetry.png
-INPUT ./img/Crossing/Four_fold_symmetry.png
-INPUT img/Crossing/Four_fold_symmetry.png
+INPUT ./img/Crossing/One_eighth_symmetry.png
+INPUT ./img/Crossing/One_eighth_symmetry.png
+INPUT img/Crossing/One_eighth_symmetry.png
 INPUT ./covers/logo2.pdf
 INPUT ./covers/logo2.pdf
 INPUT covers/logo2.pdf
@@ -2231,6 +2231,12 @@ INPUT ./Sections/5.Conclusion_and_FutureWork.tex
 INPUT Sections/5.Conclusion_and_FutureWork.tex
 INPUT ./Sections/5.Conclusion_and_FutureWork.tex
 INPUT Sections/5.Conclusion_and_FutureWork.tex
+INPUT ./covers/logo2.pdf
+INPUT ./covers/logo2.pdf
+INPUT covers/logo2.pdf
+INPUT ./covers/logo2.pdf
+INPUT ./covers/logo2.pdf
+INPUT covers/logo2.pdf
 INPUT ./covers/logo2.pdf
 INPUT ./covers/logo2.pdf
 INPUT covers/logo2.pdf

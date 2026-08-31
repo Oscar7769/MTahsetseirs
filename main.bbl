@@ -21,6 +21,14 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{meep_docs}
+{Meep Development Team}, ``Meep documentation,''
+  \url{https://meep.readthedocs.io/}, 2026, accessed: 2026-06-29.
+
+\bibitem{hao2008fdtd}
+Y.~Hao, \emph{{FDTD} Modeling of Metamaterials: Theory and Applications}.\hskip
+  1em plus 0.5em minus 0.4em\relax Artech House, 2008.
+
 \bibitem{cox1999_maximizing}
 S.~J. Cox and D.~C. Dobson, ``Maximizing band gaps in two-dimensional photonic
   crystals,'' \emph{SIAM Journal on Applied Mathematics}, vol.~59, no.~6, pp.
@@ -197,14 +205,6 @@ A.~F. Oskooi, D.~Roundy, M.~Ibanescu, P.~A. Bermel, J.~D. Joannopoulos, and
   S.~G. Johnson, ``Meep: A flexible free-software package for electromagnetic
   simulations by the fdtd method,'' \emph{Computer Physics Communications},
   vol. 181, no.~3, pp. 687--702, 2010.
-
-\bibitem{meep_docs}
-{Meep Development Team}, ``Meep documentation,''
-  \url{https://meep.readthedocs.io/}, 2026, accessed: 2026-06-29.
-
-\bibitem{hao2008fdtd}
-Y.~Hao, \emph{{FDTD} Modeling of Metamaterials: Theory and Applications}.\hskip
-  1em plus 0.5em minus 0.4em\relax Artech House, 2008.
 
 \bibitem{Chang:18}
 \BIBentryALTinterwordspacing

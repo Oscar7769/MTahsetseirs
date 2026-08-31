@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 0
+["bibtex main"] 1788171638 "main.aux" "main.bbl" "main" 1788171687
   "./IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 0 -1 0 "xelatex"
+  "main.aux" 1788171640 46865 4276237e36451d65491bfe714ed1d6f4 "xelatex"
   "ref.bib" 1784705898 12898 83a06625ed529d804d13f7671e671653 ""
   (generated)
   "main.bbl"
   "main.blg"
-["xdvipdfmx"] 0 "main.xdv" "main.pdf" "main" 0
-  "main.xdv" 0 -1 0 "xelatex"
+["xdvipdfmx"] 1788171640 "main.xdv" "main.pdf" "main" 1788171687
+  "main.xdv" 1788171640 1545568 3db89c4811e84fe0e8f268895ca1ce84 "xelatex"
   (generated)
   "main.pdf"
-["xelatex"] 1786948984 "main.tex" "main.xdv" "main" 1786948984
+["xelatex"] 1788171638 "main.tex" "main.xdv" "main" 1788171687
   "/etc/texmf/web2c/texmf.cnf" 1779784168 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -155,10 +155,10 @@
   "Sections/0.2.Abstract_chinese.tex" 1786946536 2931 5262a249613c0d062032df3da81c0f43 ""
   "Sections/0.3.Abstract.tex" 1786532558 3510 4584fcb5cbf6fb4785fd0eb0a7b57597 ""
   "Sections/1.Introduction_Motivation.tex" 1786514093 7585 2e8460c2dddef93b2ee67e66b1a6bed1 ""
-  "Sections/2.Relatedwork.tex" 1786514098 16014 2e327bdf240349d275fb4b83f8f81811 ""
+  "Sections/2.Relatedwork.tex" 1786963397 16014 2e327bdf240349d275fb4b83f8f81811 ""
   "Sections/3.Theory.tex" 1786514103 63178 9134fac1611abf4f40d483e4ce42efca ""
-  "Sections/4.Method_Result.tex" 1786948959 91940 e8a7b3fb7212e8502a815e92351d360a ""
-  "Sections/5.Conclusion_and_FutureWork.tex" 1785569094 7438 cc8c2d982ef20e3531a224ec8b790c96 ""
+  "Sections/4.Method_Result.tex" 1787899806 93139 0a890e37d8afd1f460a4d872a234e9b9 ""
+  "Sections/5.Conclusion_and_FutureWork.tex" 1787899806 9210 306af04fc861cc458ecec3dc6219777f ""
   "covers/front_var.tex" 1779787676 1160 bebc613cfc2b67ab3d3520abff3ae1dc ""
   "covers/inside_var.tex" 1786946608 1897 14dff9dac8cc58be9eaf7b2102fbf4fb ""
   "covers/load_env.tex" 1786513236 2958 56be8c6fea8abc7ee687cc4b118e7b6c ""
@@ -241,7 +241,7 @@
   "img/Crossing/Crossing-GU-Design7/replot_Optimized_Final_Structure_TE1.png" 1783919844 206874 4d99d4d56e19f08c39e3e3bb65a9ce64 ""
   "img/Crossing/Crossing-GU-Design7/replot_Smoothed_Binary_Structure.png" 1783919844 81831 f8c60f8ac960d36d32675c7119b269dc ""
   "img/Crossing/Crossing_Scheme.png" 1784325489 2397430 48ee4c01f937a3a35a706538972d2ace ""
-  "img/Crossing/Four_fold_symmetry.png" 1784326905 230036 015f5eaf33aaf03bd6db9d1bf4695a95 ""
+  "img/Crossing/One_eighth_symmetry.png" 1784326905 230036 015f5eaf33aaf03bd6db9d1bf4695a95 ""
   "img/DEMUX/DEMUX-design1/replot_output/Design1_TE0.png" 1783926945 713123 2fb77b403cdea6f0a289b64db46071eb ""
   "img/DEMUX/DEMUX-design1/replot_output/Design1_TE1.png" 1783926959 853106 975cd53834ff46acdda8887230134425 ""
   "img/DEMUX/DEMUX-design2/design2_TE0.png" 1783931561 717105 48e4b82eb656d4fcfaa3c6995c0c1704 ""
@@ -271,12 +271,12 @@
   "img/leapfrog.png" 1782748632 31601 54b74c1179eea9c4d9534f4349c46ad1 ""
   "img/pml_failure.png" 1782849884 87084 314d9a5180e1e7a51b3d4a2676a31b70 ""
   "img/subpixel.png" 1782848121 49508 dbfa3687f00fd62911e4f863e40efc22 ""
-  "main.aux" 1786948984 28672 fae4900e9749b1a797f1eb93ec8e8f6d "xelatex"
-  "main.bbl" 1786603916 10161 8961e409bff2d557887b5e0ec52ea413 "bibtex main"
-  "main.lof" 1786948961 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "main.lot" 1786948961 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "main.aux" 1788171640 46865 4276237e36451d65491bfe714ed1d6f4 "xelatex"
+  "main.bbl" 1788171638 10161 544b47c2883fa1a11aff0cfa2579d886 "bibtex main"
+  "main.lof" 1788171640 13386 f70ec7267044ad422d28c64f52295d6d "xelatex"
+  "main.lot" 1788171640 1113 7ccc33a572dd2a61eee9423ebb392169 "xelatex"
   "main.tex" 1786532558 7679 5ca7c43d2d282cf2dbe4b876c1526083 ""
-  "main.toc" 1786948960 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "main.toc" 1788171640 7047 154269674f393c50c7bd050a8ee5c275 "xelatex"
   (generated)
   "main.aux"
   "main.lof"
